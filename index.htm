@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ana-Maria Olteanu-Raimond">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>CHOUCAS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/choucas-style.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="js/fancybox/jquery.fancybox.css" rel="stylesheet">
+
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </head>
+
+  <body>
+
+	<section  id="accueil">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="col-xs-1 hidden-sm" id="logo-xs"><img src="img/logos/logo-choucas2-xs.png" alt="logo"></div>
+		<div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand languageFr" href="#" style="margin-left: 5px;margin-right: 5px;">Projet CHOUCAS</a>
+		  <a class="navbar-brand languageEn" href="#" style="margin-left: 5px;">Project CHOUCAS</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a class="languageFr" href="#accueil">Accueil</a></li>
+			<li><a class="languageFr" href="#news">Actualités</a></li>
+			<li><a class="languageFr" href="#presentation">Objectifs</a></li>
+			<li><a class="languageFr" href="#consortium">Consortium</a></li>			
+			<li><a class="languageFr" href="#galerie">Galerie</a></li>						
+			<li><a class="languageFr" href="#publis">Publications</a></li>
+			<li><a class="languageFr" href="#ressources">Ressources</a></li>			
+			
+			<li><a class="languageEn" href="#accueil">Home</a></li>
+			<li><a class="languageEn" href="#news">News</a></li>
+			<li><a class="languageEn" href="#presentation">Goals</a></li>
+			<li><a class="languageEn" href="#consortium">Consortium</a></li>							
+			<li><a class="languageEn" href="#galerie">Gallery</a></li>
+			<li><a class="languageEn" href="#ressources">Ressources</a></li>		
+          </ul>
+
+          <a href="#" class="languageEn changeLangFr">
+          <img src="img/icons/1463755195_flag-france.png"  alt="" style="float: right; padding-top: 12px;" /></a>
+		  <a href="#" class="languageFr changeLangEn">
+          <img src="img/icons/1463755205_flag-united-kingdom.png" alt="" style="float: right;padding-top: 15px;" /></a>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	</section>
+    <div class="container">
+
+      <div class="jumbotron" >
+		<!--<h1>Projet Choucas</h1>
+		<h2 class="section-heading animated languageFr" ><strong>Intégration de données hétérogènes et raisonnement spatial pour l’aide à la localisation des victimes en montagne</h2></strong>
+		<h2 class="section-heading animated languageEn" ><strong>Heterogeneous data integration and spatial reasoning for localizing victims in mountain area</h2></strong>
+		-->
+		<div class="row mar-bot50">
+				<div class="col-md-offset-1 col-md-11">
+					<div class="section-header">
+						<h2 class="section-heading animated languageFr" data-animation="bounceInUp">Intégration de données hétérogènes et raisonnement spatial pour l’aide à la localisation des victimes en montagne</h2>
+						<h2 class="section-heading animated languageEn" data-animation="bounceInUp">Heterogeneous data integration and spatial reasoning for localizing victims in mountain area</h2>
+					</div>
+				</div>
+			</div>			
+                    
+		<div class="col-xs-3" id="logo-main"><img class="center-block" src="img/logos/logo-choucas2.png" alt="logo"></div>
+		<p class="languageFr" style = "text-align : justify" ><strong> Le projet CHOUCAS est un projet collaboratif de recherche visant à répondre à un besoin exprimé initialement par le PGHM de Grenoble 
+				pour l'aide à la localisation des victimes en zone de montagne. Le projet est coordonné par l'équipe MEIG du laboratoire <strong><abbr title="Laboratoire des Sciences et Technologies de l'Information Géographique">LASTIG</abbr></strong> de l'IGN en partenariat 
+				avec les équipes STeamer du <strong><abbr title="Laboratoire d’Informatique de Grenoble">LIG</abbr></strong> et UPPA, lab. LMAP (équipe Proba./Stat.) de <strong><abbr title="Laboratoire de Mathématiques et de leurs Applications de Pau - UMR CNRS 5142">UPPA</abbr></strong> ainsi 
+				que le <strong><abbr title="Pelotons de Gendarmerie de Haute Montagne">PGHM</abbr></strong> de Grenoble. Le projet est financé par l'<strong><abbr title="Agence Nationale de la Recherche">ANR</abbr></strong> pour une durée de 55 mois (2017-2022).</strong>
+				
+		</p>
+		<p class="languageFr"><a class="btn btn-primary btn-lg" href="#presentation">En savoir plus</a></p>
+		
+		<p class="languageEn"><strong>The project CHOUCAS is an interdisciplinary research project aiming to respond to a need expressed by the PGHM of Grenoble to help localising 
+		victims in montain area. The project is leading by MEIG team from IGN involving three partners: the STeamer team of the Grenoble Informatics Laboratory (LIG) and the UPPA, lab. LMAP (Proba/Stat team) 
+		of the University of Pau and Pays de l’Adour (UPPA) as well as the High Mountain Gendarmerie Platoon of Grenoble. CHOUCAS is funded by the 
+		French National Research Agency.</strong>
+		</p>
+		<p class="languageEn"><a class="btn btn-primary btn-lg" href="#presentation">More</a></p>
+      </div>
+
+    </div><!-- /.container -->
+
+	<!-- spacer section:logos -->
+	<div id="logos"> </div>
+	<section class="section mar-top40 mar-bot40"></section>
+<!-- section news -->
+		<section id="news" class="section appear clearfix">
+        <div class="container mar-bot50">
+            <div class="row mar-bot40">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading languageFr">Actualités</h2>
+					<h2 class="section-heading languageEn">News</h2>
+				</div>
+            </div>
+			<div class="row">
+                <div class="col-lg-12">
+					<ul class="timeline">
+    					<li><div class="tldate">2021</div></li>
+						<li class="timeline-inverted"> 
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr">Soutenance de thèse de Matthieu Viry (Steamer) : Une approche déclarative basée sur les technologies du Web sémantique pour spécifier et générer des géovisualisations adaptatives </h4>
+									<h4 class="panel-title languageEn">PHD Defense of Matthieu Viry (Steamer):A declarative approach based on Semantic Web technologies to specify and generate adaptive geovisualisations  </h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i>16 Décembre 2021, 14h00</small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i>December 16 2021, 2pm</small></p>
+								</div>
+							</div>
+						</li>						
+						<li class="tl-circ"> 
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr">Soutenance de thèse Meriem Sabrine Halilali (Univ-Pau)  : Description, découverte et composition de services Web géospatiaux </h4>
+									<h4 class="panel-title languageEn">PHD Defense of Meriem Sabrine Halilali (Univ-Pau): Description, discovery and composition of geospatial web services </h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i>Mardi 09 Novembre 2021 à 13h30</small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i> November 09 2021 at 1.30pm</small></p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted"> 
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr">Geodatadays 2021 : Matthieu Viry (Steamer) a gagné le 2ème prix du Jury et le prix du public avec l'application GASPAR</h4>
+									<h4 class="panel-title languageEn">Geodatadays 2021 : Matthieu Viry (Steamer) won the 2nd Jury Prize and the Public Prize with the GASPAR application</h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i>15-16 Septembre 2021</small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i>15-16 Septembre 2021</small></p>
+								</div>
+							</div>
+						</li>
+							<li class="tl-circ"> 
+								<div class="timeline-panel">
+									<div class="tl-heading">
+										<h4 class="panel-title languageFr">Le projet CHOUCAS est représenté aux journées de la recherche de l'IGN ...suivez les deux présentations : </h4>
+										<h4 class="panel-title languageEn">CHOUCAS project is well represented to the IGN research days...follow the two presentations: </h4>
+										<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i><strong> <a href="https://youtu.be/_58TytdP3DM"> Mattia Bunel </a></strong>  </small></p>
+										<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i><strong> <a href="https://youtu.be/a5yvQZ1MKks"> Eliette FIZE, Floriane KERGUS</a> </strong>  </small></p>
+										<p><small class="text-muted languageEn "><i class="glyphicon glyphicon-time "></i><strong> <a href="https://youtu.be/_58TytdP3DM"> Mattia Bunel </a></strong>  </small></p>
+										<p><small class="text-muted languageEn "><i class="glyphicon glyphicon-time "></i><strong> <a href="https://youtu.be/a5yvQZ1MKks"> Eliette FIZE, Floriane KERGUS</a> </strong>  </small></p>
+									</div>
+								</div>
+							</li>
+						<li class="timeline-inverted"> 
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr">Soutenance de thèse Mattia Bunel (LaSTIG) : <a href="https://tel.archives-ouvertes.fr/tel-03298717"> voir rapport</h4>
+									<h4 class="panel-title languageEn">PHD Defense of Mattia Bunel (LaSTIG): see PhD report <a href="https://tel.archives-ouvertes.fr/tel-03298717"> voir rapport</h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i> Vendredi 19 février 2021 à 14h</small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i>February 19 2021 at 2pm </small></p>
+								</div>
+							</div>
+						</li>
+						
+						<li><div class="tldate">2020</div></li>
+						<li class="tl-circ"> 
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr">Recrutement d'un Ingénieur de recherche (ou Post-Doc) en cours</h4>
+									<h4 class="panel-title languageEn">Research Engineer or Post Doc Position</h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i>Démarrage souhaité : Septembre 2020 </small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i>Started date : September 2020 </small></p>
+								</div>
+								<div class="tl-body">
+									<p class="languageFr"> Le laboratoire LASTIG de l'IGN (Paris) recrute un Ingénieur de recherche pour une durée de 13 mois : <strong> <a href="doc/Choucas2020_wp5_FichePosteCdd.pdf"> voir la fiche de poste </a></strong> </p>
+									<p class="languageEn"> The LASTIG lab of IGN (Paris) propose a Research Engineer or Post Doc position for 13 months: <strong> <a href="doc/Choucas2020_wp5_FichePosteCdd.pdf"> see the description of the position </a></strong> </p>
+								</div>
+							</div>
+						</li>
+					
+						
+						<li><div class="tldate">2019</div></li>
+						<li> <div class="tl-circ"></div>
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr"> Réunion plénière</h4>
+									<h4 class="panel-title languageEn"> Consortium meeting</h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i> 5-6 Septembre 2019, Pau, LMAP </small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i> September 5-6 2019, Pau, LMAP </small></p>
+								</div>
+								<div class="tl-body">
+									<p class="languageFr">Réunion plénière avec tous les partenaires</p>
+									<p class="languageEn">Meeting with all partners</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted"> 
+                        <div class="tl-circ"></div>
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr">Conférence ICC 2019</h4>
+									<h4 class="panel-title languageEn">ICC 2019 Conference</h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i>12-20 Juillet 2019</small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i>July 12-20 2019</small></p>
+								</div>
+								<div class="tl-body">
+									<p class="languageFr">Le projet Choucas a été représenté en force à l'ICC 2019 : 3 présentations (voir rubrique présentation)</p>
+									<p class="languageEn">Choucas Project was very well represented at ICC 2019: three presentations (see presentation tab)</p>
+								</div>
+							</div>
+						</li>
+						<li> <div class="tl-circ"></div>
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr"> Réunion plénière</h4>
+									<h4 class="panel-title languageEn"> Consortium meeting</h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i> 17-18 Janvier 2019, St-Mandé, IGN  </small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i> January 17-18 2019, St-Mandé, IGN</small></p>
+								</div>
+								<div class="tl-body">
+									<p class="languageFr">Réunion plénière avec tous les partenaires</p>
+									<p class="languageEn">Meeting with all partners</p>
+								</div>
+							</div>
+						</li>
+						<li><div class="tldate">2018</div></li>
+						   
+						<li class="timeline-inverted"> 
+							<div class="tl-circ"></div>
+								<div class="timeline-panel">
+									<div class="tl-heading">
+										<h4 class="panel-title languageFr"> Réunion Lot 5</h4>
+										<h4 class="panel-title languageEn"> Meeting Work Package 5</h4>
+										<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i> 25-26 Juin 2018, Pau, LMAP  </small></p>
+										<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i> June 25-26 2018, Pau, LMAP   </small></p>
+									</div>
+								<div class="tl-body">
+									<p class="languageFr">Réunion MEIG - LMAP  </p>
+									<p class="languageEn">Meeting MEIG - LMAP </p>
+								</div>
+							</div>
+						</li>
+						
+						<li> <div class="tl-circ"></div>
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr"> Réunion plénière</h4>
+									<h4 class="panel-title languageEn"> Consortium meeting</h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i> 15-16 Février 2018, Grenoble, STeamer  </small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i> February 15-16 2018, Grenoble, STeamer </small></p>
+								</div>
+								<div class="tl-body">
+									<p class="languageFr">Réunion plénière avec tous les partenaires</p>
+									<p class="languageEn">Meeting with all partners</p>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="tldate languageFr">Démarage des travaux scientifiques 2017</div>
+							<div class="tldate languageEn">Starting project 2017</div>
+						</li>
+						<li class="timeline-inverted">
+							<div class="tl-circ"></div>
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="languageFr"> Recrutement doctorants en cours (offres pourvues)</h4>
+									<h4 class="languageEn"> PHD Student Positions</h4>
+									<p><small class="text-muted languageFr"><i class="glyphicon glyphicon-time"></i> Pour octobre 2017</small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time"></i> For September 2017</small></p>
+								</div>
+								<div class="tl-body">
+									<p>STeamer, LMAP </p>
+								</div>
+							</div>
+						</li>
+    					<li> <div class="tl-circ"></div>
+							<div class="timeline-panel">
+								<div class="tl-heading">
+									<h4 class="panel-title languageFr"> Réunion de lancement</h4>
+									<h4 class="panel-title languageEn"> Kick off meeting</h4>
+									<p><small class="text-muted languageFr "><i class="glyphicon glyphicon-time "></i> 17 Mars 2017 </small></p>
+									<p><small class="text-muted languageEn"><i class="glyphicon glyphicon-time  "></i> March 17 2017 </small></p>
+								</div>
+								<div class="tl-body">
+									<p class="languageFr">Réunion plénière avec tous les partenaires</p>
+									<p class="languageEn">Meeting with all partners</p>
+								</div>
+							</div>
+						</li>					
+					</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	
+	<!-- spacer section:styletopo -->
+	<section id="styletopo" class="section mar-top40 mar-bot40" data-stellar-background-ratio="0.8"></section>
+	<section class="section mar-top40 mar-bot40"></section>
+
+	<!-- section presentation -->
+	<section id="presentation" class="section appear clearfix">
+		<div class="container">
+			<div class="row mar-bot50">
+				<div class="col-md-offset-3 col-md-6">
+					<div class="section-header">
+						<h2 class="section-heading animated languageFr" data-animation="bounceInUp">Présentation du projet</h2>
+						<h2 class="section-heading animated languageEn" data-animation="bounceInUp">Project description</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row mar-bot50 languageFr">
+				<p> Plus de 15000 demandes de secours en montagne sont recensées annuellement en France. Les Pelotons de Gendarmerie de Haute Montagne (PGHM) sont les principaux 
+				acteurs du secours en montagne. La localisation de la victime pendant la phase d’alerte repose sur un dialogue entre le requérant 
+				(personne qui donne l’alerte, qui peut être la victime ou un tiers) et les secouristes, et s’appuie sur la recherche manuelle d’indices géographiques
+				dans différentes sources de données ainsi que sur le savoir-faire des secouristes. Cette recherche d’indices s’inscrit dans un processus de raisonnement,
+				qui consiste à formuler des hypothèses à partir des premières informations fournies par le requérant, à les affiner progressivement au fil du dialogue 
+				et de l’analyse des données, puis à déduire la localisation la plus probable de la victime.</p>
+				<p>Plusieurs éléments compliquent cette tâche de localisation. Du côté de la victime, la faible connaissance de la montagne et de la géographie des lieux, 
+				les imprécisions dans la description de l’itinéraire emprunté et la peur font que la description de sa localisation est imprécise et pas toujours fiable. 
+				Du côté des secours, mentionnons l’hétérogénéité des données sur lesquelles ils s’appuient pour la prise de décision : données multi-sources 
+				(données institutionnelles ou communautaires) et multi-formats (cartes, topo-guides de randonnées en format papier, données vectorielles). 
+				L’outillage logiciel permettant de combiner des sources de données géographiques hétérogènes sur lesquels il serait possible de mener des raisonnements 
+				déductifs est encore très peu développé. Par ailleurs, si les solutions reposant sur l’utilisation de smartphones se développent, elles présentent des inconvénients 
+				parfois rédhibitoires : d’une part elles supposent que le requérant soit au même endroit que la victime, d’autre part elles impliquent des contraintes d'équipement, 
+				de couverture réseau de données, d'installation d'application ou d'aptitude technique du requérant (qui par ailleurs risque de ne pas être en plein possession 
+				de ses moyens). Dans les cas où ces technologies ne s’appliquent pas, pouvoir exploiter conjointement des sources de données hétérogènes comme support 
+				à la décision offre un potentiel très prometteur.</p> 
+
+				<p> Dans ce contexte, le projet <strong><abbr title="Indicatif  radio des hélicoptères utilisés pour le secours en montagne">CHOUCAS</abbr></strong> a pour objectif de proposer des méthodes et des outils permettant de constituer et enrichir des données géographiques issues 
+				de sources hétérogènes, et des modèles de raisonnement afin de favoriser le processus de décision dans le contexte de la localisation des victimes 
+				en montathne. L’enjeu est donc d’améliorer la capacité de réponse à une alerte. Nous émettons l’hypothèse qu’un outil de géovisualisation intégrant 
+				des techniques de fusion de données, de raisonnement flou et d’analyse spatiale peut y contribuer.</p>
+			</div>
+			<div class="row mar-bot50 languageEn">
+				More than 15,000 SOS messages in mountain areas are counted every year in France. However, despite recent technological advances in positioning systems 
+				and the increasing number of geo-applications, locating victims during the alert is still an issue for rescue teams. Poor knowledge of mountain, inaccuracies 
+				in description of the used paths and spatial environments are some factors making the location a difficult step which can be improved by using multi-sources data. 
+				The project CHOUCAS is interdisciplinary involving researchers in geographic information sciences, computer science 
+				and automatic language processing. The aim of the project is to provide methods and tools for enriching, structuring, querying and visualising spatial data coming from 
+				heterogeneous sources and reasoning to help the rescue teams to speed up the phase of victims location and to better estimate a probable location area.
+			</div>			
+		</div>
+</section>
+
+	<!-- spacer section:mix -->
+	<section id="fond5" class="section mar-top40 mar-bot40" data-stellar-background-ratio="0.8"></section>
+	<section class="section mar-top40 mar-bot40"></section>
+	
+	<!-- section consortium -->
+	<section id="consortium" class="section appear clearfix">
+		<div class="container">
+			<div class="row mar-bot50">
+				<div class="col-md-offset-3 col-md-6">
+					<div class="section-header">
+						<h2 class="section-heading animated languageFr" data-animation="bounceInUp">Consortium</h2>
+						<h2 class="section-heading animated languageEn" data-animation="bounceInUp">Consortium</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">IGN, MEIG</h3>
+						</div>
+						<div class="panel-body">
+							<p class="languageFr">L'équipe <a href="https://www.umr-lastig.fr/meig/">MEIG (Médiation et Enrichissement de l'IG) </a> de l'IGN effectue des recherches sur la médiation et l'enrichissement de l'information géographique.</p>
+							<p class="languageFr">Les participants au projet sont :</p>
+							<p class="languageEn"><a href="https://www.umr-lastig.fr/meig/">MEIG</a> team from IGN, the French National Mapping Agency, is in charge of research related to the mediation and enrichement of geographic information.</p>
+							<p class="languageEn">Project members:</p>
+							<ul>
+								<class="languageFr"><a href="https://www.umr-lastig.fr/Ana-Maria-Raimond-homepage/" class="list-group-item languageFr">Ana-Maria Olteanu-Raimond, coordinatrice du projet et du Lot 3</a>
+								<class="languageEn"><a href="https://www.umr-lastig.fr/Ana-Maria-Raimond-homepage/" class="list-group-item languageEn">Ana-Maria Olteanu-Raimond, project leader and WP 3</a>
+								<a href="https://www.umr-lastig.fr/mdvandamme/" class="list-group-item">Marie-Dominique Van Damme, co-coordinatrice du Lot 5</a>
+                                <a href="https://www.umr-lastig.fr/mattia-bunel/index_fr.html" class="list-group-item">Mattia Bunel, doctorant, soutenance de thèse Février 2021</a>
+                                <a href="https://www.umr-lastig.fr/cdomingues_homepage/" class="list-group-item">Catherine Dominguès</a>
+								<a href="https://www.umr-lastig.fr/cecile-duchene/" class="list-group-item">Cécile Duchêne</a>
+								<a href="https://www.umr-lastig.fr/laurence-jolivet/" class="list-group-item">Laurence Jolivet</a>
+								<a href="http://recherche.ign.fr/labos/cogit/cv.php?prenom=S%E9bastien&nom=Musti%E8re" class="list-group-item">Sébastien Mustière</a>
+								<a href="https://www.linkedin.com/in/veroniquegendner/?originalSubdomain=fr" class="list-group-item">Véronique Gendner (Septembre 2020 - Août 2021)</a>								
+								<a href="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Mickael&nom=Brasebin" class="list-group-item">Mickael Brasebin (2017-2019) </a>
+                            </ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">Proba/Stat, LMAP</h3>
+						</div>
+						<div class="panel-body">
+							<p class="languageFr"><a href="https://lma-umr5142.univ-pau.fr/fr/index.html">L'équipe Proba/Stat, LMAP</a> effectue des recherche théoriques autour de deux axes principaux :
+							(1) stochastic modeling: theoretical investigations of probabilistic models and their numerical evaluation by means of Monte-Carlo and deterministic schemes;
+							et (2) l'inférence statistique : études théoriques d'estimateurs et de tests statistiques ainsi que d'algorithmes pour l'estimation, parfois dans le contexte de données en grande dimension.
+							</p>
+							<p class="languageEn"><a href="https://lma-umr5142.univ-pau.fr/fr/index.html">The team Proba/Stat, LMAP</a>  has theoretical interests mostly in:
+							(1) la modélisation stochastique : étude théorique de modèles probabilistes et évaluation numérique de modèles probabilistes par le biais d'études de Monte-Carlo et de schémas déterministes ;
+							et (2) statistical inference: theoretical studies of estimators, estimation algorithms and statistical tests.
+							</p>
+							<p class="languageFr">Les participants au projet sont :</p>
+							<p class="languageEn">Project members:</p>
+						<ul>
+								<a href="" class="list-group-item">Mauro Gaio, coordinateur du Lot 2</a>
+								<a href="" class="list-group-item">Eric Gouardères, co-coordinateur du Lot 5</a>
+								<a href="" class="list-group-item">Florent Devin</a>
+                                <a href="" class="list-group-item">Meriem Halilali, doctorant</a>
+								<a href="" class="list-group-item">Yannick Le Nir</a>
+                                <a href="" class="list-group-item">Amine Medad, doctorant</a>
+								<a href="" class="list-group-item">Ludovic Moncla</a>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">STeamer, LIG</h3>
+						</div>
+						<div class="panel-body">
+							<p class="languageFr"><a href="http://steamer.imag.fr/">STeamer</a> est une équipe du LIG. Elle s’intéresse à la spécification de méthodes et d’outils pour la conception et le développement de systèmes d’information spatio-temporelle basés sur le Web. </p>
+							<p class="languageFr">Les participants au projet sont :</p>
+							<p class="languageEn"><a href="http://steamer.imag.fr/">STeamer</a> is a research team from LIG. Its research is focuses on the specification of methods and tools for the design and development of web-based spatiotemporel systems. </p>
+							<p class="languageEn">Project members:</p>
+							<ul>
+								<a href="http://steamer.imag.fr/?page_id=47" class="list-group-item"> Marlène Villanova-Oliver, coordinatrice du Lot 1 </a>
+								<a href="http://steamer.imag.fr/?page_id=37" class="list-group-item"> Paule-Annick Davoine, coordinatrice du Lot 4</a>
+								<a href="http://steamer.imag.fr/?page_id=43" class="list-group-item"> Matthieu Viry, doctorant</a>
+								<a href="http://steamer.imag.fr/?page_id=43" class="list-group-item"> Jacques Gautier</a>
+								<a href="http://steamer.imag.fr/?page_id=35" class="list-group-item"> Sylvain Bouveret</a>
+								<a href="http://steamer.imag.fr/?page_id=40" class="list-group-item"> Philippe Genoud</a>
+								<a href="http://steamer.imag.fr/?page_id=43" class="list-group-item"> Jerôme Gensel</a>
+								<a href="http://steamer.imag.fr/?page_id=49" class="list-group-item"> Danielle Ziebelin</a>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6" >
+				
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">PGHM</h3>
+						</div>
+							<p class="languageFr">Le <a href="">PGHM</a> de Grenoble a un double rôle dans le projet : celui de contributeur et celui d’utilisateur final. </p>
+							<p class="languageFr">Les participants au projet sont :</p>
+							<p class="languageEn"><a href="">PGHM</a> from Grenoble has a both the role of contributor and end user. </p>
+							<p class="languageEn">Project members:</p>
+							<ul>
+								<li> adjudant Olivier Favre</li>
+							
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<!--<section id="logos" class="section mar-top40 mar-bot40" data-stellar-background-ratio="0.8"></section>-->
+	
+	<div id="logos"> </div>
+    <section class="section mar-top40 mar-bot40"></section>
+    
+	<!-- section galerie -->
+	<section id="galerie" class="section appear clearfix">
+		<div class="container">
+			<div class="row mar-bot50">
+				<div class="col-md-offset-3 col-md-6">
+					<div class="section-header languageFr">
+						<h2 class="section-heading animated" data-animation="bounceInUp">Galeries</h2>
+						<p>Galerie d'images, vidéos et présentations illustrant les résultats du projet.</p>
+					</div>
+					<div class="section-header languageEn">
+						<h2 class="section-heading animated" data-animation="bounceInUp">Galleries</h2>
+						<p>Gallery of pictures, videos et presentations illustrating the results of the project.</p>
+					</div>
+				</div>
+			</div>
+
+            <div class="row">
+                <nav id="filter" class="col-md-12 text-center">
+                    <div class="btn-group">
+                        <a href="#images" class="btn btn-default current btn-sm languageFr" data-filter=".images">Images</a></li>
+                        <a href="#videos"  class="btn btn-default btn-sm languageFr" data-filter=".videos" >Vidéos</a></li>
+						<a href="#presentations"  class="btn btn-default btn-sm languageFr" data-filter=".presentations" >Présentations</a></li>
+						<a href="#images" class="btn btn-default current btn-sm languageEn" data-filter=".images">Pictures</a></li>
+                        <a href="#videos"  class="btn btn-default btn-sm languageEn" data-filter=".videos" >Videos</a></li>
+						<a href="#presentations"  class="btn btn-default btn-sm languageEn" data-filter=".presentations" >Slides</a></li>
+                    </div>
+                </nav>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="portfolio-items isotopeWrapper clearfix" id="3">
+
+                            <article class="col-md-4 isotopeItem images">
+								<div class="portfolio-item">
+									<img src="img/galerie/FigBunel.png" alt="" />
+									<div class="portfolio-desc align-center">
+										<div class="folio-info">
+											<h5 class="languageFr"><a href="#">Définition de l’ensemble flou « je suis sous une ligne électrique » (M.Bunel)</a></h5>
+											<h5 class="languageEn"><a href="#">Definition of fuzzy set "I'm under an electric ligne" (M.Bunel)</a></h5>
+											<a href="img/galerie/FigBunel.png" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="portfolio-item">
+									<img src="img/galerie/VanDamme.png" alt="" />
+									<div class="portfolio-desc align-center">
+										<div class="folio-info">
+											<h5 class="languageFr"><a href="#">Relation entre points de repères homologues representant un lac et des itinéraires de randonnées homologues (Van DAmme et al.2019)</a></h5>
+											<h5 class="languageEn"><a href="#">Landmarks representing a lake linked with two homologous routes (Van Damme et al.2019)</a></h5>
+											<a href="img/galerie/VanDamme.png" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="col-md-4 isotopeItem images">
+								<div class="portfolio-item">
+									<img src="img/galerie/buneltelecabine.png" alt="" />
+									<div class="portfolio-desc align-center">
+										<div class="folio-info">
+											<h5 class="languageFr"><a href="#">Représentation floue de l'élément de localisation : je suis sous une télécabine (M. Bunel) </a></h5>
+											<h5 class="languageEn"><a href="#">Fuzzy set representation of the localizing element : I'm under a gondola (M. Bunel)</a></h5>
+											<a href="img/galerie/buneltelecabine.png" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+										</div>
+									</div>
+								</div>
+							</article>
+							
+							<article class="media hidden col-md-6 isotopeItem videos">
+								<div class="flex-video widescreen">
+									<!--<iframe name="State of the interface in July 2018" width="100%" height="100%" src="http://steamer.imag.fr/wp-content/uploads/2019/03/choucas_demo.mp4" frameborder="0" allowfullscreen></iframe>
+									-->
+									<p class="languageFr">8 Novembre 2017 : <strong>Vidéo Présentation projet CHOUCAS par Ana-Maria Olteanu-Raimond  <a href="https://webtv.univ-rouen.fr/videos/08-11-2017-141122-partie-23/"> Sagéo'2017</a></strong>, Rouen. </p>
+									<p class="languageEn">November 8 2017: <strong>Presentation video of the CHOUCAS project by Ana-Maria Olteanu-Raimond <a href="https://webtv.univ-rouen.fr/videos/08-11-2017-141122-partie-23/"> Sagéo'2017.</a></strong>, Paris. </p>
+									<p class="languageFr">14 Décembre 2018 : <strong>Vidéo Présentation plugin QGIS Hy2roresO par Cécile Duchêne  <a href="https://www.youtube.com/watch?v=hdX4OMqJG40"> Rencontres QGIS'2018</a></strong>, Montpellier. </p>
+									<p class="languageEn">Decmber 14 2018: <strong>Presentation video of the Hy2roresO QGIS plugin by Cécile Duchêne <a href="https://www.youtube.com/watch?v=hdX4OMqJG40"> Rencontres QGIS'2018.</a></strong>, Montpellier. </p>
+									
+								</div>
+							</article>
+							
+							 
+									
+
+							<article class="media hidden col-md-6 isotopeItem presentations">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title languageFr">Sagéo 2019, Clermont Ferrand, France, 13-15 Novembre 2019.</h3>
+										<h3 class="panel-title languageEn">Sagéo 2019, Clermont Ferrand, France, 13-15 November 2019.</h3>
+							
+									</div>		
+								
+									<div class="panel-body">
+										<ul>
+											<li class="bib" id="sageo2019"> M. Viry, M. Villanova-Oliver, <a class="bib" href="https://cloud.univ-grenoble-alpes.fr/index.php/s/pnK3LJ9bxCcJ5tq"> L’Ontologie d’Alerte Choucas : de la modélisation des connaissances à un outil support d’un raisonnement géovisuel - Application à la recherche de victime en haute-montagne</a>. <em> Spatial Analysis and GEOmatics 2019 </em>. 
+											</li>
+										</ul>
+									</div>
+								</div>
+								
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title languageFr">ICC 2019, Tokyo, 16-20 Juillet 2019.</h3>
+										<h3 class="panel-title languageEn">ICC 2019, Tokyo, 16-20 July 2019.</h3>
+									</div>		
+								
+									<div class="panel-body">
+										<ul>
+											<li class="bib" id="icc2019">M-D Van Damme, A-M. Olteanu-Raimond, Y. Méneroux, <a class="bib" href="https://www.tandfonline.com/doi/full/10.1080/23729333.2019.1615730">Potential of crowdsourced data for integrating landmarks and routes for rescue in mountain areas</a>. <em> ICC2019 </em>, Tokyo.
+												<a href="doc/VanDamme_ICC.pdf" class="imgLink"><img alt="Télécharger la présentation" title="Télécharger la présentation"></a>
+											</li>
+											<li class="bib" id="sageo2018m"> M. Bunel, C. Duchêne, A-M. Olteanu-Raimond, M. Villanova-Oliver, G. Bonhoure, T. Jouan, <a class="bib" href="https://hal.archives-ouvertes.fr/hal-02187587"> An approach for identifying and analysing reference features and spatial relations used in mountain emergency calls</a>. <em> ICC 2019 </em>, Tokyo. 
+												<a href="doc/BunelPresentation_ICC.pdf" class="imgLink"><img alt="Télécharger la présentation" title="Télécharger la présentation"></a>
+											</li>
+											<li class="bib" id="sageo2018m"> M. Viry, M. Villanova-Oliver, J. Gautier, P.A. Davoine, M. Sreeves, <a class="bib" href="https://hal.inria.fr/hal-02279284"> Improving the search for victims in mountain with geovisualization and competing hypotheses management</a>. <em> ICC2019</em>, Tokyo. 
+												<a href="doc/ViryEtAl_choucas_icc19_prez.pdf" class="imgLink"><img alt="Télécharger la présentation" title="Télécharger la présentation"></a>
+											</li>   	
+										</ul>
+									</div>
+								</div>
+								
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title languageFr">Sagéo 2018, Rouen, France, 3-6 Novembre 2017.</h3>
+										<h3 class="panel-title languageEn">Sagéo 2018, Rouen, France, 3-6 Novembre 2017.</h3>
+							
+									</div>		
+								
+									<div class="panel-body">
+										<ul>
+											<li class="bib" id="sageo2017">Ana-Maria Olteanu-Raimond, Paule-Annick Davoine, Mauro Gaio, Eric Gouarderes, Marie-Dominique Van Damme et al., <a class="bib" href="https://hal.archives-ouvertes.fr/hal-01649156/document">Projet CHOUCAS : Intégration de données hétérogènes et raisonnement spatial pour l'aide à la localisation des victimes en montagne</a>. <em> Spatial Analysis and GEOmatics 2017 </em>, Rouen, France, 3-6 Novembre 2017. 〈hal-01649156〉
+												<a href="doc/Raimond et al. Projet CHOUCAS_8112017.pdf" class="imgLink"><img alt="Télécharger la présentation" title="Télécharger la présentation"></a>
+											</li>
+											<li class="bib" id="sageo2018m"> Mattia Bunel, Ana-Maria Olteanu-Raimond, Cécile Duchêne, <a class="bib" href="https://hal.archives-ouvertes.fr/hal-02354491/"> Référencement spatial indirect : modélisation à base de relations et d’objets spatiaux vagues</a>. <em> Sagéo'2018 </em>, Montpellier, 6-9 Novembre 2018. 
+												<a href="doc/PresentationBunel_etal_SAGEO.pdf" class="imgLink"><img alt="Télécharger la présentation" title="Télécharger la présentation"></a>
+											</li>
+											<li class="bib" id="sageo2018m"> Meriem Sabrine Halilali, Eric Gouardères, Florent Devin, Mauro Gaio, <a class="bib" href=""> Plateforme logicielle pour l'intégration et la composition de services géospatiaux</a>. <em> Sagéo'2018 </em>, Montpellier, 6-9 Novembre 2018. 
+												<a href="doc/Presentation_SAGEO2018_HALILALI.pdf" class="imgLink"><img alt="Télécharger la présentation" title="Télécharger la présentation"></a>
+											</li> 
+											<li class="bib" id="sageo2018m"> Amine Medad, Mauro Gaio, Yannick Le Nir, Sébastien Mustière, <a class="bib" href=""> Appariement automatique de données hétérogènes: textes, traces GPS et ressources géographiques</a>. <em> Sagéo'2018 </em>, Montpellier, 6-9 Novembre 2018. 
+												
+											</li> 											
+										</ul>
+									</div>
+								</div>		
+							
+							
+					</article>	
+
+					<!-- SLIDES -->
+					<!-- 
+							<article class="media hidden col-md-4 isotopeItem presentations">
+								<div class="flex-video widescreen">
+									<iframe src="https://fr.slideshare.net/AnaMariaOlteanuRaimo/bunelicc" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"> </iframe>								
+								</div>
+							</article>
+							<article class="media hidden col-md-4 isotopeItem presentations">
+								<div class="flex-video widescreen">
+									<iframe src="https://fr.slideshare.net/AnaMariaOlteanuRaimo/van-damme-icc/AnaMariaOlteanuRaimo/van-damme-icc" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"> </iframe>								
+								</div>
+							</article>
+							<article class="media hidden col-md-4 isotopeItem presentations">
+								<div class="flex-video widescreen">
+									<iframe src="https://fr.slideshare.net/AnaMariaOlteanuRaimo/viry-etal-choucasicc19prez" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"> </iframe>
+								</div>
+							</article>
+							-->
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- spacer section:style -->
+	<section id="mix" class="section mar-top50 mar-bot50" data-stellar-background-ratio="0.8"></section>
+	<section class="section mar-top50 mar-bot50"></section>
+	
+
+	<!-- section ressources -->
+	<section id="publis" class="section appear clearfix">
+		<div class="container">
+			<div class="row mar-bot50">
+				<div class="col-md-offset-3 col-md-6">
+					<div class="section-header">
+						<h2 class="section-heading animated" data-animation="bounceInUp">Publications</h2>
+						<!--<p class="languageFr">Liste des publications du projet.</p>-->
+						<!--<p class="languageEn">List of publications related of the project.</p>-->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Articles de revue</h3>
+							<h3 class="panel-title languageEn">Journals Papers</h3>
+							
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li class="bib" id="maurorig"> Matthieu Viry, Marlène Villanova-Oliver <a class="bib" href="https://www.tandfonline.com/doi/abs/10.1080/17538947.2021.1900937?journalCode=tjde20">How to derive a geovisualization from an application data model: an approach based on Semantic Web technologies</a>. <em>International Journal of Digital Earth, </em>, pp.1-25. https://doi.org/10.1080/17538947.2021.1900937, hal-03173267, 2021.
+								</li>
+								<li class="bib" id="maurorig"> Mattia Bunel <a class="bib" href="https://journals.openedition.org/cybergeo/36126">Un état de l’art sur l’imprécision spatiale et sa modélisation</a>. <em>Cybergeo : European Journal of Geography [En ligne], Cartographie, Imagerie, SIG</em>, document 966, mis en ligne le 11 février 2021, DOI : https://doi.org/10.4000/cybergeo.36126, 2021.
+								</li>
+								<li class="bib" id="maurorig"> Matthieu Viry, Marlène Villanova-Oliver <a class="bib" href="https://cdnsciencepub.com/doi/10.1139/geomat-2020-0005">Ontologie d’Alerte Choucas : de la modélisation des connaissances à un outil support d’un raisonnement géovisuel</a>. <em>Geomatica, Association canadienne des sciences géomatiques</em>, 73 (3), pp.87-103. 10.1139/geomat-2020-0005, hal-02978163, 2020.
+								</li>
+								<li class="bib" id="maurorig"> Mauro Gaio, Ludovic Moncla, <a class="bib" href="https://hal.archives-ouvertes.fr/hal-02117833">Geoparsing and geocoding places in a dynamic space context: The case of hiking descriptions</a>. <em> Human Cognitive Processing, John Benjamins Publishing Company, 2019, Human Cognitive Processing</em>,66, pp.354-386. 10.1075/hcp.66.10gai, 2019.
+								</li>
+								<li class="bib" id="mattiaRIG"> Mattia Bunel, Ana-Maria Olteanu-Raimond, Cécile Duchêne, <a class="bib" href="https://rig.revuesonline.com/articles/lvrig/abs/2019/01/rig00075/rig00075.html"> Objets et relations spatiales composites et prise en compte du vague pour interpréter un référencement spatial indirect </a>. <em> Revue Internationale de Géomatique</em>, Lavoisier, 2019, 29 (1), pp.81-106. 10.3166/rig.2019.00075. 
+								</li>
+								<li class="bib" id="maurorig"> Ludovic Moncla, Mauro Gaio, <a class="bib" href="https://rig.revuesonline.com/articles/lvrig/abs/2018/04/rig00066/rig00066.html"> Services Web pour l'annotation sémantique d'information spatiale à partir de corpus textuels</a>. <em> Revue Internationale de Géomatique</em>, Lavoisier, volume 28, numéro 4, 439—460, 2018.
+								</li>
+								<li class="bib" id="mdvdIJC"> M-D Van Damme, A-M. Olteanu-Raimond, Y. Méneroux, <a class="bib" href="https://www.tandfonline.com/doi/abs/10.1080/23729333.2019.1615730"> Potential of crowdsourced data for integrating landmarks and routes for rescue in mountain areas</a>. <em>International Journal of Cartography</em>, <a href="https://doi.org/10.1080/23729333.2019.1615730">doi</a> 
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Actes de conférence</h3>
+                            <h3 class="panel-title languageEn">Conference papers</h3>
+                        </div>    
+                            <div class="panel-body">
+                                <ul>
+								     <li class="bib" id="icc2019LIG"> M. Viry, M. Villanova-Oliver, <a class="bib" href="https://hal.inria.fr/hal-02279330> L’Ontologie d’Alerte Choucas : de la modélisation des connaissances à un outil support d’un raisonnement géovisuel - Application à la recherche de victime en haute-montagne</a>. <em>Sageo'2019</em>, Nov 2019, Clermont-Ferrand, France. 
+								    </li>
+									<li class="bib" id="icc2019LIG"> M. Viry, M. Villanova-Oliver, J. Gautier, P.A. Davoine, M. Sreeves, <a class="bib" href="https://hal.inria.fr/hal-02279284"> Improving the search for victims in mountain with geovisualization and competing hypotheses management</a>. <em>ICC'2019</em>, 15-20 Juillet 2019, Tokyo, Japon,. 
+								    </li>
+									<li class="bib" id="icc2019IGN"> M. Bunel, C. Duchêne, A-M. Olteanu-Raimond, M. Villanova-Oliver, G. Bonhoure, T. Jouan <a class="bib" href="https://hal.archives-ouvertes.fr/hal-02187587">An approach for identifying and analysing reference features and spatial relations used in mountain emergency calls </a>. <em>ICC'2019</em>, 15-20 Juillet 2019, Tokyo, Japon. 
+								    </li>
+									<li class="bib" id="mdvdICC2019"> M-D Van Damme, A-M. Olteanu-Raimond, Y. Méneroux, <a class="bib" href="https://hal.archives-ouvertes.fr/hal-02276065"> Potential of crowdsourced data for integrating landmarks and routes for rescue in mountain areas, dans le journal International Journal of Cartography </a>. <em>ICC'2019</em>, 15-20 Juillet 2019, Tokyo, Japon. 
+									</li>
+									<li class="bib" id="cdQGIS"> Gonnaud A., Gaudin M., Vasseur G., Duchêne C.,  <a class="bib" href="http://conf.qgis.osgeo.fr/presentation.html"> Hy2roresO: un plugin QGIS dédié à la hiérarchisation automatique de réseaux hydrographiques </a>. <em>Rencontres des Utilisateurs Francophones de QGIS</em>, Montpellier, 14 décembre 2018.
+									</li>
+                                    <li class="bib" id="sageo2018m"> Mattia Bunel, Ana-Maria Olteanu-Raimond, Cécile Duchêne, <a class="bib" href="https://hal.archives-ouvertes.fr/hal-02354491/document">  Référencement spatial indirect : modélisation à base de relations et d’objets spatiaux vagues</a>. <em>Sagéo'2018</em>, Montpellier, 6-9 Novembre 2018. 
+										<a href="doc/ArticleBuneletalSageo_2018.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger l'article" title="Télécharger l'article"></a>
+										<a href="doc/PresentationBunel_etal_SAGEO.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger la présentation" title="Télécharger la présentation"></a>
+                               		</li>
+									<li class="bib" id="sageo2018msh"> Meriem Sabrine Halilali, Eric Gouardères, Florent Devin, Mauro Gaio, <a class="bib" href="https://hal-univ-pau.archives-ouvertes.fr/hal-02462322/"> Plateforme logicielle pour l'intégration et la composition de services géospatiaux</a>. <em>Sagéo'2018</em>, Montpellier, 6-9 Novembre 2018. 
+										<a href="doc/ArticleSAGEO2018_HALILALI.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger l'article" title="Télécharger l'article"></a>
+										<a href="doc/Presentation_SAGEO2018_HALILALI.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger la présentation" title="Télécharger la présentation"></a>
+                               		
+									</li>
+                                    <li class="bib" id="sageo2018am"> Amine Medad, Mauro Gaio, Yannick Le Nir, Sébastien Mustière, <a class="bib" href="https://hal.inria.fr/hal-02462063v1"> Appariement automatique de données hétérogènes: textes, traces GPS et ressources géographiques</a>. <em>Sagéo'2018</em>, Montpellier, 6-9 Novembre 2018. 
+										<a href="doc/Article_AmineetalSageo.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger l'article" title="Télécharger l'article"></a>
+									</li>
+									
+								<!-- liste li -->	
+                                </ul>
+                            </div>
+							
+                            
+						
+						<div class="panel-body">
+							<ul>
+								<!-- liste li -->	
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Livres et chapitres de livres</h3>
+							<h3 class="panel-title languageEn">Books and chapters</h3>
+						
+						</div>
+						<div class="panel-body">
+							<ul>
+							<!-- 
+								<li class="bib" id="chHCP"> Gaio M., Moncla L., <a class="bib" href=""> Geoparsing and geocoding places in a dynamic space context: The case of hiking descriptions</a>. <em> Chapitre de livre dans "The Semantics of Dynamic Space in French"</em>, M. Aurnague & D. Stosic (Eds.), collection "Human Cognitive Processing" (HCP), Cognitive Foundations of Language Structure and Use J. Benjamins, pp. 353—386  July 2019   https://doi.org/10.1075/hcp.66.10gai. 
+								</li>
+								-->
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Posters</h3>
+							<h3 class="panel-title languageEn">Posters</h3>
+						</div>
+						<div class="panel-body">
+							<ul>
+                                <li class="bib" id="sageo2017">Ana-Maria Olteanu-Raimond, Paule-Annick Davoine, Mauro Gaio, Eric Gouarderes, Marie-Dominique Van Damme et al., <a class="bib" href="https://hal.archives-ouvertes.fr/hal-01649156">Projet CHOUCAS : Intégration de données hétérogènes et raisonnement spatial pour l'aide à la localisation des victimes en montagne</a>. <em> Spatial Analysis and GEOmatics 2017 </em>, Rouen, France, 3-6 Novembre 2017. 〈hal-01649156〉
+									<span class="hal"><input type="image" src="img/icons/bibtex.png" alt="BibTeX entry for this article" title="BibTeX entry for this article" onclick="window.open('bib/sageo_17.bib','BibTex','width=800,height=200,top=100,left=100,scrollbars=yes,resizable=yes');"></span>
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01649156/file/Choucas_Sage_o2017_resoumis1509.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger le document" title="Full Access"></a>
+                                </li>
+                                <li class="bib" id="JR2018m">Mattia Bunel, Cécile Duchêne, Ana-Maria Olteanu-Raimond,<a class="bib" > Modélisation et raisonnement spatial flous pour l'aide à la localisation de victimes en montagne</a>. <em> 27es journées de la Recherche </em>, Cité Descartes, Marne-la-Vallée, les 22 et 23 mars 2018. 〈hal-01806891〉
+									<span class="hal"><input type="image" src="img/icons/bibtex.png" alt="BibTeX entry for this article" title="BibTeX entry for this article" onclick="window.open('bib/jrbunel_18.bib','BibTex','width=800,height=200,top=100,left=100,scrollbars=yes,resizable=yes');"></span>
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01806891/document" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger le document" title="Full Access"></a>
+                                </li>
+                                <li class="bib" id="JR2018a">Amine Medad, Mauro Gaio, Sébastien Mustière, <a class="bib" > Localisation automatique des points d'intérêt par la mise en correspondance du texte narratif et de la trace GPS</a>. <em> 27es journées de la Recherche </em>, Cité Descartes, Marne-la-Vallée, les 22 et 23 mars 2018. 
+									<a href="doc/Poster_Medad_et_al.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger le document" title="Full Access"></a>
+                                </li>
+                                <!-- liste li -->	
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Livrables</h3>
+							<h3 class="panel-title languageEn">Deliverables</h3>
+							
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li class="bib" id="L0.1">Livrable 0.4 : Définition fil rouge 
+									<a href="livrables/L0.4 Fil Rouge Choucas.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger le document" title="Télécharger le document"></a>
+									<!--<a href="filrouge/indexfilrouge.html" class="imgLink"><img src="img/icons/mozilla.jpg" height="16" alt="Notre fil rouge en images" title="Notre fil rouge en images"></a>-->
+								</li>                           
+								<li class="bib" id="L11"> L1.1	Description du corpus de matériaux bruts (Interviews, Enregistrements d’appels) (Lot 1).
+								</li>  
+								<li class="bib" id="L11bis"> L1.1bis Template de saisie des expressions (Lot 1).
+								</li>  
+								<li class="bib" id="L211"> L 2.1.1	État de l'art sur l’annotation et la catégorisation des entités spatiales (ES) nommées ou génériques (Lot2).
+								</li> 
+								<li class="bib" id="L212"> L 2.1.2	Conception et implantation de méthodes permettant l'identification des différentes ES (Lot2).
+								</li> 
+								<li class="bib" id="L221"> L 2.2.1	État de l'art sur les méthodes de désambiguïsation (Lot2).
+								</li> 
+								<li class="bib" id="L231"> L 2.3.1	État de l'art sur les méthodes l’extraction des relations spatiales et d’appariement avec des traces GPS (Lot2).
+								</li>  
+								<li class="bib" id="L241"> L 2.4.1	Étude exploratoire de données alternatives (Lot2).
+								</li>  
+								<li class="bib" id="L311"> L 3.1.1	Etat de l’art des modèles flous (Lot3).
+								</li>  
+								<li class="bib" id="L321"> L 3.2.1	Etat de l’art sur les prédicats (Lot3).
+								</li>  
+								<li class="bib" id="L421"> L4.2.1	Visualisation des données incertaines et imparfaites (Lot4).
+								</li>  
+								<li class="bib" id="L511"> L 5.1.1	Spécifications du DSL (version alpha) (Lot5).
+								</li> 
+								<li class="bib" id="L521"> L 5.2.1	État de l’art sur les classifications de services (Lot5).
+								</li>   	
+							</ul>
+						</div>
+					</div>
+                    <div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Vulgarisation</h3>
+							<h3 class="panel-title languageEn">Dissemination</h3>
+							
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li class="bib" id="IGNMag18">Projet Choucas : Mieux localiser les victimes pour mieux les secourir, <em> IGN Magazine N°89, 2018. </em>
+									 <a href="doc/ign_mag_89.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger le document" title="Télécharger le document"></a>
+                                </li>  
+                                                           
+                            <li class="bib" id="EDPau2018">Participation d'Amine Medad et Meriem Sabrine Halilali aux journées doctoriales transfrontalières, <a class="bib" href="http://ed-sea.univ-pau.fr/fr/formation/doctoriales-transfrontalieres.html"> Doctoriales transfrontalières UPPA-UPV</a>, Saint Sébastien, Espagne, 9 au 12 juillet 2018.  
+                            </li>   
+                                <!-- liste li -->	
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<!-- section ressources -->
+	<section id="ressources" class="section appear clearfix">
+		<div class="container">
+			<div class="row mar-bot50">
+				<div class="col-md-offset-3 col-md-6">
+					<div class="section-header">
+						<h2 class="section-heading animated" data-animation="bounceInUp">Ressources</h2>
+						<!--<p class="languageFr">Liste des publications du projet.</p>-->
+						<!--<p class="languageEn">List of publications related of the project.</p>-->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Ontologies</h3>
+							<h3 class="panel-title languageEn">Ontologies</h3>
+							
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li class="bib" id="oac"> Ontologie d'Alerte CHOUCAS (OAC) <a href="http://purl.org/oac" class="imgLink"><img src="img/icons/mozilla.jpg" height="16" alt="OAC" title="OAC"></a>
+								</li>
+								<li class="bib" id="oac"> Ontologie d'Objets de Repères (OOR)
+									
+									<a href="doc/ontologies/Description OOR.pdf" class="imgLink"><img src="img/icons/pdf_icon.gif" height="16" alt="Télécharger la description" title="Télécharger la description"></a>
+                                
+									<a class="languageFr" href="doc/ontologies/index-fr.html" class="imgLink"><img src="img/icons/mozilla.jpg" height="16" alt="OOR" title="OOR"></a>
+									<a class="languageEn" href="doc/ontologies/index-en.html" class="imgLink"><img src="img/icons/mozilla.jpg" height="16" alt="OOR" title="OOR"></a>
+								</li>
+								<li class="bib" id="oac"> Ontologie de Relations de Localisation (ORL).
+								</li>									
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Plug-ins</h3>
+							<h3 class="panel-title languageEn">Plug-ins</h3>
+							
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li class="bib" id="oac"> <a class="bib" href="https://github.com/ANRChoucas/PluginChoucas"> Plug-in QGIS Chargement données VGI</a>. Ce plug-in a comme objectif de faciliter l'accès et la visualisation de données de type point (refuges, plans d’eau...) et de type ligne (itinéraires de randonnée), provenant essentiellement de sites collaboratif.
+								</li>
+								<li class="bib" id="oac"> <a class="bib" href="https://github.com/ANRChoucas/choucas_visibility"> Plug-in QGIS de calculs de visibilité active</a>. Ce plug-in permet des calculs de visibilité passive, totale/partielle, et tests de sensibilité aux données en entrée.
+								</li>
+								<li class="bib" id="oac"> <a class="bib" href="https://github.com/mgaudin/Hy2roresO"> Plug-in QGIS Hy2roresO</a>. Ce plug-in permet la hiérarchisation automatique de réseaux hydrographiques.
+								</li>
+															
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+				<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title languageFr">Prototypes</h3>
+							<h3 class="panel-title languageEn">Protoypes</h3>
+						
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li class ="class="bib" id="oac"> Différents état de l'environnement de géovisualisation GASPAR pour la localisation des victimes en montagne.
+										
+									<div class="container">
+										<p class="languageFr"><strong>Vidéo GASPAR :<a href="http://steamer.imag.fr/wp-content/uploads/2019/03/choucas_demo.mp4"> L'état de l'interface en Juillet 2018</a></strong></p>
+										<p class="languageEn"><strong>GASPAR video: <a href="http://steamer.imag.fr/wp-content/uploads/2019/03/choucas_demo.mp4">State of the interface in July 2018</a></strong></p>
+										<p class="languageFr"><strong>Vidéo GASPAR :<a href="https://steamer.imag.fr/wp-content/uploads/2019/10/video_proto_jacques.mp4"> L'état de l'interface en Juillet 2019</a></strong></p>
+										<p class="languageEn"><strong>GASPAR video: <a href="https://steamer.imag.fr/wp-content/uploads/2019/10/video_proto_jacques.mp4">State of the interface in July 2019</a></strong></p>
+										<p class="languageFr"> <strong>Vidéo GASPAR :<a href="https://steamer.imag.fr/wp-content/uploads/2019/10/screencast_gaspar_usecase_audio.mp4"> L'état de l'interface en Septembre 2019 - cas d'étude commenté</a></strong></p>
+										<p class="languageEn"><strong>GASPAR video: <a href="https://steamer.imag.fr/wp-content/uploads/2019/10/screencast_gaspar_usecase_audio.mp4">State of the interface in September 2019 – Commented use-case</a></strong></p>
+										<p class="languageFr"><strong>Vidéo GASPAR :<a href="https://steamer.imag.fr/wp-content/uploads/2019/10/screencast_gaspar_usecase_audio.mp4"> L'état de l'interface en Septembre 2019 - un tour guidé </a></strong></p>
+										<p class="languageEn"><strong>GASPAR video: <a href="https://steamer.imag.fr/wp-content/uploads/2019/10/screencast_gaspar_usecase_audio.mp4">State of the interface in September 2019 – Guided tour </a></strong></p>
+									</div>	
+								</li>							
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section mar-top50 mar-bot50"></section>
+
+	<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+	<section id="footer" class="section footer">
+		<div class="container">
+			<div class="row align-center copyright">
+					<div class="col-sm-12"><p>Copyright &copy; 2017 IGN - Institut National de l'Information Géographique et Forestière</p></div>
+			</div>
+		</div>
+	</section>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="js/skrollr.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/validate.js"></script>
+	<script src="js/main.js"></script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  </body>
+</html>
