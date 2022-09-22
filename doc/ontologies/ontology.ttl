@@ -1,0 +1,4682 @@
+@prefix : <http://purl.org/choucas.ign.fr/oor#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/choucas.ign.fr/oor> .
+
+<http://purl.org/choucas.ign.fr/oor> rdf:type owl:Ontology ;
+                                      owl:versionIRI <http://purl.org/choucas.ign.fr/oor/1.0.0> ;
+                                      <http://creativecommons.org/ns#licence> <http://creativecommons.org/licenses/by/4.0/> ;
+                                      <http://purl.org/dc/elements/1.1/creator> "1 - Ana-Maria Raimond <Ana-Maria.Raimond"@ign.fr> ,
+                                                                                "2 - Sebastien Mustiere <Sebastien.Mustiere"@ensg.eu> ,
+                                                                                "3 - Mattia Bunel <Mattia.Bunel"@ign.fr> ,
+                                                                                "4 - Catherine Domingues <Catherine.Domingues"@ign.fr> ,
+                                                                                "5 - Cecile Duchene <Cecile.Duchene"@ensg.eu> ,
+                                                                                "6 - Laurence Jolivet <Laurence.Jolivet"@ign.fr> ,
+                                                                                "7 - Marie-Dominique Van-Damme <Marie-Dominique.Van-Damme"@ign.fr> ;
+                                      <http://purl.org/dc/elements/1.1/description> """Ontologie des objets géographiques pouvant servir d'objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. 
+
+Cette ontologie a été proposée dans le cadre du projet Choucas (choucas.ign.fr). Elle est inspiré de l'Ontologie GeOnto (Mustière et al., 2011) et LFRO (Sinha, Gaurav et al. 2018. )
+
+Mustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d'alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180
+
+Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."""@fr ,
+                                                                                    """Ontology of geographical objects used as reference objects in a mountain context.
+
+This ontology is proposed during ANR Choucas project (choucas.ign.fr). It is inspired from  GeOnto Ontology  (Mustière et al., 2011) et LFRO ontology (Sinha, Gaurav et al. 2018).
+
+Mustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d'alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180
+
+Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."""@en ;
+                                      <http://purl.org/dc/elements/1.1/issued> "2020-01-28" ;
+                                      <http://purl.org/dc/elements/1.1/modified> "2020-01-28" ;
+                                      <http://purl.org/dc/elements/1.1/publisher> "ANR CHOUCAS - LASTIG/IGN" ;
+                                      <http://purl.org/dc/elements/1.1/rights> "Copyright © 2020 Choucas/LASTIG"@en ;
+                                      <http://purl.org/dc/elements/1.1/title> "Ontologie des objets de référence"@fr ,
+                                                                              "Spatial reference objects ontology"@en ;
+                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "oor" ;
+                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "URI DU NAMESPACE" ;
+                                      owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#licence
+<http://creativecommons.org/ns#licence> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/issued
+<http://purl.org/dc/elements/1.1/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#altLabel
+rdfs:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#prefLabel
+rdfs:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/choucas.ign.fr/oor#aPourCouleur
+:aPourCouleur rdf:type owl:ObjectProperty ;
+              rdfs:comment "Pour modéliser la couleur d'un objet (ex. une maison jaune)"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aPourForme
+:aPourForme rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:comment "pour modéliser la forme d'un objet (ex. un lac rond)"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#peutEtreCoLocaliséAvec
+:peutEtreCoLocaliséAvec rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Pour modéliser des objets liés sur le terrain ; il s’agit des objets qui peuvent être en concurrence de par leur nature ou leur fonction (ex : port  êtreColocaliséAvec  quai ; rymayé êtreColocaliséAvec  glacier ; pied êtreColocaliséAvec  montagne) ;"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#peutEtreComposéDe
+:peutEtreComposéDe rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Permet de modéliser le fait qu'en objet peut peut être composé par plusiers objets"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#peutEtreConfonduAvec
+:peutEtreConfonduAvec rdf:type owl:ObjectProperty ;
+                      rdfs:comment "pour modéliser les objets qui peuvent être confondu de par leur forme (ex : ligne électrique peutEtreConfonduAvec cable transporteur)"@fr .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées dans cette version d’OOR"@fr .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/choucas.ign.fr/oor#bruyère
+:bruyère rdf:type owl:DatatypeProperty ;
+         rdfs:label "bruyère"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#buis
+:buis rdf:type owl:DatatypeProperty ;
+      rdfs:label "buis"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#conifère
+:conifère rdf:type owl:DatatypeProperty ;
+          rdfs:label "conifère"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#feuillus
+:feuillus rdf:type owl:DatatypeProperty ;
+          rdfs:label "feuillus"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#hêtraie
+:hêtraie rdf:type owl:DatatypeProperty ;
+         rdfs:label "hêtraie"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#mélezin
+:mélezin rdf:type owl:DatatypeProperty ;
+         rdfs:label "mélezin"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#résineux
+:résineux rdf:type owl:DatatypeProperty ;
+          rdfs:label "résineux"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#sapin
+:sapin rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/choucas.ign.fr/oor#abattoir
+:abattoir rdf:type owl:Class ;
+          rdfs:subClassOf :installation_d_élevage ;
+          rdfs:altLabel "slaughter-house"@en ;
+          rdfs:prefLabel "abattoir"@en ,
+                         "abattoir"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#abreuvoir
+:abreuvoir rdf:type owl:Class ;
+           rdfs:subClassOf :équipement_agricole ;
+           rdfs:prefLabel "abreuvoir"@fr ,
+                          "watering-trough"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#abri_de_montagne
+:abri_de_montagne rdf:type owl:Class ;
+                  rdfs:subClassOf :équipement_agricole ;
+                  rdfs:altLabel "abri"@fr ,
+                                "mountain refuge hut"@en ;
+                  rdfs:prefLabel "abri de montagne"@fr ,
+                                 "montain shelter"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#agglomération
+:agglomération rdf:type owl:Class ;
+               rdfs:subClassOf :zone_bâtie ;
+               rdfs:altLabel "agglomeration"@en ,
+                             "agglomération"@fr ,
+                             "bourg"@fr ,
+                             "bourgade"@en ,
+                             "bourgade"@fr ,
+                             "built-up area"@en ,
+                             "chef-lieu"@fr ,
+                             "community"@en ,
+                             "conurbation"@en ,
+                             "localité"@fr ,
+                             "station"@fr ,
+                             "station thermale"@fr ,
+                             "thermal station"@fr ,
+                             "village"@fr ,
+                             "winter sport resort"@fr ;
+               rdfs:prefLabel "town"@en ,
+                              "ville"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aiguille
+:aiguille rdf:type owl:Class ;
+          rdfs:subClassOf :convexe ;
+          rdfs:altLabel "spine"@en ,
+                        "stack"@en ;
+          rdfs:comment "Montagne de forme effilée"@fr ,
+                       "Montagne dont le sommet a une forme de dent"@fr ;
+          rdfs:prefLabel "aiguille"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :aiguille ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Montagne de forme effilée"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/aiguille"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aire_d_autoroute
+:aire_d_autoroute rdf:type owl:Class ;
+                  rdfs:subClassOf :infrastructure_de_transport_routier ;
+                  rdfs:altLabel "aire de repos"@fr ,
+                                "aire de service"@fr ,
+                                "service area"@en ;
+                  rdfs:prefLabel "aire d'autoroute"@fr ,
+                                 "rest area"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aire_de_pique-nique
+:aire_de_pique-nique rdf:type owl:Class ;
+                     rdfs:subClassOf :bâtiment_et_installation_sport_et_loisirs ;
+                     rdfs:prefLabel "aire de pique-nique"@fr ,
+                                    "picnic site"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aire_de_péage
+:aire_de_péage rdf:type owl:Class ;
+               rdfs:subClassOf :infrastructure_de_transport_routier ;
+               rdfs:altLabel "toll"@en ,
+                             "toll booths"@en ,
+                             "toll-house"@en ;
+               rdfs:prefLabel "aire de péage"@fr ,
+                              "toll-gate"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#amer
+:amer rdf:type owl:Class ;
+      rdfs:subClassOf :infrastructure_de_transport_maritime_ou_fluvial ;
+      rdfs:altLabel "balise"@fr ,
+                    "beacon"@en ,
+                    "bouée"@fr ,
+                    "buoy"@en ,
+                    "feu"@fr ,
+                    "lighthouse"@en ,
+                    "phare"@fr ,
+                    "sea-mark"@en ,
+                    "tourelle"@fr ;
+      rdfs:prefLabel "amer"@fr ,
+                     "seamark"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#anneau_de_glace
+:anneau_de_glace rdf:type owl:Class ;
+                 rdfs:subClassOf :patinoire ;
+                 rdfs:prefLabel "anneau de glace"@fr ,
+                                "ice ring"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#antenne
+:antenne rdf:type owl:Class ;
+         rdfs:subClassOf :infrastructure_de_communication_hertzienne ;
+         rdfs:altLabel "aerial"@en ,
+                       "dish"@en ,
+                       "relais"@fr ;
+         rdfs:prefLabel "antenna"@en ,
+                        "antenne"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aqueduc
+:aqueduc rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d'eau> ;
+         rdfs:prefLabel "aqueduc"@fr ,
+                        "aqueduct"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#arbre
+:arbre rdf:type owl:Class ;
+       rdfs:subClassOf :végétation_arborée ;
+       rdfs:prefLabel "arbre"@fr ,
+                      "tree"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#arcade
+:arcade rdf:type owl:Class ;
+        rdfs:subClassOf :monument ;
+        rdfs:altLabel "arc de triomphe"@fr ,
+                      "arch"@en ;
+        rdfs:prefLabel "arcade"@en ,
+                       "arcade"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#arcosse
+:arcosse rdf:type owl:Class ;
+         rdfs:subClassOf :balisage ;
+         rdfs:prefLabel "arcos"@en ,
+                        "arcosse"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#arrondissement
+:arrondissement rdf:type owl:Class ;
+                rdfs:subClassOf :division_territoriale_administrative ;
+                rdfs:prefLabel "arrondissement"@fr ,
+                               "arrondissement (department subdivision)" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#arête
+:arête rdf:type owl:Class ;
+       rdfs:subClassOf :crête ;
+       rdfs:comment "Crête rocheuse"@fr ;
+       rdfs:prefLabel "arête"@fr ,
+                      "edge"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :arête ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Crête rocheuse"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/ar%C3%AAte"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#auvent
+:auvent rdf:type owl:Class ;
+        rdfs:subClassOf :équipement_de_montagne ;
+        rdfs:altLabel "protective scaffold"@en ;
+        rdfs:prefLabel "auvent"@fr ,
+                       "awning"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aven
+:aven rdf:type owl:Class ;
+      rdfs:subClassOf :gouffre ;
+      rdfs:altLabel "embùt"@fr ;
+      rdfs:isDefinedBy "Puits naturel aux parois abruptes, creusé dans un plateau calcaire par les eaux d'infiltration et formé, soit par dissolution, soit par effondrement de la voûte de cavités karstiques"@fr ;
+      rdfs:prefLabel "aven"@fr ,
+                     "sink hole"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :aven ;
+   owl:annotatedProperty rdfs:isDefinedBy ;
+   owl:annotatedTarget "Puits naturel aux parois abruptes, creusé dans un plateau calcaire par les eaux d'infiltration et formé, soit par dissolution, soit par effondrement de la voûte de cavités karstiques"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/aven"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aérogare
+:aérogare rdf:type owl:Class ;
+          rdfs:subClassOf :infrastructure_de_transport_aérien ;
+          rdfs:altLabel "air terminal"@en ;
+          rdfs:prefLabel "aérogare"@fr ,
+                         "terminal d'aéroport"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aéroport
+:aéroport rdf:type owl:Class ;
+          rdfs:subClassOf :infrastructure_de_transport_aérien ;
+          rdfs:prefLabel "airport"@en ,
+                         "aéroport"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bac
+:bac rdf:type owl:Class ;
+     rdfs:subClassOf :franchissement ;
+     rdfs:altLabel "ferry"@fr ;
+     rdfs:prefLabel "bac"@fr ,
+                    "ferry"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#balcon
+:balcon rdf:type owl:Class ;
+        rdfs:subClassOf :replat ;
+        rdfs:comment "Plate-forme naturelle offrant un point de vue sur un paysage situé en contrebas."@fr ;
+        rdfs:prefLabel "balcon"@fr ,
+                       "balcony"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :balcon ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Plate-forme naturelle offrant un point de vue sur un paysage situé en contrebas."@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/balcon"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#balisage
+:balisage rdf:type owl:Class ;
+          rdfs:subClassOf :construction ;
+          rdfs:comment "Marque concrète ponctuelle d'un itinéraire ou d'une frontière"@fr ;
+          rdfs:prefLabel "balisage"@fr ,
+                         "beaconing"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#banc
+:banc rdf:type owl:Class ;
+      rdfs:subClassOf :réseau_hydrographique_naturel ;
+      rdfs:altLabel "banc de sable"@fr ,
+                    "ledge"@en ,
+                    "mudbank"@en ,
+                    "sandbank"@en ,
+                    "tidal flat"@en ;
+      rdfs:prefLabel "banc"@fr ,
+                     "bank"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#barrage
+:barrage rdf:type owl:Class ;
+         rdfs:subClassOf :équipement_de_protection_hydrographique ;
+         rdfs:altLabel "barrage"@en ,
+                       "weir"@en ;
+         rdfs:prefLabel "barrage"@fr ,
+                        "dam"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#barrière
+:barrière rdf:type owl:Class ;
+          rdfs:subClassOf :limite_matérialisée ;
+          rdfs:altLabel "gate"@en ;
+          rdfs:prefLabel "barrier"@en ,
+                         "barrière"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bassin_fermé
+:bassin_fermé rdf:type owl:Class ;
+              rdfs:subClassOf :depression_fermée ;
+              rdfs:comment "Grande dépression immergée, qui peut l'être, ou qui l'a été."@fr ;
+              rdfs:prefLabel "bassin fermé"@en ,
+                             "closed basin"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#batiment_culturel
+:batiment_culturel rdf:type owl:Class ;
+                   rdfs:subClassOf :batiment_et_installation ;
+                   rdfs:prefLabel "bâtiment culturel"@fr ,
+                                  "cultural building"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#batiment_et_installation
+:batiment_et_installation rdf:type owl:Class ;
+                          rdfs:subClassOf :construction ;
+                          rdfs:comment "Construction constituant un lieu protecteur pour des personnes, des animaux ou des choses et les éléments associés tout en restant dans un espace circonscrit ainsi que les édifices"@fr ;
+                          rdfs:prefLabel "building and installation"@en ,
+                                         "bâtiment et installation"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#batiment_militaire
+:batiment_militaire rdf:type owl:Class ;
+                    rdfs:subClassOf :batiment_et_installation ;
+                    rdfs:prefLabel "bâtiment militaire"@fr ,
+                                   "military feature"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#batiments_et_installations_industriels
+:batiments_et_installations_industriels rdf:type owl:Class ;
+                                        rdfs:subClassOf :batiment_et_installation ;
+                                        rdfs:prefLabel "bâtiments et installations industriels"@fr ,
+                                                       "industrial feature"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bief
+:bief rdf:type owl:Class ;
+      rdfs:subClassOf :cours_d_eau_artificiel ;
+      rdfs:altLabel "level"@en ,
+                    "reach"@en ;
+      rdfs:prefLabel "bay"@en ,
+                     "bief"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bivouac
+:bivouac rdf:type owl:Class ;
+         rdfs:subClassOf :bâtiment_et_installation_sport_et_loisirs ;
+         rdfs:comment "Un bivouac est un campement rudimentaire permettant de passer la nuit en pleine nature"@fr ;
+         rdfs:prefLabel "bivouac"@en ,
+                        "bivouac"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#blockhaus
+:blockhaus rdf:type owl:Class ;
+           rdfs:subClassOf :batiment_militaire ;
+           rdfs:altLabel "bunker"@en ,
+                         "casemate"@fr ,
+                         "pillbox"@en ;
+           rdfs:prefLabel "blockhaus"@fr ,
+                          "blockhouse"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#borne
+:borne rdf:type owl:Class ;
+       rdfs:subClassOf :équipement_scientifique_et_technique ;
+       rdfs:prefLabel "marker"@en ,
+                      "milestone"@en ,
+                      "équipement géodésique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#borne_frontière
+:borne_frontière rdf:type owl:Class ;
+                 rdfs:subClassOf :balisage ;
+                 rdfs:altLabel "boundary beacon"@en ,
+                               "boundary monument"@en ,
+                               "boundary stone"@en ;
+                 rdfs:prefLabel "borne frontière"@fr ,
+                                "boundary marker"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#borne_géodésique
+:borne_géodésique rdf:type owl:Class ;
+                  rdfs:subClassOf :borne ;
+                  rdfs:prefLabel "borne géodésique"@fr ,
+                                 "geodetic point"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#borne_kilométrique
+:borne_kilométrique rdf:type owl:Class ;
+                    rdfs:subClassOf :balisage ;
+                    rdfs:prefLabel "borne kilométrique"@fr ,
+                                   "odometer"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#broussaille
+:broussaille rdf:type owl:Class ;
+             rdfs:subClassOf :végétation_basse ;
+             rdfs:altLabel "garrigue"@en ,
+                           "garrigue"@fr ,
+                           "heath"@en ,
+                           "lande"@fr ,
+                           "maquis"@en ,
+                           "maquis"@fr ;
+             rdfs:prefLabel "broussaille"@fr ,
+                            "scrub growth"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#brèche
+:brèche rdf:type owl:Class ;
+        rdfs:subClassOf :depression_ouverte ;
+        rdfs:comment "Dépression dans une chaîne de montagne ou une crête rocheuse souvent utilisée comme passage"@fr ;
+        rdfs:prefLabel "breach"@en ,
+                       "brèche"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bureau_de_guide
+:bureau_de_guide rdf:type owl:Class ;
+                 rdfs:subClassOf :bâtiment_et_installation_sport_et_loisirs ;
+                 rdfs:prefLabel "bureau de guide"@fr ,
+                                "guide office"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bureau_de_poste
+:bureau_de_poste rdf:type owl:Class ;
+                 rdfs:subClassOf :bâtiment_administratif ;
+                 rdfs:prefLabel "bureau de poste"@fr ,
+                                "post office"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_administratif
+:bâtiment_administratif rdf:type owl:Class ;
+                        rdfs:subClassOf :batiment_et_installation ;
+                        rdfs:prefLabel "administrative building"@en ,
+                                       "bâtiment administratif"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_commercial
+:bâtiment_commercial rdf:type owl:Class ;
+                     rdfs:subClassOf :batiment_et_installation ;
+                     rdfs:prefLabel "bâtiment commercial"@fr ,
+                                    "office building"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation_sport_et_loisirs
+:bâtiment_et_installation_sport_et_loisirs rdf:type owl:Class ;
+                                           rdfs:subClassOf :batiment_et_installation ;
+                                           rdfs:prefLabel "building and sport and leisure instalations"@en ,
+                                                          "bâtiment et installation sport et loisirs"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_et_installations_agricoles
+:bâtiment_et_installations_agricoles rdf:type owl:Class ;
+                                     rdfs:subClassOf :batiment_et_installation ;
+                                     rdfs:prefLabel "bâtiment et installation agricoles"@fr ,
+                                                    "farm building"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_religieux
+:bâtiment_religieux rdf:type owl:Class ;
+                    rdfs:subClassOf :batiment_et_installation ;
+                    rdfs:prefLabel "bâtiment religieux"@fr ,
+                                   "christian religious"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_remarquable
+:bâtiment_remarquable rdf:type owl:Class ;
+                      rdfs:subClassOf :batiment_et_installation ,
+                                      :élément_du_patrimoine ;
+                      rdfs:prefLabel "bâtiment remarquable"@fr ,
+                                     "touristic building"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cabane
+:cabane rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation> ;
+        rdfs:altLabel "abri"@fr ,
+                      "baraque"@fr ,
+                      "bungalow"@en ,
+                      "bungalow"@fr ,
+                      "cabin"@en ,
+                      "hutte"@en ,
+                      "shelter"@en ;
+        rdfs:prefLabel "cabane"@fr ,
+                       "hut"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#caillou
+:caillou rdf:type owl:Class ;
+         rdfs:subClassOf :pierrier ;
+         rdfs:prefLabel "caillou"@fr ,
+                        "pebble"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#calvaire
+:calvaire rdf:type owl:Class ;
+          rdfs:subClassOf :monument_religieux ;
+          rdfs:prefLabel "calvaire"@fr ,
+                         "calvary"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#camp_militaire
+:camp_militaire rdf:type owl:Class ;
+                rdfs:subClassOf :zone_militaire ;
+                rdfs:prefLabel "camp militaire"@fr ,
+                               "military camp"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#campanile
+:campanile rdf:type owl:Class ;
+           rdfs:subClassOf :monument_religieux ;
+           rdfs:prefLabel "campanile"@en ,
+                          "campanile"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#camping
+:camping rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation> ;
+         rdfs:altLabel ""@en ,
+                       "bungalow"@en ,
+                       "bungalow"@fr ,
+                       "camp"@fr ,
+                       "camping grounds"@en ,
+                       "camping site"@en ,
+                       "caravaning"@fr ,
+                       "tent"@en ,
+                       "tente"@fr ,
+                       "terrain de camping"@fr ;
+         rdfs:prefLabel "camping"@fr ,
+                        "campsite"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#canal
+:canal rdf:type owl:Class ;
+       rdfs:subClassOf :cours_d_eau_artificiel ;
+       rdfs:altLabel "channel"@en ;
+       rdfs:prefLabel "canal"@en ,
+                      "canal"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#canal_de_navigation
+:canal_de_navigation rdf:type owl:Class ;
+                     rdfs:subClassOf :infrastructure_de_transport_maritime_ou_fluvial ;
+                     rdfs:prefLabel "canal de navigation"@fr ,
+                                    "navigation canal"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#canalisation
+:canalisation rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d'eau> ;
+              rdfs:altLabel "conduite forcée"@fr ,
+                            "galerie d'amenée d'eau"@fr ,
+                            "main"@en ,
+                            "pipe"@en ;
+              rdfs:prefLabel "canalisation"@fr ,
+                             "conduit"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#canon_à_neige
+:canon_à_neige rdf:type owl:Class ;
+               rdfs:subClassOf :équipement_de_sports_d_hiver ;
+               rdfs:prefLabel "canon à neige"@fr ,
+                              "snowthrower"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#canton
+:canton rdf:type owl:Class ;
+        rdfs:subClassOf :division_territoriale_administrative ;
+        rdfs:prefLabel "canton"@en ,
+                       "canton"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#canyon
+:canyon rdf:type owl:Class ;
+        rdfs:subClassOf :depression_ouverte ;
+        rdfs:comment "Vallée profonde avec des escarpements très raides. Un canyon est généralement situé dans les zones arides et est considéré plus grand qu'une gorge"@fr ;
+        rdfs:prefLabel "canyon"@en ,
+                       "canyon"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :canyon ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Vallée profonde avec des escarpements très raides. Un canyon est généralement situé dans les zones arides et est considéré plus grand qu'une gorge"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/canyon"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#carrefour
+:carrefour rdf:type owl:Class ;
+           rdfs:subClassOf :infrastructure_de_transport_routier ;
+           rdfs:altLabel "embranchement"@fr ,
+                         "intersection"@en ,
+                         "intersection"@fr ,
+                         "junction"@en ;
+           rdfs:prefLabel "carrefour"@fr ,
+                          "crossroads"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cascade
+:cascade rdf:type owl:Class ;
+         rdfs:subClassOf :réseau_hydrographique_naturel ;
+         rdfs:altLabel "cascade"@en ,
+                       "chute d'eau"@fr ,
+                       "salto"@es ,
+                       "saut"@fr ;
+         rdfs:prefLabel "cascade"@fr ,
+                        "waterfall"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#caserne
+:caserne rdf:type owl:Class ;
+         rdfs:subClassOf :batiment_militaire ;
+         rdfs:altLabel "barracks"@en ,
+                       "barraquement"@fr ,
+                       "camp militaire"@fr ;
+         rdfs:prefLabel "barracks"@en ,
+                        "caserne"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#caserne_de_pompiers
+:caserne_de_pompiers rdf:type owl:Class ;
+                     rdfs:subClassOf :bâtiment_administratif ;
+                     rdfs:altLabel "SAMU"@fr ,
+                                   "firehouse"@en ,
+                                   "poste de secours"@fr ;
+                     rdfs:prefLabel "caserne de pompiers"@fr ,
+                                    "fire station"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#caverne
+:caverne rdf:type owl:Class ;
+         rdfs:subClassOf :grotte ;
+         rdfs:altLabel "abime"@fr ;
+         rdfs:comment "Cavité naturelle souterraine, fermée de tous côtés à l'exception d'une étroite ouverture et creusée dans une roche le plus souvent calcaire"@fr ;
+         rdfs:prefLabel "cavern"@en ,
+                        "caverne"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :caverne ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Cavité naturelle souterraine, fermée de tous côtés à l'exception d'une étroite ouverture et creusée dans une roche le plus souvent calcaire"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/caverne"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cavité
+:cavité rdf:type owl:Class ;
+        rdfs:subClassOf :depression_fermée ;
+        rdfs:altLabel "anfractuosité"@fr ,
+                      "creux"@fr ,
+                      "excavation"@en ,
+                      "excavation"@fr ,
+                      "galerie"@fr ,
+                      "hole"@en ,
+                      "trou"@fr ;
+        rdfs:comment "Espace creux, naturel ou artificiel, plus ou moins large et plus ou moins profond, fermé ou non, dans un corps solide"@fr ;
+        rdfs:prefLabel "cavity"@en ,
+                       "cavité"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :cavité ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Espace creux, naturel ou artificiel, plus ou moins large et plus ou moins profond, fermé ou non, dans un corps solide"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/cavit%C3%A9"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#centrale_électrique
+:centrale_électrique rdf:type owl:Class ;
+                     rdfs:subClassOf :batiments_et_installations_industriels ;
+                     rdfs:altLabel "centrale hydro-electrique"@fr ,
+                                   "centrale nucléaire"@fr ,
+                                   "centrale thermique"@fr ,
+                                   "electrical power plant"@en ,
+                                   "hydro-electric power plant"@en ,
+                                   "nuclear power plant"@en ,
+                                   "thermal power plant"@en ,
+                                   "éolienne"@fr ;
+                     rdfs:prefLabel "centrale électrique"@fr ,
+                                    "power station"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#centre
+:centre rdf:type owl:Class ;
+        rdfs:subClassOf :quartier ;
+        rdfs:altLabel "centre"@fr ,
+                      "chef lieu"@fr ;
+        rdfs:prefLabel "centre ville"@fr ,
+                       "town center"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#centre_de_soins
+:centre_de_soins rdf:type owl:Class ;
+                 rdfs:subClassOf :établissement_de_santé ;
+                 rdfs:altLabel "hospice"@fr ,
+                               "maison de repos"@fr ,
+                               "maison de retraite"@fr ,
+                               "maison médicale"@fr ,
+                               "senior center"@en ,
+                               "spa"@en ,
+                               "treatment center"@en ,
+                               "établissement thermal" ;
+                 rdfs:prefLabel "centre de soin"@fr ,
+                                "healthcare center"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#centre_historique
+:centre_historique rdf:type owl:Class ;
+                   rdfs:subClassOf :division_territoriale_administrative ;
+                   rdfs:prefLabel "centre historique"@fr ,
+                                  "old center"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#champ
+:champ rdf:type owl:Class ;
+       rdfs:subClassOf :zone_de_culture ;
+       rdfs:prefLabel "champ"@fr ,
+                      "field"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#champ_de_tir
+:champ_de_tir rdf:type owl:Class ;
+              rdfs:subClassOf :zone_militaire ;
+              rdfs:altLabel "rifle range"@en ;
+              rdfs:prefLabel "artillery range"@en ,
+                             "champ de tir"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#chaos
+:chaos rdf:type owl:Class ;
+       rdfs:subClassOf :pierrier ;
+       rdfs:altLabel "rockslide"@en ;
+       rdfs:comment "Amoncellement de blocs résultant de la désagrégation de roches granitiques ou gréseuses et d'éboulis"@fr ;
+       rdfs:prefLabel "chaos"@en ,
+                      "chaos"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :chaos ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Amoncellement de blocs résultant de la désagrégation de roches granitiques ou gréseuses et d'éboulis"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/chaos"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#chapelle
+:chapelle rdf:type owl:Class ;
+          rdfs:subClassOf :bâtiment_religieux ;
+          rdfs:altLabel "oratoire"@fr ,
+                        "oratorio"@en ;
+          rdfs:prefLabel "chapel"@en ,
+                         "chapelle"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#chaîne_de_montagne
+:chaîne_de_montagne rdf:type owl:Class ;
+                    rdfs:subClassOf :convexe ;
+                    rdfs:prefLabel "chaîne de montagnes"@fr ,
+                                   "range of mountains"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#chemin
+:chemin rdf:type owl:Class ;
+        rdfs:subClassOf :voie_de_communication_non_carrossable ;
+        rdfs:altLabel "allée"@fr ,
+                      "allée forestière"@fr ,
+                      "allée piétonne"@fr ,
+                      "chemin d'exploitation"@fr ,
+                      "chemin de débardage"@fr ,
+                      "chemin de halage"@fr ,
+                      "dirt road"@en ,
+                      "footpath"@en ,
+                      "footway"@en ,
+                      "forest road"@en ,
+                      "laie forestière"@fr ,
+                      "layon"@fr ,
+                      "ride"@en ,
+                      "sente"@fr ,
+                      "sentier"@fr ,
+                      "sentier équestre"@fr ,
+                      "skidding path"@en ,
+                      "track"@en ,
+                      "trail"@en ,
+                      "walkway"@en ;
+        rdfs:prefLabel "bridleway"@fr ,
+                       "chemin"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cheminée
+:cheminée rdf:type owl:Class ;
+          rdfs:subClassOf :équipement_industriel ;
+          rdfs:altLabel "factory chimney"@en ,
+                        "flare"@en ,
+                        "flare tower"@en ,
+                        "smokestack"@en ,
+                        "torchère"@fr ;
+          rdfs:prefLabel "cheminée"@fr ,
+                         "chimneystack"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#chourum
+:chourum rdf:type owl:Class ;
+         rdfs:subClassOf :depression_fermée ;
+         rdfs:comment "Cavité naturelle créusée par le vent et la pluie, où la neige peut s'accumuler"@fr ;
+         rdfs:prefLabel "chourum"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#château
+:château rdf:type owl:Class ;
+         rdfs:subClassOf :bâtiment_remarquable ;
+         rdfs:altLabel "calstel"@fr ,
+                       "château fort"@fr ,
+                       "fortified castel"@en ;
+         rdfs:prefLabel "castle"@en ,
+                        "château"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#château_d_eau
+:château_d_eau rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> ;
+               rdfs:prefLabel "château d'eau"@fr ,
+                              "water tower"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cimetière
+:cimetière rdf:type owl:Class ;
+           rdfs:subClassOf :infrastructure_service ;
+           rdfs:altLabel "burial-ground"@en ,
+                         "funérarium"@fr ,
+                         "graveyard"@en ,
+                         "nécropole"@fr ,
+                         "ossuaire"@fr ,
+                         "tombe"@fr ,
+                         "tombeau"@fr ;
+           rdfs:prefLabel "cemetery"@en ,
+                          "cimetière"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#circuit_automobile
+:circuit_automobile rdf:type owl:Class ;
+                    rdfs:subClassOf :piste_de_sport ;
+                    rdfs:altLabel "autodrome"@en ,
+                                  "autodrome"@fr ,
+                                  "circuit auto-moto"@fr ;
+                    rdfs:prefLabel "automobile-race track"@en ,
+                                   "circuit automobile"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cirque
+:cirque rdf:type owl:Class ;
+        rdfs:subClassOf :vallée ;
+        rdfs:altLabel "corrie"@en ;
+        rdfs:comment "Plaine de forme plus ou moins circulaire creusée dans les flancs d'un massif montagneux"@fr ;
+        rdfs:prefLabel "cirque"@en ,
+                       "cirque"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :cirque ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Plaine de forme plus ou moins circulaire creusée dans les flancs d'un massif montagneux"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/cirque"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#citerne
+:citerne rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> ;
+         rdfs:altLabel "cistern"@en ;
+         rdfs:prefLabel "citerne"@fr ,
+                        "tank"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#clairière
+:clairière rdf:type owl:Class ;
+           rdfs:subClassOf :ouverture ;
+           rdfs:altLabel "meadow"@en ;
+           rdfs:prefLabel "clairière"@fr ,
+                          "glade"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#clocher
+:clocher rdf:type owl:Class ;
+         rdfs:subClassOf :monument_religieux ;
+         rdfs:altLabel "bell-tower"@en ;
+         rdfs:prefLabel "clocher"@fr ,
+                        "steeple"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cluse
+:cluse rdf:type owl:Class ;
+       rdfs:subClassOf :depression_ouverte ;
+       rdfs:altLabel "clue"@fr ,
+                     "cross-valley"@en ,
+                     "transverse valley"@en ;
+       rdfs:comment "Passage étroit et escarpé, creusé perpendiculairement à une ligne montagneuse et qui fait communiquer deux vallées"@fr ;
+       rdfs:prefLabel "cluse"@en ,
+                      "cluse"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :cluse ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Passage étroit et escarpé, creusé perpendiculairement à une ligne montagneuse et qui fait communiquer deux vallées"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/cluse"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#clôture
+:clôture rdf:type owl:Class ;
+         rdfs:subClassOf :limite_matérialisée ;
+         rdfs:altLabel "fence"@en ;
+         rdfs:prefLabel "clôture"@fr ,
+                        "enclosure"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#col
+:col rdf:type owl:Class ;
+     rdfs:subClassOf :ensellement ;
+     rdfs:altLabel "collet"@fr ,
+                   "forclaz"@fr ,
+                   "hourquette"@fr ,
+                   "passage"@fr ;
+     rdfs:comment "Dépression entre deux espaces élevés"@en ;
+     rdfs:prefLabel "col"@fr ,
+                    "mountain pass"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :col ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Dépression entre deux espaces élevés"@en ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/col"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#colline
+:colline rdf:type owl:Class ;
+         rdfs:subClassOf :convexe ;
+         rdfs:comment "Relief de faible hauteur dont la pente est généralement douce"@en ;
+         rdfs:prefLabel "colline"@fr ,
+                        "hill"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :colline ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Relief de faible hauteur dont la pente est généralement douce"@en ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/colline"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#collège
+:collège rdf:type owl:Class ;
+         rdfs:subClassOf :établissement_d_enseignement ;
+         rdfs:altLabel "middle school"@en ,
+                       "school"@en ;
+         rdfs:prefLabel "collège"@fr ,
+                        "junior high school"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#combe
+:combe rdf:type owl:Class ;
+       rdfs:subClassOf :depression_ouverte ;
+       rdfs:altLabel "anticlinal valley"@en ,
+                     "coomb"@en ;
+       rdfs:comment "Petite vallée encaissée"@fr ;
+       rdfs:prefLabel "comb"@en ,
+                      "combe"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :combe ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Petite vallée encaissée"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/combe"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#communauté_de_communes
+:communauté_de_communes rdf:type owl:Class ;
+                        rdfs:subClassOf :division_territoriale_administrative ;
+                        rdfs:prefLabel "communauté de communes"@fr ,
+                                       "community of communes"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#commune
+:commune rdf:type owl:Class ;
+         rdfs:subClassOf :division_territoriale_administrative ;
+         rdfs:altLabel "locality"@en ;
+         rdfs:prefLabel "commune"@en ,
+                        "commune"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#complexe_sportif
+:complexe_sportif rdf:type owl:Class ;
+                  rdfs:subClassOf :équipement_sportif ;
+                  rdfs:altLabel "gradin"@fr ,
+                                "sports ground"@en ,
+                                "stade"@fr ,
+                                "stadium"@en ,
+                                "tribune"@fr ;
+                  rdfs:prefLabel "complexe sportif"@fr ,
+                                 "sports complex"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#concave
+:concave rdf:type owl:Class ;
+         rdfs:subClassOf :relief ;
+         rdfs:comment "Contient des formes de relief concaves"@fr ;
+         rdfs:prefLabel "concave"@en ,
+                        "concave"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#conduite_de_matière_première
+:conduite_de_matière_première rdf:type owl:Class ;
+                              rdfs:subClassOf :infrastructure_hydrocarbure ;
+                              rdfs:altLabel "gazoduc"@fr ,
+                                            "oléoduc"@fr ,
+                                            "pipeline"@fr ,
+                                            "raw material pipeline"@en ;
+                              rdfs:prefLabel "conduite hydrocarbure"@fr ,
+                                             "pipeline"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#conduite_forcée
+:conduite_forcée rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d'eau> ;
+                 rdfs:prefLabel "conduite forcée"@fr ,
+                                "forced pipe"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#confluence
+:confluence rdf:type owl:Class ;
+            rdfs:subClassOf :noeud_du_réseau_hydrographique_terrestre ;
+            rdfs:prefLabel "confluence"@en ,
+                           "confluence"@fr ,
+                           "confluent"@fr ,
+                           "river confluence"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#construction
+:construction rdf:type owl:Class ;
+              rdfs:comment "Contient toutes les constructions humaines dont la fonction apparente ne permet pas le rattachement aux classes hydrographie, végétation et relief"@fr ;
+              rdfs:prefLabel "construction"@en ,
+                             "construction"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#contrefort
+:contrefort rdf:type owl:Class ;
+            rdfs:subClassOf :chaîne_de_montagne ,
+                            :planaire_vertical ;
+            rdfs:altLabel "mountainside"@en ;
+            rdfs:comment "Petite chaîne de montagne longeant une chaîne principale; Peut aussi designer la bordure d'une montagne résultant d'une érosion d'une montagne"@fr ;
+            rdfs:prefLabel "contrefort"@fr ,
+                           "foothill"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#convexe
+:convexe rdf:type owl:Class ;
+         rdfs:subClassOf :relief ;
+         rdfs:altLabel "rise in the ground"@en ,
+                       "élévation"@fr ;
+         rdfs:comment "Contient des formes de relief convexe"@fr ;
+         rdfs:prefLabel "convex"@en ,
+                        "convexe"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#coopérative
+:coopérative rdf:type owl:Class ;
+             rdfs:subClassOf :installation_d_élevage ,
+                             :installation_de_culture ;
+             rdfs:prefLabel "co-operative stores"@en ,
+                            "coopérative"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#corniche
+:corniche rdf:type owl:Class ;
+          rdfs:subClassOf :escarpement ;
+          rdfs:comment "Escarpement abrupt de roches dures en surplomb d'une pente plus douce"@fr ;
+          rdfs:prefLabel "cornice"@en ,
+                         "corniche"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#corniche_de_neige
+:corniche_de_neige rdf:type owl:Class ;
+                   rdfs:subClassOf :crête ,
+                                   :glacier ;
+                   rdfs:comment "Amas de neige  souvent instable accumulé  par le vent le long d'une crête"@fr ;
+                   rdfs:prefLabel "corniche de neige"@fr ,
+                                  "snow cornice"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#coteau
+:coteau rdf:type owl:Class ;
+        rdfs:subClassOf :versant ;
+        rdfs:altLabel "hill-side"@en ;
+        rdfs:comment "Versant d'une petite colline"@fr ;
+        rdfs:prefLabel "coteau"@en ,
+                       "hillside"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#couloir
+:couloir rdf:type owl:Class ;
+         rdfs:subClassOf :depression_ouverte ;
+         rdfs:altLabel "Une partie creuse dans une paroie, neige, etc. qui peut servir de voie d'accès"@fr ;
+         rdfs:prefLabel "corridor"@en ,
+                        "couloir"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cours_d_eau
+:cours_d_eau rdf:type owl:Class ;
+             rdfs:subClassOf :réseau_hydrographique_naturel ;
+             rdfs:prefLabel "cours d'eau"@fr ,
+                            "watercourse"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel
+:cours_d_eau_artificiel rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d'eau> ;
+                        rdfs:prefLabel "artificial waterway"@en ,
+                                       "cours d'eau artificiel"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#couvent
+:couvent rdf:type owl:Class ;
+         rdfs:subClassOf :bâtiment_religieux ;
+         rdfs:altLabel "abbaye"@fr ,
+                       "monastery"@en ,
+                       "monastère"@fr ,
+                       "prieuré"@fr ;
+         rdfs:prefLabel "convent"@en ,
+                        "couvent"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cratère
+:cratère rdf:type owl:Class ;
+         rdfs:subClassOf :volcan ;
+         rdfs:comment "Évasement de la cheminée, en forme d'entonnoir, au sommet ou sur les flancs d'un cône volcanique"@en ;
+         rdfs:prefLabel "crater"@en ,
+                        "cratère"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :cratère ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Évasement de la cheminée, en forme d'entonnoir, au sommet ou sur les flancs d'un cône volcanique"@en ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/crat%C3%A8re"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cressonnière
+:cressonnière rdf:type owl:Class ;
+              rdfs:subClassOf :zone_de_culture ;
+              rdfs:altLabel "watercress pond"@en ;
+              rdfs:prefLabel "cressonnière"@fr ,
+                             "watercress bed"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#crevasse
+:crevasse rdf:type owl:Class ;
+          rdfs:subClassOf :depression_fermée ;
+          rdfs:comment """Fente étroite et profonde à la surface d'un glacier, souvent liée
+à l'étirement de la glace sur une pente plus raide"""@en ,
+                       "Fentes profondes sillonnant les glaciers et provoquées par la rupture de la glace en mouvement"@fr ;
+          rdfs:prefLabel "crevasse"@en ,
+                         "crevasse"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :crevasse ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Fentes profondes sillonnant les glaciers et provoquées par la rupture de la glace en mouvement"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/crevasse"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#croix
+:croix rdf:type owl:Class ;
+       rdfs:subClassOf :monument_religieux ;
+       rdfs:altLabel "croix de chemin"@fr ,
+                     "wayside cross"@en ;
+       rdfs:prefLabel "croix"@fr ,
+                      "cross"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#croupe
+:croupe rdf:type owl:Class ;
+        rdfs:subClassOf :convexe ;
+        rdfs:comment "Partie supérieure, arrondie, d'une élévation de terrain"@fr ;
+        rdfs:prefLabel "croup"@en ,
+                       "croupe"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :croupe ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Partie supérieure, arrondie, d'une élévation de terrain"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/croupe"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#crèche
+:crèche rdf:type owl:Class ;
+        rdfs:subClassOf :établissement_d_enseignement ;
+        rdfs:prefLabel "crèche"@fr ,
+                       "nursery"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#crête
+:crête rdf:type owl:Class ;
+       rdfs:subClassOf :convexe ;
+       rdfs:altLabel "ligne de crête"@fr ,
+                     "ridge"@en ;
+       rdfs:comment "Ligne de points haut d'un relief séparant deux versants opposés"@fr ;
+       rdfs:prefLabel "crest"@en ,
+                      "crête"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cuvette
+:cuvette rdf:type owl:Class ;
+         rdfs:subClassOf :depression_fermée ;
+         rdfs:comment "Creux topographique, occupé actuellement par les eaux (à titre permanent ou saisonnier) ou anciennement occupé par les eaux et conservant les dépôts accumulés en milieu océanique, marin ou lacustre. Par extension, toute forme qui se prête à la constitution d'un bassin fermé"@fr ;
+         rdfs:prefLabel "cuvette"@fr ,
+                        "depression"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :cuvette ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Creux topographique, occupé actuellement par les eaux (à titre permanent ou saisonnier) ou anciennement occupé par les eaux et conservant les dépôts accumulés en milieu océanique, marin ou lacustre. Par extension, toute forme qui se prête à la constitution d'un bassin fermé"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/cuvette"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cynodrome
+:cynodrome rdf:type owl:Class ;
+           rdfs:subClassOf :piste_de_sport ;
+           rdfs:prefLabel "cynodrome"@fr ,
+                          "dog race track"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#câble_transporteur
+:câble_transporteur rdf:type owl:Class ;
+                    rdfs:subClassOf :infrastructure_de_transport_par_câble ;
+                    rdfs:altLabel "telpher line"@en ,
+                                  "telpher railway"@en ;
+                    rdfs:prefLabel "cableway"@en ,
+                                   "câble transporteur"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cénote
+:cénote rdf:type owl:Class ;
+        rdfs:subClassOf :doline ;
+        rdfs:comment "Le cénote est une doline effondrée, en milieu karstique, totalement ou partiellement remplis d'eau."@fr ;
+        rdfs:prefLabel "cenote"@en ,
+                       "cénote"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#côte
+:côte rdf:type owl:Class ;
+      rdfs:subClassOf :planaire_vertical ;
+      rdfs:comment "Versant de colline ou de montagne"@fr ;
+      rdfs:prefLabel "côte"@fr ,
+                     "mountain side"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#dalle_de_protection
+:dalle_de_protection rdf:type owl:Class ;
+                     rdfs:subClassOf :équipement_de_montagne ;
+                     rdfs:prefLabel "dalle de protection"@fr ,
+                                    "protective wall"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#dent
+:dent rdf:type owl:Class ;
+      rdfs:subClassOf :convexe ;
+      rdfs:prefLabel "dent"@fr ,
+                     "top land"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#depression_fermée
+:depression_fermée rdf:type owl:Class ;
+                   rdfs:subClassOf :concave ;
+                   rdfs:comment "Contient des formes de relief concaves gardant l'eau"@fr ;
+                   rdfs:prefLabel "closed depression"@en ,
+                                  "dépression fermée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#depression_ouverte
+:depression_ouverte rdf:type owl:Class ;
+                    rdfs:subClassOf :concave ;
+                    rdfs:comment "Contient des formes de relief concave qui ne peuvent pas garder l'eau; l'eau coule"@fr ;
+                    rdfs:prefLabel "dépression ouverte"@fr ,
+                                   "open depression"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#descente
+:descente rdf:type owl:Class ;
+          rdfs:subClassOf :côte ,
+                          :depression_ouverte ;
+          rdfs:comment "Une partie de montagne permettant de la parcourir en descente"@fr ;
+          rdfs:prefLabel "descent"@en ,
+                         "descente"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#diffluence
+:diffluence rdf:type owl:Class ;
+            rdfs:subClassOf :noeud_du_réseau_hydrographique_terrestre ;
+            rdfs:prefLabel "diffluence"@en ,
+                           "diffluence"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#digue
+:digue rdf:type owl:Class ;
+       rdfs:subClassOf :équipement_de_protection_hydrographique ;
+       rdfs:altLabel "breakwater"@en ,
+                     "dike"@en ,
+                     "estacade"@fr ,
+                     "levee"@en ;
+       rdfs:prefLabel "digue"@fr ,
+                      "embankment"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#division_territoriale_administrative
+:division_territoriale_administrative rdf:type owl:Class ;
+                                      rdfs:subClassOf :zonage ;
+                                      rdfs:comment "Délimitation légale du territoire a but administratif"@fr ;
+                                      rdfs:prefLabel "administrative subdivision"@en ,
+                                                     "division territoriale administrative"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#doline
+:doline rdf:type owl:Class ;
+        rdfs:subClassOf :depression_fermée ;
+        rdfs:altLabel "sink hole"@en ,
+                      "swallow-hole"@en ;
+        rdfs:comment "Excavation circulaire fermée de nature karstique, à fond plus ou moins plat, pouvant avoir de dix à plusieurs centaines de mètres de diamètre, utilisée parfois comme terrain de culture"@fr ;
+        rdfs:prefLabel "doline"@en ,
+                       "doline"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :doline ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Excavation circulaire fermée de nature karstique, à fond plus ou moins plat, pouvant avoir de dix à plusieurs centaines de mètres de diamètre, utilisée parfois comme terrain de culture"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/doline"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#dolmen
+:dolmen rdf:type owl:Class ;
+        rdfs:subClassOf :vestige ;
+        rdfs:altLabel "cromlech"@en ;
+        rdfs:prefLabel "dolmen"@en ,
+                       "dolmen"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#déblai
+:déblai rdf:type owl:Class ;
+        rdfs:subClassOf :depression_fermée ;
+        rdfs:altLabel "cleared off"@en ,
+                      "cutting"@en ;
+        rdfs:comment "Excavation pratiquée dans le sol pour la construction"@fr ;
+        rdfs:prefLabel "cut"@en ,
+                       "déblai"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#défilé
+:défilé rdf:type owl:Class ;
+        rdfs:subClassOf :gorge ;
+        rdfs:comment "Passage naturel, étroit et encaissé, qu'on ne peut traverser qu'en file"@fr ;
+        rdfs:prefLabel "défilé"@fr ,
+                       "steep-sided gorge"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :défilé ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Passage naturel, étroit et encaissé, qu'on ne peut traverser qu'en file"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/d%C3%A9fil%C3%A9"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#département
+:département rdf:type owl:Class ;
+             rdfs:subClassOf :division_territoriale_administrative ;
+             rdfs:prefLabel "department (administrative region)"@en ,
+                            "département"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#déversoir
+:déversoir rdf:type owl:Class ;
+           rdfs:subClassOf :équipement_de_protection_hydrographique ;
+           rdfs:prefLabel "déversoir"@fr ,
+                          "spillway"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#enceinte
+:enceinte rdf:type owl:Class ;
+          rdfs:subClassOf :limite_matérialisée ;
+          rdfs:prefLabel "enceinte"@fr ,
+                         "surrounding wall"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ensellement
+:ensellement rdf:type owl:Class ;
+             rdfs:subClassOf :relief ;
+             rdfs:comment "Contient des formes de relief sous forme de selle"@fr ;
+             rdfs:prefLabel "saddle"@en ,
+                            "selle"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#entaille
+:entaille rdf:type owl:Class ;
+          rdfs:subClassOf :brèche ;
+          rdfs:prefLabel "entaille"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#entrepôt
+:entrepôt rdf:type owl:Class ;
+          rdfs:subClassOf :équipement_industriel ;
+          rdfs:altLabel "depot"@en ,
+                        "stockyard"@en ,
+                        "storage area"@en ;
+          rdfs:prefLabel "entrepôt"@fr ,
+                         "warehouse"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#escalier
+:escalier rdf:type owl:Class ;
+          rdfs:subClassOf :voie_de_communication_non_carrossable ;
+          rdfs:altLabel "steps"@en ;
+          rdfs:prefLabel "escalier"@fr ,
+                         "stairs"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#escarpement
+:escarpement rdf:type owl:Class ;
+             rdfs:subClassOf :planaire_vertical ;
+             rdfs:altLabel "scarp"@en ;
+             rdfs:comment "Pente raide, abrupte"@fr ;
+             rdfs:prefLabel "escarpement"@fr ,
+                            "escarpment"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :escarpement ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Pente raide, abrupte"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/escarpement"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#exploitation_agricole
+:exploitation_agricole rdf:type owl:Class ;
+                       rdfs:subClassOf :installation_d_élevage ,
+                                       :installation_de_culture ;
+                       rdfs:altLabel "exploitation agricole"@fr ;
+                       rdfs:prefLabel "farm"@en ,
+                                      "ferme"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#exploitation_maraîchère
+:exploitation_maraîchère rdf:type owl:Class ;
+                         rdfs:subClassOf :installation_de_culture ;
+                         rdfs:prefLabel "exploitation maraîchère"@fr ,
+                                        "market gardening"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#exutoire
+:exutoire rdf:type owl:Class ;
+          rdfs:subClassOf :noeud_du_réseau_hydrographique_terrestre ;
+          rdfs:prefLabel "exutoire"@fr ,
+                         "outlet"@en ,
+                         "rising spring"@en ,
+                         "émissaire"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#face
+:face rdf:type owl:Class ;
+      rdfs:subClassOf :planaire_vertical ;
+      rdfs:prefLabel "face"@en ,
+                     "face"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#faille
+:faille rdf:type owl:Class ;
+        rdfs:subClassOf :brèche ;
+        rdfs:comment "Fissure, cassure dans une couche géologique"@fr ;
+        rdfs:prefLabel "faille"@fr ,
+                       "fault"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :faille ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Fissure, cassure dans une couche géologique"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/faille"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#falaise
+:falaise rdf:type owl:Class ;
+         rdfs:subClassOf :escarpement ;
+         rdfs:comment "Escarpement abrupt"@fr ,
+                      "Paroi à très forte pente, exempte de végétation, marquant le contact entre la mer et la terre"@fr ;
+         rdfs:prefLabel "cliff"@en ,
+                        "falaise"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :falaise ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Escarpement abrupt"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/falaise"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#faîte
+:faîte rdf:type owl:Class ;
+       rdfs:subClassOf :convexe ;
+       rdfs:altLabel "ligne de faîte"@fr ;
+       rdfs:comment "Enfilade de crêtes d'une chaîne de montagnes."@fr ;
+       rdfs:prefLabel "faîte"@fr ,
+                      "ridge line"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :faîte ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Enfilade de crêtes d'une chaîne de montagnes."@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/fa%C3%AEte"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#fissure
+:fissure rdf:type owl:Class ;
+         rdfs:subClassOf :brèche ;
+         rdfs:altLabel "lézarde"@fr ;
+         rdfs:comment "Fente rocheuse qui ne permet pas le passage d'un corps mais sert de prise ou de points d'assurage"@fr ;
+         rdfs:prefLabel "crack"@en ,
+                        "fissure"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#flanc
+:flanc rdf:type owl:Class ;
+       rdfs:subClassOf :côte ;
+       rdfs:altLabel "face de racordement"@fr ;
+       rdfs:comment "Chacune des parties qui plongent de part et d'autre d'un plan axial"@fr ;
+       rdfs:prefLabel "flanc"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#fontaine
+:fontaine rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> ;
+          rdfs:prefLabel "fontaine"@fr ,
+                         "fountain"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#fort
+:fort rdf:type owl:Class ;
+      rdfs:subClassOf :batiment_militaire ;
+      rdfs:altLabel "bastille"@fr ,
+                    "citadelle"@fr ,
+                    "forteresse"@fr ,
+                    "fortification"@fr ;
+      rdfs:prefLabel "fort"@en ,
+                     "fort"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#forêt_domaniale
+:forêt_domaniale rdf:type owl:Class ;
+                 rdfs:subClassOf :zones_naturelles_protégées ;
+                 rdfs:prefLabel "forêt domaniale"@fr ,
+                                "national forest"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#fossé
+:fossé rdf:type owl:Class ;
+       rdfs:subClassOf :cours_d_eau_artificiel ;
+       rdfs:altLabel "biaou"@fr ,
+                     "gutter"@en ,
+                     "moat"@en ,
+                     "rigole"@fr ,
+                     "trench"@en ,
+                     "watergang"@fr ;
+       rdfs:prefLabel "ditch"@en ,
+                      "fossé"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#franchissement
+:franchissement rdf:type owl:Class ;
+                rdfs:subClassOf :infrastructure_de_transport_routier ,
+                                :voie_de_communication_non_carrossable ;
+                rdfs:prefLabel "bridge"@en ,
+                               "franchissement"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#fronton_de_pelote_basque
+:fronton_de_pelote_basque rdf:type owl:Class ;
+                          rdfs:subClassOf :terrain_de_sport ;
+                          rdfs:prefLabel "fronton de pelote basque"@fr ,
+                                         "pelota play wall"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#funiculaire
+:funiculaire rdf:type owl:Class ;
+             rdfs:subClassOf :voie_ferrée ;
+             rdfs:altLabel "cable-railway"@en ,
+                           "funicular railway"@en ;
+             rdfs:prefLabel "funiculaire"@fr ,
+                            "funicular"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#garage_individuel
+:garage_individuel rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation> ;
+                   rdfs:altLabel "box"@en ;
+                   rdfs:prefLabel "garage"@en ,
+                                  "garage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#gare_ferrovière
+:gare_ferrovière rdf:type owl:Class ;
+                 rdfs:subClassOf :infrastructure_de_transport_ferré ;
+                 rdfs:altLabel "aire de garage"@fr ,
+                               "aire de triage"@fr ,
+                               "arrêt ferroviaire"@fr ,
+                               "freight yard"@en ,
+                               "gare de fret"@fr ,
+                               "gare voyageurs"@fr ,
+                               "marshalling yard"@en ,
+                               "passengers station"@en ,
+                               "point de desserte"@fr ,
+                               "station voyageurs"@fr ;
+                 rdfs:prefLabel "gare"@fr ,
+                                "station"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#gare_routière
+:gare_routière rdf:type owl:Class ;
+               rdfs:subClassOf :infrastructure_de_transport_routier ;
+               rdfs:prefLabel "bus station"@en ,
+                              "gare routière"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#gare_téléphérique
+:gare_téléphérique rdf:type owl:Class ;
+                   rdfs:subClassOf :infrastructure_de_transport_par_câble ,
+                                   :équipement_de_sports_d_hiver ;
+                   rdfs:altLabel "telpher station"@en ;
+                   rdfs:prefLabel "cable car station"@en ,
+                                  "gare téléphérique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#gazex
+:gazex rdf:type owl:Class ;
+       rdfs:subClassOf :équipement_de_montagne ;
+       rdfs:altLabel "catex"@en ,
+                     "catex"@fr ;
+       rdfs:comment "déclancheur d'avalanche"@fr ;
+       rdfs:prefLabel "gazex"@en ,
+                      "gazex"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#glacier
+:glacier rdf:type owl:Class ;
+         rdfs:subClassOf :planaire ,
+                         :réseau_hydrographique_naturel ;
+         rdfs:comment "Amas de glace formé par l'accumulation d'épaisses couches de neige dont la masse est animée de mouvements lents"@fr ;
+         rdfs:prefLabel "glacier"@en ,
+                        "glacier"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :glacier ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Amas de glace formé par l'accumulation d'épaisses couches de neige dont la masse est animée de mouvements lents"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/glacier"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#glacis
+:glacis rdf:type owl:Class ;
+        rdfs:subClassOf :pied_de_la_montagne ;
+        rdfs:altLabel "pediment"@en ,
+                      "pédiment"@fr ;
+        rdfs:comment "Surface d'érosion en pente douce au pied d'une montagne"@fr ;
+        rdfs:prefLabel "glacis"@fr ,
+                       "glaze"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :glacis ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Surface d'érosion en pente douce au pied d'une montagne"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/p%C3%A9diment"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#golf
+:golf rdf:type owl:Class ;
+      rdfs:subClassOf :terrain_de_sport ;
+      rdfs:altLabel "golf"@fr ,
+                    "golf-course"@en ,
+                    "golf-links"@en ;
+      rdfs:prefLabel "golf course"@en ,
+                     "terrain de golf"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#gorge
+:gorge rdf:type owl:Class ;
+       rdfs:subClassOf :depression_ouverte ;
+       rdfs:altLabel "Vallée étroite et encaissée"@fr ,
+                     "gleann"@en ,
+                     "glen"@en ;
+       rdfs:prefLabel "gorge"@en ,
+                      "gorge"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#gouffre
+:gouffre rdf:type owl:Class ;
+         rdfs:subClassOf :cavité ;
+         rdfs:altLabel "abyss"@en ,
+                       "abîme"@fr ,
+                       "chasm"@en ,
+                       "gulf"@en ,
+                       "précipice"@fr ;
+         rdfs:comment "Cavité souterraine creusée par les eaux dans les régions calcaires"@fr ;
+         rdfs:prefLabel "gouffre"@fr ,
+                        "scialet"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :gouffre ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Cavité souterraine creusée par les eaux dans les régions calcaires"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/gouffre"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#grange
+:grange rdf:type owl:Class ;
+        rdfs:subClassOf :équipement_agricole ;
+        rdfs:altLabel "hangar"@fr ;
+        rdfs:prefLabel "barn"@en ,
+                       "grange"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#grotte
+:grotte rdf:type owl:Class ;
+        rdfs:subClassOf :cavité ;
+        rdfs:altLabel "antre"@fr ,
+                      "grotto"@en ;
+        rdfs:comment "Caverne naturelle dans un rocher − quelquefois souterraine ou sous-marine −, ou qui est creusée de main d'homme, et sert parfois de lieu d'habitation"@fr ;
+        rdfs:prefLabel "cave"@en ,
+                       "grotte"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :grotte ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Caverne naturelle dans un rocher − quelquefois souterraine ou sous-marine −, ou qui est creusée de main d'homme, et sert parfois de lieu d'habitation"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/grotte"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#gué
+:gué rdf:type owl:Class ;
+     rdfs:subClassOf :franchissement ;
+     rdfs:altLabel "radier"@fr ;
+     rdfs:prefLabel "ford"@en ,
+                    "gué"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#gymnase
+:gymnase rdf:type owl:Class ;
+         rdfs:subClassOf :équipement_sportif ;
+         rdfs:altLabel "salle de sport"@fr ;
+         rdfs:prefLabel "gymnase"@fr ,
+                        "gymnasium"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#habert
+:habert rdf:type owl:Class ;
+        rdfs:subClassOf :équipement_agricole ;
+        rdfs:prefLabel "habert"@en ,
+                       "habert"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#habitation_troglodytique
+:habitation_troglodytique rdf:type owl:Class ;
+                          rdfs:subClassOf :bâtiment_remarquable ;
+                          rdfs:prefLabel "cliff dwelling"@en ,
+                                         "habitation troglodytique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#haie
+:haie rdf:type owl:Class ;
+      rdfs:subClassOf :végétation_arborée ,
+                      :végétation_basse ;
+      rdfs:altLabel "hedge-row"@en ,
+                    "rangée d'arbres"@fr ;
+      rdfs:prefLabel "haie"@fr ,
+                     "hedge"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#hangar_industriel
+:hangar_industriel rdf:type owl:Class ;
+                   rdfs:subClassOf :équipement_industriel ;
+                   rdfs:prefLabel "hangar industriel"@fr ,
+                                  "industrial hangar"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#hippodrome
+:hippodrome rdf:type owl:Class ;
+            rdfs:subClassOf :piste_de_sport ;
+            rdfs:altLabel "champ de courses équestres"@fr ,
+                          "piste équestre"@fr ,
+                          "racetrack"@en ;
+            rdfs:prefLabel "hippodrome"@fr ,
+                           "racecourse"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#hydrographie
+:hydrographie rdf:type owl:Class ;
+              rdfs:comment "Contient tous les éléments hydrographiques et les constructions dont la fonction apparente est liée à l'hydrographie"@fr ;
+              rdfs:prefLabel "hydrographie"@fr ,
+                             "inland hydrographic feature"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#héliport
+:héliport rdf:type owl:Class ;
+          rdfs:subClassOf :infrastructure_de_transport_aérien ;
+          rdfs:altLabel "DZ"@fr ,
+                        "drop zone"@en ,
+                        "heliport"@en ;
+          rdfs:prefLabel "helicopter aerodrome"@en ,
+                         "héliport"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#hôpital
+:hôpital rdf:type owl:Class ;
+         rdfs:subClassOf :établissement_de_santé ;
+         rdfs:altLabel "clinic"@en ,
+                       "clinique"@fr ,
+                       "dispensaire"@fr ,
+                       "polyclinique"@fr ,
+                       "établissement hospitalier"@fr ;
+         rdfs:prefLabel "hospital"@en ,
+                        "hôpital"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#hôtel
+:hôtel rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation> ;
+       rdfs:altLabel "auberge"@fr ,
+                     "ferme-auberge"@fr ,
+                     "gîte"@fr ,
+                     "gîte d'étape"@fr ,
+                     "hôtel de montagne"@fr ,
+                     "manor"@en ,
+                     "mountain hotel"@en ,
+                     "rest house"@en ;
+       rdfs:prefLabel "hotel"@en ,
+                      "hôtel"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#igue
+:igue rdf:type owl:Class ;
+      rdfs:subClassOf :gouffre ;
+      rdfs:comment "Cavité étroite pouvant résulter d'un effondrement d'une cavité"@fr ;
+      rdfs:prefLabel "igue"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_communication_hertzienne
+:infrastructure_de_communication_hertzienne rdf:type owl:Class ;
+                                            rdfs:subClassOf :infrastructure_eau_énergie ;
+                                            rdfs:altLabel "wireless communication tower"@en ;
+                                            rdfs:prefLabel "Hertzian infrastructure"@en ,
+                                                           "infrastructure  hertzienne"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_terrestre
+:infrastructure_de_déplacement_terrestre rdf:type owl:Class ;
+                                         rdfs:subClassOf :infrastructure_déplacement ;
+                                         rdfs:prefLabel "infrastructure de déplacement terrestre"@fr ,
+                                                        "transport infrastructure on earth surface"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_aérien
+:infrastructure_de_transport_aérien rdf:type owl:Class ;
+                                    rdfs:subClassOf :infrastructure_déplacement ;
+                                    rdfs:prefLabel "air transport infrastructure"@en ,
+                                                   "infrastructure de déplacement aérien"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_électricité
+:infrastructure_de_transport_d_électricité rdf:type owl:Class ;
+                                           rdfs:subClassOf :infrastructure_eau_énergie ;
+                                           rdfs:prefLabel "electricity transport infrastructure"@en ,
+                                                          "infrastructure électricité"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_ferré
+:infrastructure_de_transport_ferré rdf:type owl:Class ;
+                                   rdfs:subClassOf :infrastructure_de_déplacement_terrestre ;
+                                   rdfs:prefLabel "infrastructure de transport ferré"@fr ,
+                                                  "transport by rail infrastructure"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_maritime_ou_fluvial
+:infrastructure_de_transport_maritime_ou_fluvial rdf:type owl:Class ;
+                                                 rdfs:subClassOf :hydrographie ,
+                                                                 :infrastructure_déplacement ;
+                                                 rdfs:prefLabel "infrastructure de déplacement maritime ou fluvial"@fr ,
+                                                                "sea or river transport infrastructure"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_par_câble
+:infrastructure_de_transport_par_câble rdf:type owl:Class ;
+                                       rdfs:subClassOf :infrastructure_de_déplacement_terrestre ;
+                                       rdfs:altLabel "cableway transport infrastructure"@en ;
+                                       rdfs:prefLabel "cable car infrastructure"@en ,
+                                                      "infrastructure de transport par câble"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier
+:infrastructure_de_transport_routier rdf:type owl:Class ;
+                                     rdfs:subClassOf :infrastructure_de_déplacement_terrestre ;
+                                     rdfs:prefLabel "infrastructure de transport routier"@fr ,
+                                                    "road transport infrastructure"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_déplacement
+:infrastructure_déplacement rdf:type owl:Class ;
+                            rdfs:subClassOf :infrastructures ;
+                            rdfs:prefLabel "displacement infrastructure"@en ,
+                                           "infrastructure déplacement" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_eau
+:infrastructure_eau rdf:type owl:Class ;
+                    rdfs:subClassOf :infrastructure_eau_énergie ;
+                    rdfs:prefLabel "water infrastructure"@en ,
+                                   "infrastructure eau" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_eau_énergie
+:infrastructure_eau_énergie rdf:type owl:Class ;
+                            rdfs:subClassOf :infrastructures ;
+                            rdfs:prefLabel "water energy communication infrastructure"@en ,
+                                           "infrastructure eau énergie communication" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_hydrocarbure
+:infrastructure_hydrocarbure rdf:type owl:Class ;
+                             rdfs:subClassOf :infrastructure_eau_énergie ;
+                             rdfs:prefLabel "hydrocarbon infrastructure"@en ,
+                                            "infrastructure hydrocarbure"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_service
+:infrastructure_service rdf:type owl:Class ;
+                        rdfs:subClassOf :batiment_et_installation ;
+                        rdfs:prefLabel "infrastructure service"@fr ,
+                                       "installation service"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructures
+:infrastructures rdf:type owl:Class ;
+                 rdfs:subClassOf :construction ;
+                 rdfs:comment "Ensemble des équipements économiques ou techniques"@fr ;
+                 rdfs:prefLabel "infrastructure"@en ,
+                                "infrastructure"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture
+:installation_d_aquaculture rdf:type owl:Class ;
+                            rdfs:subClassOf :installation_d_élevage ;
+                            rdfs:prefLabel "aquaculture"@en ,
+                                           "installation d'aquaculture"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#installation_d_élevage
+:installation_d_élevage rdf:type owl:Class ;
+                        rdfs:subClassOf :bâtiment_et_installations_agricoles ;
+                        rdfs:altLabel "cattle ranch"@en ,
+                                      "livestock building"@en ,
+                                      "livestock facility"@en ,
+                                      "poultry farm"@en ,
+                                      "ranch"@en ,
+                                      "stable"@en ;
+                        rdfs:prefLabel "animal farm"@en ,
+                                       "installation d'élevage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#installation_de_culture
+:installation_de_culture rdf:type owl:Class ;
+                         rdfs:subClassOf :bâtiment_et_installations_agricoles ;
+                         rdfs:prefLabel "farmlands"@en ,
+                                        "installation de culture"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#installation_minière
+:installation_minière rdf:type owl:Class ;
+                      rdfs:subClassOf :batiments_et_installations_industriels ;
+                      rdfs:altLabel "ballast pit"@en ,
+                                    "ballastière"@fr ,
+                                    "borrow pit"@en ,
+                                    "carrière"@fr ,
+                                    "gravel pit"@en ,
+                                    "gravière"@fr ,
+                                    "mine"@fr ,
+                                    "mineshaft"@en ,
+                                    "quarry"@en ,
+                                    "sablière"@fr ,
+                                    "sand pit"@en ;
+                      rdfs:prefLabel "installation minière"@fr ,
+                                     "mine"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#jetée
+:jetée rdf:type owl:Class ;
+       rdfs:subClassOf :équipement_de_protection_hydrographique ;
+       rdfs:altLabel "pier"@en ;
+       rdfs:prefLabel "jetty"@en ,
+                      "jetée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#karst
+:karst rdf:type owl:Class ;
+       rdfs:subClassOf :concave ,
+                       :convexe ;
+       rdfs:comment "région de formation calcaire caractérisée par la prépondérance du drainage souterrain et par le développement d'une topographie originale due à la corrosion de la roche (grottes, gouffres, résurgences, etc.)"@fr ;
+       rdfs:prefLabel "karst"@en ,
+                      "karst"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :karst ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "région de formation calcaire caractérisée par la prépondérance du drainage souterrain et par le développement d'une topographie originale due à la corrosion de la roche (grottes, gouffres, résurgences, etc.)"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/karst"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#lac
+:lac rdf:type owl:Class ;
+     rdfs:subClassOf :surface_d_eau ;
+     rdfs:altLabel "lac d'altitude"@fr ;
+     rdfs:prefLabel "lac"@fr ,
+                    "lake"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#lapiaz
+:lapiaz rdf:type owl:Class ;
+        rdfs:subClassOf :karst ;
+        rdfs:comment "un karst naturel"@fr ;
+        rdfs:prefLabel "lapiaz"@fr ,
+                       "limestone pavement"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#lavoir
+:lavoir rdf:type owl:Class ;
+        rdfs:subClassOf :bâtiment_remarquable ;
+        rdfs:altLabel "washing place"@en ;
+        rdfs:prefLabel "lavoir"@fr ,
+                       "wash-house"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#levée
+:levée rdf:type owl:Class ;
+       rdfs:subClassOf :convexe ;
+       rdfs:altLabel "Remblai de terre ou de pierre"@fr ,
+                     "earth bank"@en ,
+                     "embankment"@en ,
+                     "remblai"@fr ;
+       rdfs:prefLabel "levee"@en ,
+                      "levée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#levée_de_terre
+:levée_de_terre rdf:type owl:Class ;
+                rdfs:subClassOf :équipement_de_protection_hydrographique ;
+                rdfs:altLabel "embankment"@en ,
+                              "levee"@en ;
+                rdfs:prefLabel "earth bank"@en ,
+                               "levée de terre"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#lieu-dit
+:lieu-dit rdf:type owl:Class ;
+          rdfs:subClassOf :zone_bâtie ;
+          rdfs:altLabel "lieu-dit"@fr ,
+                        "local placename"@en ,
+                        "écart"@fr ;
+          rdfs:prefLabel "hameau"@fr ,
+                         "hamlet"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#lieu_de_culte
+:lieu_de_culte rdf:type owl:Class ;
+               rdfs:subClassOf :bâtiment_religieux ;
+               rdfs:altLabel "abbatiale"@fr ,
+                             "basilica"@en ,
+                             "basilique"@fr ,
+                             "buddhist temple"@en ,
+                             "cathedral"@en ,
+                             "cathédrale"@fr ,
+                             "chapel"@en ,
+                             "chapelle"@fr ,
+                             "church"@en ,
+                             "clocher"@fr ,
+                             "collégiale"@fr ,
+                             "hindu temple"@en ,
+                             "minaret"@en ,
+                             "mosquée"@fr ,
+                             "protestant church"@en ,
+                             "sanctuaire"@fr ,
+                             "steeple"@en ,
+                             "synagogue"@fr ,
+                             "synaguoge"@en ,
+                             "temple"@en ,
+                             "temple"@fr ,
+                             "temple boudhiste"@fr ,
+                             "temple hindouiste"@fr ,
+                             "temple protestant"@fr ,
+                             "église"@fr ;
+               rdfs:prefLabel "lieu de culte"@fr ,
+                              "wayside shrine"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ligne_électrique
+:ligne_électrique rdf:type owl:Class ;
+                  rdfs:subClassOf :infrastructure_de_transport_d_électricité ;
+                  rdfs:altLabel "power transmission line"@en ;
+                  rdfs:prefLabel "electricity transmission line"@en ,
+                                 "ligne électrique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ligne_électrique_de_basse_tension
+:ligne_électrique_de_basse_tension rdf:type owl:Class ;
+                                   rdfs:subClassOf :ligne_électrique ;
+                                   rdfs:prefLabel "ligne électrique de basse tension"@fr ,
+                                                  "low power electricity transmission line"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ligne_électrique_de_haute_tension
+:ligne_électrique_de_haute_tension rdf:type owl:Class ;
+                                   rdfs:subClassOf :ligne_électrique ;
+                                   rdfs:prefLabel "high power electricity transmission line"@en ,
+                                                  "ligne électrique de haute tension"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ligne_électrique_de_moyenne_tension
+:ligne_électrique_de_moyenne_tension rdf:type owl:Class ;
+                                     rdfs:subClassOf :ligne_électrique ;
+                                     rdfs:prefLabel "ligne électrique de moyenne tension"@fr ,
+                                                    "mean power electricity transmission line"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ligne_électrique_de_très_haute_tension
+:ligne_électrique_de_très_haute_tension rdf:type owl:Class ;
+                                        rdfs:subClassOf :ligne_électrique ;
+                                        rdfs:prefLabel "ligne électrique de très haute tension"@fr ,
+                                                       "very high power electricity transmission line"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#limite_matérialisée
+:limite_matérialisée rdf:type owl:Class ;
+                     rdfs:subClassOf :construction ;
+                     rdfs:comment "Délimitations matérielles du territoire"@fr ;
+                     rdfs:prefLabel "limite matérialisée"@fr ,
+                                    "materialized border"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#lotissement
+:lotissement rdf:type owl:Class ;
+             rdfs:subClassOf :quartier ;
+             rdfs:prefLabel "estate"@en ,
+                            "lotissement"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#lycée
+:lycée rdf:type owl:Class ;
+       rdfs:subClassOf :établissement_d_enseignement ;
+       rdfs:altLabel "grammar-school"@en ,
+                     "secondary school"@en ;
+       rdfs:prefLabel "high school"@en ,
+                      "lycée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#magasin
+:magasin rdf:type owl:Class ;
+         rdfs:subClassOf :bâtiment_commercial ;
+         rdfs:altLabel "commerce"@fr ,
+                       "garden center"@en ,
+                       "jardinerie"@fr ,
+                       "supérette"@fr ;
+         rdfs:prefLabel "magasin"@fr ,
+                        "store"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#mairie
+:mairie rdf:type owl:Class ;
+        rdfs:subClassOf :bâtiment_administratif ;
+        rdfs:altLabel "city hall"@en ,
+                      "hôtel de ville"@fr ,
+                      "préfecture"@fr ;
+        rdfs:prefLabel "mairie"@fr ,
+                       "town-hall"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#maison
+:maison rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation> ;
+        rdfs:altLabel "alpine chalet"@en ,
+                      "chalet"@en ,
+                      "chalet"@fr ,
+                      "chalet d'alpage"@fr ,
+                      "chaumière"@fr ,
+                      "demeure"@fr ,
+                      "gentilhommière"@en ,
+                      "guesthouse"@en ,
+                      "maisonette"@fr ,
+                      "manoir"@fr ;
+        rdfs:prefLabel "house"@en ,
+                       "maison"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#maison_du_parc
+:maison_du_parc rdf:type owl:Class ;
+                rdfs:subClassOf :batiment_culturel ;
+                rdfs:altLabel "centre d'interprétation"@fr ,
+                              "interpretation center"@en ;
+                rdfs:prefLabel "maison du parc"@fr ,
+                               "park center"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#maison_forestière
+:maison_forestière rdf:type owl:Class ;
+                   rdfs:subClassOf :installation_de_culture ;
+                   rdfs:prefLabel "forest house"@en ,
+                                  "maison forestière"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#mamelon
+:mamelon rdf:type owl:Class ;
+         rdfs:subClassOf :convexe ;
+         rdfs:altLabel "rounded hillock"@en ;
+         rdfs:comment "Petite élévation de terrain au sommet arrondi"@fr ;
+         rdfs:prefLabel "knoll"@en ,
+                        "mamelon"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :mamelon ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Petite élévation de terrain au sommet arrondi"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/mamelon"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#manteau
+:manteau rdf:type owl:Class ;
+         rdfs:subClassOf :glacier ;
+         rdfs:comment "Plusieures couches de neige déposées sur un glacier présent d'une manière permanente"@fr ;
+         rdfs:prefLabel "manteau"@fr ,
+                        "snowpack"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#marais
+:marais rdf:type owl:Class ;
+        rdfs:subClassOf :surface_d_eau ;
+        rdfs:altLabel "fen"@en ,
+                      "marre"@en ,
+                      "marsh"@en ,
+                      "marécage"@fr ,
+                      "peat bog"@en ,
+                      "swamp"@en ,
+                      "tourbière"@fr ,
+                      "zone humide"@fr ;
+        rdfs:prefLabel "bog"@en ,
+                       "marais"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#marché
+:marché rdf:type owl:Class ;
+        rdfs:subClassOf :bâtiment_commercial ;
+        rdfs:altLabel "covered market"@en ,
+                      "foire"@fr ,
+                      "halle"@fr ,
+                      "market house"@en ,
+                      "trade show"@en ;
+        rdfs:prefLabel "marché"@fr ,
+                       "market"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#marquage
+:marquage rdf:type owl:Class ;
+          rdfs:subClassOf :balisage ;
+          rdfs:altLabel "marquage au sol"@fr ,
+                        "marque"@fr ;
+          rdfs:comment "Marques matérialisant les passages de l'itinéraire"@fr ;
+          rdfs:prefLabel "marking"@en ,
+                         "marquage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#massif
+:massif rdf:type owl:Class ;
+        rdfs:subClassOf :convexe ;
+        rdfs:altLabel "massif de montagne"@fr ,
+                      "mountain massif"@en ;
+        rdfs:comment "Ensemble de montagnes formant un bloc continu"@fr ;
+        rdfs:prefLabel "massif"@en ,
+                       "massif"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :massif ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Ensemble de montagnes formant un bloc continu"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/massif"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#massif_boisé
+:massif_boisé rdf:type owl:Class ;
+              rdfs:subClassOf :végétation_arborée ;
+              rdfs:altLabel "bois"@fr ,
+                            "bosquet"@fr ,
+                            "clumps"@en ,
+                            "forest"@en ,
+                            "forêt"@fr ,
+                            "futaie"@fr ,
+                            "grove"@en ,
+                            "taillis"@fr ;
+              rdfs:prefLabel "massif boisé"@fr ,
+                             "wooded area"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#menhir
+:menhir rdf:type owl:Class ;
+        rdfs:subClassOf :vestige ;
+        rdfs:altLabel "standing stone"@en ;
+        rdfs:prefLabel "menhir"@en ,
+                       "menhir"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#mont
+:mont rdf:type owl:Class ;
+      rdfs:subClassOf :convexe ;
+      rdfs:comment "Importante élévation naturelle de terrain au-dessus du sol environnant et dont la surface coïncide totalement ou approximativement avec une voûte anticlinale"@fr ;
+      rdfs:prefLabel "mont"@fr ,
+                     "mount"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :mont ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Importante élévation naturelle de terrain au-dessus du sol environnant et dont la surface coïncide totalement ou approximativement avec une voûte anticlinale"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/mont"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#montagne
+:montagne rdf:type owl:Class ;
+          rdfs:subClassOf :convexe ;
+          rdfs:comment "Forme de relief consistant en élévations importantes de terrains, résultant d'un soulèvement du sol et caractérisée par une forte dénivellation entre sommets et fonds de vallées"@fr ;
+          rdfs:prefLabel "montagne"@fr ,
+                         "mountain"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :montagne ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Forme de relief consistant en élévations importantes de terrains, résultant d'un soulèvement du sol et caractérisée par une forte dénivellation entre sommets et fonds de vallées"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/montagne"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#montée
+:montée rdf:type owl:Class ;
+        rdfs:subClassOf :côte ;
+        rdfs:comment "Une partie de montagne permettant de la parcourir en montée"@fr ;
+        rdfs:prefLabel "climb"@en ,
+                       "montée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#monument
+:monument rdf:type owl:Class ;
+          rdfs:subClassOf :élément_du_patrimoine ;
+          rdfs:prefLabel "monument"@en ,
+                         "monument"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#monument_aux_morts
+:monument_aux_morts rdf:type owl:Class ;
+                    rdfs:subClassOf :monument ;
+                    rdfs:prefLabel "monument aux morts"@fr ,
+                                   "war memorial"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#monument_religieux
+:monument_religieux rdf:type owl:Class ;
+                    rdfs:subClassOf :monument ;
+                    rdfs:prefLabel "catholic or orthodox shrine"@en ,
+                                   "monument religieux"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#moraine
+:moraine rdf:type owl:Class ;
+         rdfs:subClassOf :glacier ;
+         rdfs:comment "Accumulation de pierres, roches et éboulis sur le front et les bords d'un glacier (et parfois à sa surface)."@fr ,
+                      "Amas de blocs et de débris rocheux entraînés par le mouvement de glissement d'un glacier"@fr ;
+         rdfs:prefLabel "moraine"@en ,
+                        "moraine"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :moraine ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Amas de blocs et de débris rocheux entraînés par le mouvement de glissement d'un glacier"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/moraine"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#moulin
+:moulin rdf:type owl:Class ;
+        rdfs:subClassOf :bâtiment_remarquable ;
+        rdfs:altLabel "moulin à eau"@fr ,
+                      "moulin à vent"@fr ,
+                      "water-mill"@en ,
+                      "windmill"@en ;
+        rdfs:prefLabel "mill"@en ,
+                       "moulin"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#mur
+:mur rdf:type owl:Class ;
+     rdfs:subClassOf :limite_matérialisée ;
+     rdfs:altLabel "wall"@en ;
+     rdfs:prefLabel "mur"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#mur_anti-bruit
+:mur_anti-bruit rdf:type owl:Class ;
+                rdfs:subClassOf :équipement_de_montagne ;
+                rdfs:altLabel "sound attenuation barrier"@en ,
+                              "soundproof wall"@en ;
+                rdfs:prefLabel "mur anti-bruit"@fr ,
+                               "noise wall"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#mur_de_soutènement
+:mur_de_soutènement rdf:type owl:Class ;
+                    rdfs:subClassOf :équipement_de_montagne ;
+                    rdfs:prefLabel "mur de soutènement"@fr ,
+                                   "retaining wall"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#musée
+:musée rdf:type owl:Class ;
+       rdfs:subClassOf :batiment_culturel ;
+       rdfs:altLabel "maison à thème"@fr ;
+       rdfs:prefLabel "museum"@en ,
+                      "musée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#nappe_d_eau
+:nappe_d_eau rdf:type owl:Class ;
+             rdfs:subClassOf :surface_d_eau ;
+             rdfs:altLabel "basin"@en ,
+                           "bassin"@fr ,
+                           "gour"@fr ,
+                           "mare"@fr ,
+                           "pond"@en ,
+                           "pool"@en ,
+                           "vasque"@fr ,
+                           "étang"@fr ;
+             rdfs:prefLabel "body of water"@en ,
+                            "nappe d'eau"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#noeud_du_réseau_hydrographique_terrestre
+:noeud_du_réseau_hydrographique_terrestre rdf:type owl:Class ;
+                                          rdfs:subClassOf :réseau_hydrographique_naturel ;
+                                          rdfs:prefLabel "hydrographic land network node"@en ,
+                                                         "noeud du réseau hydrographique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#névé
+:névé rdf:type owl:Class ;
+      rdfs:subClassOf :glacier ;
+      rdfs:altLabel "firn"@en ;
+      rdfs:comment "Amas de neige qui, sous l'effet du tassement et d'une alternance de dégels et regels, tend à se durcir et qui se trouve à l'origine d'un glacier."@fr ,
+                   "Partie amont d'un glacier où la neige ne s'est pas encore transformée en glace. C'est aussi une accumulation de neige isolée, mais relativement importante, qui persiste en été."@fr ;
+      rdfs:prefLabel "neve"@en ,
+                     "névé"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :névé ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Amas de neige qui, sous l'effet du tassement et d'une alternance de dégels et regels, tend à se durcir et qui se trouve à l'origine d'un glacier."@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/n%C3%A9v%C3%A9"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#observatoire
+:observatoire rdf:type owl:Class ;
+              rdfs:subClassOf :équipement_scientifique_et_technique ;
+              rdfs:prefLabel "observatoire astronomique"@fr ,
+                             "observatory"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#observatoire_de_tir
+:observatoire_de_tir rdf:type owl:Class ;
+                     rdfs:subClassOf :batiment_militaire ;
+                     rdfs:altLabel "rifle-range"@en ;
+                     rdfs:prefLabel "artillery range"@en ,
+                                    "observatoire de tir"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#observatoire_à_incendie
+:observatoire_à_incendie rdf:type owl:Class ;
+                         rdfs:subClassOf :équipement_de_montagne ;
+                         rdfs:altLabel "observation tower"@en ;
+                         rdfs:prefLabel "fire observatory"@en ,
+                                        "observatoire à incendie"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#obélisque
+:obélisque rdf:type owl:Class ;
+           rdfs:subClassOf :monument ;
+           rdfs:prefLabel "obelisk"@en ,
+                          "obélisque"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#office_de_tourisme
+:office_de_tourisme rdf:type owl:Class ;
+                    rdfs:subClassOf :infrastructure_service ;
+                    rdfs:altLabel "point d'information touristique"@fr ,
+                                  "syndicat d'initiative"@fr ,
+                                  "tourist information bureau"@en ;
+                    rdfs:prefLabel "office de tourisme"@fr ,
+                                   "tourist information office"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ouverture
+:ouverture rdf:type owl:Class ;
+           rdfs:subClassOf :végétation_arborée ;
+           rdfs:prefLabel "opening"@en ,
+                          "ouverture"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#palais_de_justice
+:palais_de_justice rdf:type owl:Class ;
+                   rdfs:subClassOf :bâtiment_administratif ;
+                   rdfs:altLabel "law-courts"@en ,
+                                 "tribunal"@fr ;
+                   rdfs:prefLabel "courthouse"@en ,
+                                  "palais de justice"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#panneau
+:panneau rdf:type owl:Class ;
+         rdfs:subClassOf :balisage ;
+         rdfs:altLabel "pancarte"@fr ,
+                       "panneau signalisation"@fr ;
+         rdfs:prefLabel "panneau"@fr ,
+                        "sign"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parc
+:parc rdf:type owl:Class ;
+      rdfs:subClassOf :bâtiment_et_installation_sport_et_loisirs ;
+      rdfs:altLabel "garden"@en ,
+                    "jardin public"@fr ,
+                    "square"@fr ,
+                    "parc" ;
+      rdfs:prefLabel "espace vert"@fr ,
+                     "park"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parc_aquatique
+:parc_aquatique rdf:type owl:Class ;
+                rdfs:subClassOf :parc_de_loisirs ;
+                rdfs:prefLabel "parc aquatique"@fr ,
+                               "water park"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parc_d_attraction
+:parc_d_attraction rdf:type owl:Class ;
+                   rdfs:subClassOf :parc_de_loisirs ;
+                   rdfs:altLabel "amusement grounds"@en ;
+                   rdfs:prefLabel "amusement park"@en ,
+                                  "parc d'attraction"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parc_de_loisirs
+:parc_de_loisirs rdf:type owl:Class ;
+                 rdfs:subClassOf :bâtiment_et_installation_sport_et_loisirs ;
+                 rdfs:altLabel "parc de détente"@fr ;
+                 rdfs:prefLabel "leisure park"@en ,
+                                "parc de loisir"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parc_national
+:parc_national rdf:type owl:Class ;
+               rdfs:subClassOf :zones_naturelles_protégées ;
+               rdfs:prefLabel "national park"@en ,
+                              "parc national"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parc_naturel_régional
+:parc_naturel_régional rdf:type owl:Class ;
+                       rdfs:subClassOf :zones_naturelles_protégées ;
+                       rdfs:altLabel "country park"@en ;
+                       rdfs:prefLabel "parc naturel régional"@fr ,
+                                      "regional nature reserve"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parc_zoologique
+:parc_zoologique rdf:type owl:Class ;
+                 rdfs:subClassOf :parc_de_loisirs ;
+                 rdfs:altLabel "aquarium"@en ,
+                               "aquarium"@fr ,
+                               "zoo"@en ,
+                               "zoo"@fr ,
+                               "zoological garden"@en ;
+                 rdfs:prefLabel "parc zoologique"@fr ,
+                                "zoological park"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pare-avalanche
+:pare-avalanche rdf:type owl:Class ;
+                rdfs:subClassOf :équipement_de_montagne ;
+                rdfs:altLabel "avalanche protection wall"@en ;
+                rdfs:prefLabel "avalanche break"@en ,
+                               "pare-avalanche"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parking
+:parking rdf:type owl:Class ;
+         rdfs:subClassOf :infrastructure_de_transport_routier ;
+         rdfs:altLabel "aire de stationnement"@fr ,
+                       "parking lot"@en ;
+         rdfs:prefLabel "car park"@en ,
+                        "parking"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#paroi_rocheuse
+:paroi_rocheuse rdf:type owl:Class ;
+                rdfs:subClassOf :versant ;
+                rdfs:altLabel "mur"@fr ,
+                              "muraille"@fr ,
+                              "paroi"@fr ;
+                rdfs:comment "Versant rocheux lisse et proche de la verticale"@fr ;
+                rdfs:prefLabel "paroi rocheuse"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pas
+:pas rdf:type owl:Class ;
+     rdfs:subClassOf :col ;
+     rdfs:altLabel "passe"@fr ;
+     rdfs:comment "Passage étroit,  souvent un passage technique ou plus délicat qu'un col"@fr ;
+     rdfs:prefLabel "notch"@en ,
+                    "pas"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#passage_à_bétail
+:passage_à_bétail rdf:type owl:Class ;
+                  rdfs:subClassOf :équipement_agricole ;
+                  rdfs:prefLabel "livestock passage"@en ,
+                                 "passage à bétail"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#passerelle
+:passerelle rdf:type owl:Class ;
+            rdfs:subClassOf :franchissement ;
+            rdfs:comment "footbridge"@en ,
+                         "passerelle"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#patinoire
+:patinoire rdf:type owl:Class ;
+           rdfs:subClassOf :équipement_sportif ;
+           rdfs:prefLabel "patinoire"@fr ,
+                          "skating rink"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#paturage
+:paturage rdf:type owl:Class ;
+          rdfs:subClassOf :végétation ;
+          rdfs:altLabel "alpage"@fr ,
+                        "gazon"@fr ,
+                        "grass"@en ,
+                        "herbage"@fr ,
+                        "herbe"@fr ,
+                        "pacage"@fr ,
+                        "pature"@fr ,
+                        "pré"@fr ;
+          rdfs:comment "Espace dédié à l'alimentation des animaux"@fr ;
+          rdfs:prefLabel "pasture"@en ,
+                         "paturage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pays
+:pays rdf:type owl:Class ;
+      rdfs:subClassOf :division_territoriale_administrative ;
+      rdfs:prefLabel "county"@en ,
+                     "pays (région)"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pente
+:pente rdf:type owl:Class ;
+       rdfs:subClassOf :planaire_vertical ;
+       rdfs:altLabel "déclivité"@fr ,
+                     "rampe"@fr ;
+       rdfs:comment "Surface, terrain en pente"@fr ;
+       rdfs:prefLabel "pente"@fr ,
+                      "slope"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#perte
+:perte rdf:type owl:Class ;
+       rdfs:subClassOf :noeud_du_réseau_hydrographique_terrestre ;
+       rdfs:prefLabel "loss"@en ,
+                      "perte"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pic
+:pic rdf:type owl:Class ;
+     rdfs:subClassOf :convexe ;
+     rdfs:comment "Sommet qui a la forme d'une pointe"@fr ;
+     rdfs:prefLabel "peak"@en ,
+                    "pic"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :pic ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Sommet qui a la forme d'une pointe"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/pic"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pied_de_la_montagne
+:pied_de_la_montagne rdf:type owl:Class ;
+                     rdfs:subClassOf :planaire_horizontal ;
+                     rdfs:altLabel "base de la montagne"@fr ,
+                                   "base of moutain"@en ;
+                     rdfs:comment "Contour de la partie inférieure d'une montagne"@fr ;
+                     rdfs:prefLabel "foot of moutain"@en ,
+                                    "pied de la montagne"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pierre
+:pierre rdf:type owl:Class ;
+        rdfs:subClassOf :planaire_horizontal ;
+        rdfs:altLabel "plaque de pierre"@fr ,
+                      "stone plate"@en ;
+        rdfs:comment "Grande prierre plate"@fr ;
+        rdfs:prefLabel "pierre"@fr ,
+                       "stone"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pierrier
+:pierrier rdf:type owl:Class ;
+          rdfs:subClassOf :convexe ;
+          rdfs:altLabel "scree"@en ;
+          rdfs:comment "Amoncellement de cailloux, de pierres; champ de pierres"@fr ;
+          rdfs:prefLabel "pierrier"@fr ,
+                         "pile of stones"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :pierrier ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Amoncellement de cailloux, de pierres; champ de pierres"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/pierrier"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pigeonnier
+:pigeonnier rdf:type owl:Class ;
+            rdfs:subClassOf :bâtiment_remarquable ;
+            rdfs:altLabel "columbary"@en ,
+                          "dove-cot"@en ,
+                          "dove-cote"@en ,
+                          "pigeon-house"@en ;
+            rdfs:prefLabel "columbarium"@en ,
+                           "pigeonnier"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pilier
+:pilier rdf:type owl:Class ;
+        rdfs:subClassOf :balisage ;
+        rdfs:prefLabel "pillar"@en ,
+                       "pilier" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piscine
+:piscine rdf:type owl:Class ;
+         rdfs:subClassOf :équipement_sportif ;
+         rdfs:altLabel "swimming-bath"@en ;
+         rdfs:prefLabel "piscine"@fr ,
+                        "swimming-pool"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_cyclable
+:piste_cyclable rdf:type owl:Class ;
+                rdfs:subClassOf :voie_de_communication_non_carrossable ;
+                rdfs:prefLabel "bicycle path"@en ,
+                               "piste cyclable"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme
+:piste_d_athlétisme rdf:type owl:Class ;
+                    rdfs:subClassOf :piste_de_sport ;
+                    rdfs:altLabel "bridle path"@en ,
+                                  "track"@en ;
+                    rdfs:prefLabel "piste d'athlétisme"@fr ,
+                                   "running track"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_d_aérodrome
+:piste_d_aérodrome rdf:type owl:Class ;
+                   rdfs:subClassOf :infrastructure_de_transport_aérien ;
+                   rdfs:altLabel "taxiway"@en ;
+                   rdfs:prefLabel "piste d'aviation"@fr ,
+                                  "runway"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_de_bobsleigh
+:piste_de_bobsleigh rdf:type owl:Class ;
+                    rdfs:subClassOf :piste_de_sport ;
+                    rdfs:altLabel "bobsleigh track"@en ,
+                                  "piste de bobsleigh"@fr ;
+                    rdfs:prefLabel "luge track"@en ,
+                                   "piste de luge"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_de_cross
+:piste_de_cross rdf:type owl:Class ;
+                rdfs:subClassOf :piste_de_sport ;
+                rdfs:prefLabel "cross-country  track"@en ,
+                               "piste de cross"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_de_ski
+:piste_de_ski rdf:type owl:Class ;
+              rdfs:subClassOf :piste_de_sport ;
+              rdfs:altLabel "ski course"@en ,
+                            "ski trail"@en ;
+              rdfs:prefLabel "piste de ski"@fr ,
+                             "ski run"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_de_sport
+:piste_de_sport rdf:type owl:Class ;
+                rdfs:subClassOf :équipement_sportif ;
+                rdfs:altLabel "sports track"@en ,
+                              "track"@en ;
+                rdfs:prefLabel "piste de sport"@fr ,
+                               "running track"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piton
+:piton rdf:type owl:Class ;
+       rdfs:subClassOf :convexe ;
+       rdfs:altLabel "pinnacle"@en ;
+       rdfs:comment """Sommet pointu et dénudé d'une montagne.
+
+Relief isolé de forme conique, monticule aigu difficile à escalader."""@fr ;
+       rdfs:prefLabel "piton"@en ,
+                      "piton"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :piton ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """Sommet pointu et dénudé d'une montagne.
+
+Relief isolé de forme conique, monticule aigu difficile à escalader."""@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/piton"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#place
+:place rdf:type owl:Class ;
+       rdfs:subClassOf :infrastructure_de_transport_routier ;
+       rdfs:prefLabel "place"@fr ,
+                      "square"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#plage
+:plage rdf:type owl:Class ;
+       rdfs:subClassOf :réseau_hydrographique_naturel ;
+       rdfs:altLabel "gravel beach"@en ,
+                     "grève"@fr ;
+       rdfs:prefLabel "beach"@en ,
+                      "plage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#plaine
+:plaine rdf:type owl:Class ;
+        rdfs:subClassOf :planaire_horizontal ;
+        rdfs:comment "Grande étendue de terrain sans relief ou légèrement ondulée, d'altitude peu élevée par rapport au niveau de la mer ou d'altitude moindre que les régions environnantes."@fr ;
+        rdfs:prefLabel "plain"@en ,
+                       "plaine"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :plaine ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Grande étendue de terrain sans relief ou légèrement ondulée, d'altitude peu élevée par rapport au niveau de la mer ou d'altitude moindre que les régions environnantes."@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/plaine"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#plan_d_eau
+:plan_d_eau rdf:type owl:Class ;
+            rdfs:subClassOf :équipement_sportif ;
+            rdfs:altLabel "marina"@en ,
+                          "plan d'eau"@fr ,
+                          "port de plaisance"@fr ;
+            rdfs:prefLabel "base nautique"@fr ,
+                           "water area"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#planaire
+:planaire rdf:type owl:Class ;
+          rdfs:subClassOf :relief ;
+          rdfs:prefLabel "planaire"@fr ,
+                         "planary"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#planaire_horizontal
+:planaire_horizontal rdf:type owl:Class ;
+                     rdfs:subClassOf :planaire ;
+                     rdfs:comment "Contient des formes de relief planaire horizontal"@fr ;
+                     rdfs:prefLabel "horizontal planar"@en ,
+                                    "planaire horizontal"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#planaire_vertical
+:planaire_vertical rdf:type owl:Class ;
+                   rdfs:subClassOf :planaire ;
+                   rdfs:comment "Contient des formes de relief planaire vertical"@fr ;
+                   rdfs:prefLabel "planaire vertical"@fr ,
+                                  "vertical planar"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#plateau
+:plateau rdf:type owl:Class ;
+         rdfs:subClassOf :planaire_horizontal ;
+         rdfs:altLabel "table-land"@en ;
+         rdfs:comment "Région plate située dans une altitude élevée"@fr ;
+         rdfs:prefLabel "plateau"@en ,
+                        "plateau"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#point_de_vue
+:point_de_vue rdf:type owl:Class ;
+              rdfs:subClassOf :bâtiment_et_installation_sport_et_loisirs ;
+              rdfs:altLabel "belvedere"@en ,
+                            "belvédère"@fr ,
+                            "panorama"@fr ,
+                            "prospect"@en ,
+                            "table d'orientation"@fr ,
+                            "viewing table"@en ,
+                            "viewpoint"@en ;
+              rdfs:prefLabel "point de vue"@fr ,
+                             "view-point"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pont
+:pont rdf:type owl:Class ;
+      rdfs:subClassOf :franchissement ;
+      rdfs:altLabel "carrefour dénivelé"@fr ,
+                    "culvert"@en ,
+                    "drawbridge"@en ,
+                    "ponceau"@fr ,
+                    "pont mobile"@fr ,
+                    "viaduc"@fr ,
+                    "viaduct"@en ;
+      rdfs:prefLabel "bridge"@en ,
+                     "pont"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#port
+:port rdf:type owl:Class ;
+      rdfs:subClassOf :infrastructure_de_transport_maritime_ou_fluvial ;
+      rdfs:altLabel "harbour"@en ,
+                    "havre"@fr ;
+      rdfs:prefLabel "harbor"@en ,
+                     "port"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#poste_de_police_ou_gendarmerie
+:poste_de_police_ou_gendarmerie rdf:type owl:Class ;
+                                rdfs:subClassOf :bâtiment_administratif ;
+                                rdfs:altLabel "commissariat"@fr ,
+                                              "customs"@en ,
+                                              "gendarmerie"@fr ,
+                                              "police post"@en ,
+                                              "poste de douane"@fr ;
+                                rdfs:prefLabel "police station"@en ,
+                                               "poste de police ou gendarmerie"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#poste_de_transformation
+:poste_de_transformation rdf:type owl:Class ;
+                         rdfs:subClassOf :infrastructure_de_transport_d_électricité ;
+                         rdfs:altLabel "poste électrique"@fr ,
+                                       "transformateur"@fr ;
+                         rdfs:prefLabel "poste de transformation"@fr ,
+                                        "transformation sub-station"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#prairie
+:prairie rdf:type owl:Class ;
+         rdfs:subClassOf :végétation_basse ;
+         rdfs:altLabel "gazon"@fr ,
+                       "lawn"@en ,
+                       "pelouse"@fr ,
+                       "prairie"@en ;
+         rdfs:prefLabel "meadow"@en ,
+                        "prairie"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#prison
+:prison rdf:type owl:Class ;
+        rdfs:subClassOf :bâtiment_administratif ;
+        rdfs:altLabel "centre de rétention"@fr ,
+                      "gaol"@en ,
+                      "prison"@en ;
+        rdfs:prefLabel "jail"@en ,
+                       "prison"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#promontoire
+:promontoire rdf:type owl:Class ;
+             rdfs:subClassOf :convexe ;
+             rdfs:altLabel "headland"@en ;
+             rdfs:comment "Relief élevé qui domine un autre relief moins élevé, une plaine"@fr ;
+             rdfs:prefLabel "promontoire"@fr ,
+                            "promontory"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :promontoire ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Relief élevé qui domine un autre relief moins élevé, une plaine"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/promontoire"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#puit
+:puit rdf:type owl:Class ;
+      rdfs:subClassOf :gorge ,
+                      <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> ;
+      rdfs:altLabel "well"@en ;
+      rdfs:prefLabel "puit"@fr ,
+                     "water well"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#puy
+:puy rdf:type owl:Class ;
+     rdfs:subClassOf :mont ,
+                     :volcan ;
+     rdfs:comment "Mont volcanique ayant une forme arrondie"@fr ;
+     rdfs:prefLabel "puy"@fr ,
+                    "volcano mountain"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pylône
+:pylône rdf:type owl:Class ;
+        rdfs:subClassOf :infrastructure_de_transport_d_électricité ;
+        rdfs:altLabel "portique"@fr ;
+        rdfs:prefLabel "pylon"@en ,
+                       "pylône"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#pépinière
+:pépinière rdf:type owl:Class ;
+           rdfs:subClassOf :zone_de_culture ;
+           rdfs:prefLabel "nursery"@en ,
+                          "pépinière"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#quai
+:quai rdf:type owl:Class ;
+      rdfs:subClassOf :infrastructure_de_transport_maritime_ou_fluvial ;
+      rdfs:altLabel "appontement"@fr ,
+                    "cale"@fr ,
+                    "embankment"@en ,
+                    "embarcadère"@fr ,
+                    "ponton"@fr ,
+                    "pontoon"@en ,
+                    "quay"@en ;
+      rdfs:prefLabel "quai"@fr ,
+                     "wharf"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#quartier
+:quartier rdf:type owl:Class ;
+          rdfs:subClassOf :zone_bâtie ;
+          rdfs:altLabel "quarter"@en ;
+          rdfs:prefLabel "district"@en ,
+                         "quartier"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#radar
+:radar rdf:type owl:Class ;
+       rdfs:subClassOf :infrastructure_de_communication_hertzienne ,
+                       :équipement_scientifique_et_technique ;
+       rdfs:altLabel "radar"@en ;
+       rdfs:prefLabel "radar"@fr ,
+                      "radar station"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#raillère
+:raillère rdf:type owl:Class ;
+          rdfs:subClassOf :versant ;
+          rdfs:comment "Versant à pentes abruptes et caillouteuses"@fr ,
+                       "steep rocky side"@en ;
+          rdfs:prefLabel "raillère"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ravin
+:ravin rdf:type owl:Class ;
+       rdfs:subClassOf :depression_ouverte ;
+       rdfs:altLabel "ravine"@en ;
+       rdfs:comment "Entaille assez profonde du sol, le plus souvent en V, produite par les eaux de ruissellement ou par un torrent; petite vallée étroite, encaissée."@fr ;
+       rdfs:prefLabel "gully"@en ,
+                      "ravin"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ravin ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Entaille assez profonde du sol, le plus souvent en V, produite par les eaux de ruissellement ou par un torrent; petite vallée étroite, encaissée."@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/ravin"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#reculée
+:reculée rdf:type owl:Class ;
+         rdfs:subClassOf :vallée ;
+         rdfs:comment "Vallée courte et profonde creusée en bordure d'un plateau calcaire, terminée en amont par un amphithéâtre"@fr ;
+         rdfs:prefLabel "reculée"@fr ,
+                        "steephead valley"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :reculée ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Vallée courte et profonde creusée en bordure d'un plateau calcaire, terminée en amont par un amphithéâtre"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/recul%C3%A9e"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#recyclage
+:recyclage rdf:type owl:Class ;
+           rdfs:subClassOf :batiments_et_installations_industriels ;
+           rdfs:prefLabel "recyclage"@fr ,
+                          "recycling"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#refuge
+:refuge rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation> ;
+        rdfs:altLabel "abri de montagne"@fr ,
+                      "gîte de montagne"@fr ,
+                      "shelter"@en ;
+        rdfs:prefLabel "refuge"@en ,
+                       "refuge"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#relief
+:relief rdf:type owl:Class ;
+        rdfs:comment "Contient tous les termes décrivant les formes de relief naturelles"@fr ;
+        rdfs:prefLabel "landform"@en ,
+                       "relief"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#remontée_mécanique
+:remontée_mécanique rdf:type owl:Class ;
+                    rdfs:subClassOf :infrastructure_de_transport_par_câble ,
+                                    :équipement_de_sports_d_hiver ;
+                    rdfs:altLabel "remonte pente"@fr ,
+                                  "ski lift"@en ;
+                    rdfs:prefLabel "mechanical lift"@en ,
+                                   "remontée mécanique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#rempart
+:rempart rdf:type owl:Class ;
+         rdfs:subClassOf :batiment_militaire ;
+         rdfs:altLabel "city wall"@en ,
+                       "mur de fortification"@fr ;
+         rdfs:prefLabel "rampart"@en ,
+                        "rempart"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#rempart_montagneux
+:rempart_montagneux rdf:type owl:Class ;
+                    rdfs:subClassOf :planaire_vertical ;
+                    rdfs:altLabel "barre"@fr ,
+                                  "barre rocheuse"@fr ,
+                                  "rocky cliff"@en ;
+                    rdfs:comment "Paroi un à-pic sur une certaine longueur d'une montagne"@fr ,
+                                 "rempart montagneux"@fr ;
+                    rdfs:prefLabel "rocky hog back"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#replat
+:replat rdf:type owl:Class ;
+        rdfs:subClassOf :planaire_horizontal ;
+        rdfs:comment "Partie plate située en épaulement sur une pente ou au flanc d'un versant"@fr ;
+        rdfs:prefLabel "flat"@en ,
+                       "replat"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#repère_de_nivellement
+:repère_de_nivellement rdf:type owl:Class ;
+                       rdfs:subClassOf :borne ;
+                       rdfs:altLabel "levelling point"@en ,
+                                     "vertical control point"@en ;
+                       rdfs:prefLabel "benchmark"@en ,
+                                      "repère de nivellement"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ressaut
+:ressaut rdf:type owl:Class ;
+         rdfs:subClassOf :planaire_vertical ;
+         rdfs:altLabel "jump"@en ;
+         rdfs:comment "Une pente brusque correspondant à un palier entre deux zones relativement plates"@fr ;
+         rdfs:prefLabel "ressaut"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#retenue_d_eau
+:retenue_d_eau rdf:type owl:Class ;
+               rdfs:subClassOf :équipement_de_protection_hydrographique ;
+               rdfs:altLabel "forebay"@en ,
+                             "reservoir"@en ,
+                             "retention hill"@en ,
+                             "retenue collinaire"@fr ,
+                             "écréteur de crue"@fr ;
+               rdfs:prefLabel "pondage"@en ,
+                              "retenue d'eau"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ride
+:ride rdf:type owl:Class ;
+      rdfs:subClassOf :convexe ;
+      rdfs:altLabel "ripple"@en ;
+      rdfs:comment "Forme de relief mobile au profil dissymétrique modelée par de l'eau en mouvement dans un matériau meuble"@fr ;
+      rdfs:prefLabel "ride"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ride ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Forme de relief mobile au profil dissymétrique modelée par de l'eau en mouvement dans un matériau meuble"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/ride"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#rimaye
+:rimaye rdf:type owl:Class ;
+        rdfs:subClassOf :crevasse ;
+        rdfs:comment "Large crevasse ouverte profondément sur le pourtour du névé, entre le rocher et la glace en mouvement"@fr ;
+        rdfs:prefLabel "rimaye"@en ,
+                       "rimaye"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :rimaye ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Large crevasse ouverte profondément sur le pourtour du névé, entre le rocher et la glace en mouvement"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/rimaye"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#rive
+:rive rdf:type owl:Class ;
+      rdfs:subClassOf :réseau_hydrographique_naturel ;
+      rdfs:altLabel "berge"@fr ,
+                    "rivage"@fr ;
+      rdfs:prefLabel "bank"@en ,
+                     "rive"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#rivière
+:rivière rdf:type owl:Class ;
+         rdfs:subClassOf :cours_d_eau ;
+         rdfs:altLabel "fleuve"@fr ;
+         rdfs:prefLabel "rio"@es ,
+                        "river"@en ,
+                        "rivière"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#rocher
+:rocher rdf:type owl:Class ;
+        rdfs:subClassOf :convexe ;
+        rdfs:altLabel "crag"@en ,
+                      "roche"@fr ;
+        rdfs:prefLabel "rocher"@fr ,
+                       "rock"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#rond-point
+:rond-point rdf:type owl:Class ;
+            rdfs:subClassOf :carrefour ;
+            rdfs:altLabel "carrefour giratoire"@fr ,
+                          "traffic circle"@en ;
+            rdfs:prefLabel "rond point"@fr ,
+                           "roundabout"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#route
+:route rdf:type owl:Class ;
+       rdfs:subClassOf :infrastructure_de_transport_routier ;
+       rdfs:altLabel "autoroute"@fr ,
+                     "bretelle"@fr ,
+                     "rue"@fr ,
+                     "ruelle"@fr ,
+                     "voie rapide"@fr ;
+       rdfs:prefLabel "road"@en ,
+                      "route"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ruine
+:ruine rdf:type owl:Class ;
+       rdfs:subClassOf :vestige ;
+       rdfs:prefLabel "ruin"@en ,
+                      "ruine"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ruisseau
+:ruisseau rdf:type owl:Class ;
+          rdfs:subClassOf :cours_d_eau ;
+          rdfs:altLabel "brook"@en ,
+                        "burn"@en ,
+                        "gave"@fr ,
+                        "nant"@fr ,
+                        "ravine"@fr ,
+                        "riou"@fr ,
+                        "riu"@fr ,
+                        "rivulet"@en ,
+                        "torrent"@en ,
+                        "torrent"@fr ;
+          rdfs:prefLabel "ruisseau"@fr ,
+                         "stream"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#région
+:région rdf:type owl:Class ;
+        rdfs:subClassOf :division_territoriale_administrative ;
+        rdfs:prefLabel "region"@en ,
+                       "région"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#réseau_hydrographique_naturel
+:réseau_hydrographique_naturel rdf:type owl:Class ;
+                               rdfs:subClassOf :hydrographie ;
+                               rdfs:prefLabel "natural hydrographic network"@en ,
+                                              "réseau hydrographique naturel"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#réserve_nationale_de_chasse
+:réserve_nationale_de_chasse rdf:type owl:Class ;
+                             rdfs:subClassOf :zones_naturelles_protégées ;
+                             rdfs:prefLabel "game reserve"@en ,
+                                            "réserve de chasse"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#réserve_naturelle
+:réserve_naturelle rdf:type owl:Class ;
+                   rdfs:subClassOf :zones_naturelles_protégées ;
+                   rdfs:prefLabel "nature preserve"@en ,
+                                  "réserve naturelle"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#réservoir
+:réservoir rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> ;
+           rdfs:altLabel "bassin"@fr ,
+                         "forebay"@en ,
+                         "pondage"@en ;
+           rdfs:prefLabel "reservoir"@en ,
+                          "réservoir"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#réservoir_d_engrais
+:réservoir_d_engrais rdf:type owl:Class ;
+                     rdfs:subClassOf :équipement_agricole ;
+                     rdfs:altLabel "cuve à vin"@fr ,
+                                   "réservoir agricole"@fr ;
+                     rdfs:prefLabel "fertilizer tank"@en ,
+                                    "silo"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#réservoir_industriel
+:réservoir_industriel rdf:type owl:Class ;
+                      rdfs:subClassOf :équipement_industriel ;
+                      rdfs:altLabel "tank"@en ;
+                      rdfs:prefLabel "cistern"@en ,
+                                     "réservoir industriel"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#salle_de_spectacle
+:salle_de_spectacle rdf:type owl:Class ;
+                    rdfs:subClassOf :batiment_culturel ;
+                    rdfs:altLabel "auditorium"@fr ,
+                                  "cinema"@en ,
+                                  "cinéma"@fr ,
+                                  "theater"@en ,
+                                  "théatre"@fr ;
+                    rdfs:prefLabel "auditorium"@en ,
+                                   "salle de spectacle"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur
+:secteur rdf:type owl:Class ;
+         rdfs:subClassOf :zonage ;
+         rdfs:comment "Délimitation pour réaliser une activité sportive"@fr ;
+         rdfs:prefLabel "area"@en ,
+                        "secteur"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_couvert
+:secteur_couvert rdf:type owl:Class ;
+                 rdfs:subClassOf :secteur ;
+                 rdfs:comment "covered area"@en ,
+                              "secteur couvert"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_de_décollage_parapente
+:secteur_de_décollage_parapente rdf:type owl:Class ;
+                                rdfs:subClassOf :secteur ;
+                                rdfs:comment "Paragliding take-off area"@en ,
+                                             "secteur de décollage parapente"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_découvert
+:secteur_découvert rdf:type owl:Class ;
+                   rdfs:subClassOf :secteur ;
+                   rdfs:prefLabel "discovered area"@en ,
+                                  "secteur découvert"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_enneigé
+:secteur_enneigé rdf:type owl:Class ;
+                 rdfs:subClassOf :secteur ;
+                 rdfs:comment "secteur enneigé"@fr ,
+                              "snowy area"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_ensoleillé
+:secteur_ensoleillé rdf:type owl:Class ;
+                    rdfs:subClassOf :secteur ;
+                    rdfs:prefLabel "secteur ensoleillé"@fr ,
+                                   "sunny area"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_ombragé
+:secteur_ombragé rdf:type owl:Class ;
+                 rdfs:subClassOf :secteur ;
+                 rdfs:prefLabel "secteur ombragé"@fr ,
+                                "shaded area"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_pentue
+:secteur_pentue rdf:type owl:Class ;
+                rdfs:subClassOf :secteur ;
+                rdfs:comment "secteur pentue est une zone de forte pente"@fr ;
+                rdfs:prefLabel "secteur pentue"@fr ,
+                               "steep area"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_plat
+:secteur_plat rdf:type owl:Class ;
+              rdfs:subClassOf :secteur ;
+              rdfs:comment "flat area"@en ,
+                           "secteur plat"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_rocheux
+:secteur_rocheux rdf:type owl:Class ;
+                 rdfs:subClassOf :secteur ;
+                 rdfs:comment "rocky area"@en ,
+                              "secteur rocheux"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#serre
+:serre rdf:type owl:Class ;
+       rdfs:subClassOf :équipement_agricole ;
+       rdfs:altLabel "glass-house"@en ;
+       rdfs:prefLabel "greenhouse"@en ,
+                      "serre"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#siphon
+:siphon rdf:type owl:Class ;
+        rdfs:subClassOf :depression_fermée ;
+        rdfs:comment "Conduit naturel noyé ou empli d'eau"@fr ;
+        rdfs:prefLabel "siphon"@en ,
+                       "siphon"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :siphon ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Conduit naturel noyé ou empli d'eau"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/siphon"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#site_d_escalade
+:site_d_escalade rdf:type owl:Class ;
+                 rdfs:subClassOf :équipement_sportif ;
+                 rdfs:altLabel "artificial climbing wall"@en ,
+                               "climbing rock"@en ,
+                               "mur d'escalade artificiel"@fr ,
+                               "rocher d'escalade"@fr ;
+                 rdfs:prefLabel "rock climbing place"@en ,
+                                "site d'escalade"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#site_de_fouilles
+:site_de_fouilles rdf:type owl:Class ;
+                  rdfs:subClassOf :vestige ;
+                  rdfs:altLabel "digs"@en ,
+                                "excavation"@en ;
+                  rdfs:prefLabel "archaeological site"@en ,
+                                 "site de fouilles"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#site_de_vol_libre
+:site_de_vol_libre rdf:type owl:Class ;
+                   rdfs:subClassOf :équipement_sportif ;
+                   rdfs:prefLabel "hang-gliding site"@en ,
+                                  "site de vol libre"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#snowpark
+:snowpark rdf:type owl:Class ;
+          rdfs:subClassOf :équipement_sportif ;
+          rdfs:comment "Un parc à neige est une zone enneigée aménagée pour la pratique du snowtrott, snowboard et du ski freestyle."@fr ;
+          rdfs:prefLabel "parc à neige"@fr ,
+                         "snowpark"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#sommet
+:sommet rdf:type owl:Class ;
+        rdfs:subClassOf :convexe ;
+        rdfs:altLabel "antécime"@fr ,
+                      "bric"@fr ,
+                      "cime"@fr ,
+                      "pointe"@fr ,
+                      "sommité"@fr ;
+        rdfs:comment "Point le plus élevé d'une forme de relief"@fr ;
+        rdfs:prefLabel "sommet"@fr ,
+                       "summit"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :sommet ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Point le plus élevé d'une forme de relief"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/sommet"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#source
+:source rdf:type owl:Class ;
+        rdfs:subClassOf :noeud_du_réseau_hydrographique_terrestre ;
+        rdfs:altLabel "exsurgence"@fr ,
+                      "outcropping"@en ,
+                      "puisard"@fr ,
+                      "resurgence"@en ,
+                      "résurgence"@fr ;
+        rdfs:prefLabel "source"@en ,
+                       "source"@fr ,
+                       "spring"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#station
+:station rdf:type owl:Class ;
+         rdfs:subClassOf :quartier ;
+         rdfs:altLabel "domaine skiable"@fr ,
+                       "station de ski"@fr ,
+                       "station de sports d'hiver"@fr ,
+                       "winter sport resort"@en ;
+         rdfs:prefLabel "resort"@en ,
+                        "station"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#station_de_pompage
+:station_de_pompage rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> ;
+                    rdfs:altLabel "captage"@fr ,
+                                  "prise d'eau"@fr ,
+                                  "water catchment"@en ;
+                    rdfs:prefLabel "pumping station"@en ,
+                                   "station de pompage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#station_de_taxi
+:station_de_taxi rdf:type owl:Class ;
+                 rdfs:subClassOf :infrastructure_de_transport_routier ;
+                 rdfs:prefLabel "station de taxi"@fr ,
+                                "taxi station"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#station_météorologique
+:station_météorologique rdf:type owl:Class ;
+                        rdfs:subClassOf :équipement_scientifique_et_technique ;
+                        rdfs:altLabel "meteorological station"@en ,
+                                      "station météo"@fr ;
+                        rdfs:prefLabel "station météorologique"@fr ,
+                                       "weather station"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#station_scientifique
+:station_scientifique rdf:type owl:Class ;
+                      rdfs:subClassOf :équipement_scientifique_et_technique ;
+                      rdfs:prefLabel "scientific station"@en ,
+                                     "station scientifique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#statue
+:statue rdf:type owl:Class ;
+        rdfs:subClassOf :monument ;
+        rdfs:prefLabel "statue"@en ,
+                       "statue"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#stèle
+:stèle rdf:type owl:Class ;
+       rdfs:subClassOf :monument ;
+       rdfs:prefLabel "stele"@en ,
+                      "stèle"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#supermarché
+:supermarché rdf:type owl:Class ;
+             rdfs:subClassOf :bâtiment_commercial ;
+             rdfs:altLabel "centre commercial"@fr ,
+                           "hypermarché"@fr ,
+                           "hypermarket"@en ;
+             rdfs:prefLabel "supermarché"@fr ,
+                            "supermarket"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#surface_d_eau
+:surface_d_eau rdf:type owl:Class ;
+               rdfs:subClassOf :réseau_hydrographique_naturel ;
+               rdfs:altLabel "body of water"@en ,
+                             "plan d'eau"@fr ,
+                             "water surface"@en ;
+               rdfs:prefLabel "surface d'eau"@fr ,
+                              "water body"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#surplomb
+:surplomb rdf:type owl:Class ;
+          rdfs:subClassOf :convexe ;
+          rdfs:comment "Partie supérieure d'une roche, d'une masse qui fait saillie, qui s'avance"@en ;
+          rdfs:prefLabel "overhang"@en ,
+                         "surplomb"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :surplomb ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Partie supérieure d'une roche, d'une masse qui fait saillie, qui s'avance"@en ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/surplomb"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#sérac
+:sérac rdf:type owl:Class ;
+       rdfs:subClassOf :glacier ;
+       rdfs:comment "Fortes irrégularités de la surface du glacier séparées par des crevasses résultant de la fracturation de la glace dans les secteurs à forte pente et se poursuivant sur la langue par une disposition chaotique de blocs et de pyramides de dimensions diverses"@fr ,
+                    "Le sérac est un bloc de glace de grande taille formé par la fracturation d'un glacier"@fr ;
+       rdfs:prefLabel "serac"@en ,
+                      "sérac"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :sérac ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Fortes irrégularités de la surface du glacier séparées par des crevasses résultant de la fracturation de la glace dans les secteurs à forte pente et se poursuivant sur la langue par une disposition chaotique de blocs et de pyramides de dimensions diverses"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/s%C3%A9rac"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#talus
+:talus rdf:type owl:Class ;
+       rdfs:subClassOf :planaire_vertical ;
+       rdfs:comment "Terrain, partie du sol en pente"@fr ;
+       rdfs:prefLabel "embankment"@en ,
+                      "talus"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tapis_roulant_industriel
+:tapis_roulant_industriel rdf:type owl:Class ;
+                          rdfs:subClassOf :équipement_industriel ;
+                          rdfs:prefLabel "industrial conveyor belt"@en ,
+                                         "tapis roulant industriel"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terrain_d_aviation
+:terrain_d_aviation rdf:type owl:Class ;
+                    rdfs:subClassOf :infrastructure_de_transport_aérien ;
+                    rdfs:altLabel "aerodrome"@en ,
+                                  "altiport"@en ,
+                                  "aérodrome"@fr ,
+                                  "aérogare"@fr ;
+                    rdfs:prefLabel "airfield"@en ,
+                                   "terrain d'aviation"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terrain_de_football
+:terrain_de_football rdf:type owl:Class ;
+                     rdfs:subClassOf :terrain_de_sport ;
+                     rdfs:altLabel "football field"@en ;
+                     rdfs:prefLabel "football ground"@en ,
+                                    "terrain de football"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terrain_de_manoeuvre
+:terrain_de_manoeuvre rdf:type owl:Class ;
+                      rdfs:subClassOf :zone_militaire ;
+                      rdfs:prefLabel "drill-ground"@en ,
+                                     "terrain de manoeuvre"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terrain_de_rugby
+:terrain_de_rugby rdf:type owl:Class ;
+                  rdfs:subClassOf :terrain_de_sport ;
+                  rdfs:altLabel "rugby field"@en ;
+                  rdfs:prefLabel "rugby ground"@en ,
+                                 "terrain de rugby"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terrain_de_sport
+:terrain_de_sport rdf:type owl:Class ;
+                  rdfs:subClassOf :équipement_sportif ;
+                  rdfs:prefLabel "sports-ground"@en ,
+                                 "terrain de sport"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terrain_de_tennis
+:terrain_de_tennis rdf:type owl:Class ;
+                   rdfs:subClassOf :terrain_de_sport ;
+                   rdfs:altLabel "terrain de tennis"@fr ;
+                   rdfs:prefLabel "court de tennis"@fr ,
+                                  "tennis court"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terrasse
+:terrasse rdf:type owl:Class ;
+          rdfs:subClassOf :replat ;
+          rdfs:comment "Replat d'un versant formé par l'érosion, par les fluctuations du niveau d'un fleuve, de la mer, d'un lac."@fr ;
+          rdfs:prefLabel "terrace"@en ,
+                         "terrasse"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :terrasse ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Replat d'un versant formé par l'érosion, par les fluctuations du niveau d'un fleuve, de la mer, d'un lac."@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/terrasse"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terril
+:terril rdf:type owl:Class ;
+        rdfs:subClassOf :convexe ;
+        rdfs:altLabel "crassier"@fr ,
+                      "slag-heap"@en ,
+                      "spoil-bank"@en ,
+                      "spoil-heap"@en ,
+                      "tip"@en ;
+        rdfs:comment "Entassement de déblais stériles de forme conique, provenant de l'exploitation des mines et carrières."@en ;
+        rdfs:prefLabel "spoil-dump"@en ,
+                       "terril"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :terril ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Entassement de déblais stériles de forme conique, provenant de l'exploitation des mines et carrières."@en ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/terril"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#thalweg
+:thalweg rdf:type owl:Class ;
+         rdfs:subClassOf :depression_ouverte ;
+         rdfs:altLabel "talweg"@fr ,
+                       "valley line"@en ;
+         rdfs:comment "Ligne d'intersection des deux pentes latérales d'une vallée."@fr ;
+         rdfs:prefLabel "thalweg"@en ,
+                        "thalweg"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :thalweg ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Ligne d'intersection des deux pentes latérales d'une vallée."@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/thalweg"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#théâtre_de_plein_air
+:théâtre_de_plein_air rdf:type owl:Class ;
+                      rdfs:subClassOf :bâtiment_remarquable ;
+                      rdfs:altLabel "amphitheater"@en ,
+                                    "arena"@en ,
+                                    "arène"@fr ,
+                                    "open-air theater"@en ,
+                                    "roman theater"@en ,
+                                    "theater in the round"@en ,
+                                    "théatre antique"@fr ,
+                                    "théâtre de plein air"@fr ,
+                                    "téhatre roamin"@fr ;
+                      rdfs:prefLabel "amphitéatre"@fr ,
+                                     "outdoor theater"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#toit
+:toit rdf:type owl:Class ;
+      rdfs:subClassOf :convexe ;
+      rdfs:comment "Surplomb perpendiculaire à la paroi"@en ;
+      rdfs:prefLabel "roof"@en ,
+                     "toit"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :toit ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Surplomb perpendiculaire à la paroi"@en ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/toit"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tour
+:tour rdf:type owl:Class ;
+      rdfs:subClassOf :batiment_militaire ;
+      rdfs:altLabel "beffroi"@fr ,
+                    "donjon"@fr ;
+      rdfs:prefLabel "tour"@fr ,
+                     "tower"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tour_de_contrôle
+:tour_de_contrôle rdf:type owl:Class ;
+                  rdfs:subClassOf :infrastructure_de_transport_aérien ;
+                  rdfs:prefLabel "control tower"@en ,
+                                 "tour de contrôle"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tour_de_télécommunication
+:tour_de_télécommunication rdf:type owl:Class ;
+                           rdfs:subClassOf :infrastructure_de_communication_hertzienne ;
+                           rdfs:prefLabel "telecommunication tower"@en ,
+                                          "tour de télécommunication"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tranchée
+:tranchée rdf:type owl:Class ;
+          rdfs:subClassOf :depression_ouverte ;
+          rdfs:altLabel "Entaille pratiquée dans le sol"@fr ,
+                        "shelter-trench"@en ,
+                        "trench"@en ;
+          rdfs:prefLabel "ditch"@en ,
+                         "tranchée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tremplin
+:tremplin rdf:type owl:Class ;
+          rdfs:subClassOf :talus ;
+          rdfs:comment "Portion inclinée permettant le saut, par exemple en ski lorsque recouverte de neige"@fr ;
+          rdfs:prefLabel "platform"@en ,
+                         "tremplin"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#trouée
+:trouée rdf:type owl:Class ;
+        rdfs:subClassOf :ouverture ;
+        rdfs:altLabel "fire-break"@en ,
+                      "pare-feu"@fr ;
+        rdfs:prefLabel "clearing"@en ,
+                       "trouée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tumulus
+:tumulus rdf:type owl:Class ;
+         rdfs:subClassOf :vestige ;
+         rdfs:altLabel "barrow"@en ,
+                       "burial mound"@en ,
+                       "sepulchral mound"@en ;
+         rdfs:prefLabel "tumulus"@en ,
+                        "tumulus"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tunnel
+:tunnel rdf:type owl:Class ;
+        rdfs:subClassOf :franchissement ;
+        rdfs:prefLabel "tunnel"@en ,
+                       "tunnel"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#télécabine
+:télécabine rdf:type owl:Class ;
+            rdfs:subClassOf :remontée_mécanique ;
+            rdfs:altLabel "telpher"@en ,
+                          "télébenne"@fr ,
+                          "téléphérique"@fr ;
+            rdfs:prefLabel "cable car"@en ,
+                           "télécabine"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#télésiège
+:télésiège rdf:type owl:Class ;
+           rdfs:subClassOf :remontée_mécanique ;
+           rdfs:prefLabel "chair lift"@en ,
+                          "télésiège"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#téléski
+:téléski rdf:type owl:Class ;
+         rdfs:subClassOf :remontée_mécanique ;
+         rdfs:prefLabel "ski lift"@en ,
+                        "téléski"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#université
+:université rdf:type owl:Class ;
+            rdfs:subClassOf :établissement_d_enseignement ;
+            rdfs:altLabel "college"@en ,
+                          "grande école"@fr ;
+            rdfs:prefLabel "university"@en ,
+                           "université"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#usine
+:usine rdf:type owl:Class ;
+       rdfs:subClassOf :batiments_et_installations_industriels ;
+       rdfs:altLabel "atelier"@fr ,
+                     "blast furnace"@en ,
+                     "fabrique"@fr ,
+                     "factory"@en ,
+                     "flowr-mill"@en ,
+                     "haut fourneau"@fr ,
+                     "manufacture"@fr ,
+                     "minoterie"@fr ,
+                     "raffinerie"@fr ,
+                     "refinery"@en ,
+                     "sawmill"@en ,
+                     "scierie"@fr ,
+                     "works"@en ;
+       rdfs:prefLabel "plant"@en ,
+                      "usine"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#usine_de_traitement_des_eaux
+:usine_de_traitement_des_eaux rdf:type owl:Class ;
+                              rdfs:subClassOf :infrastructure_eau ;
+                              rdfs:altLabel "bassin de décantation"@fr ,
+                                            "bassin de filtrage"@fr ,
+                                            "bassin de lagunage"@fr ,
+                                            "station d'épuration"@fr ,
+                                            "usine de traitement des eaux"@fr ,
+                                            "water treatment plant"@en ;
+                              rdfs:prefLabel "infrastructure de traitement des eaux"@fr ,
+                                             "sewage treatment plant"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#val
+:val rdf:type owl:Class ;
+     rdfs:subClassOf :vallée ;
+     rdfs:comment "Dépression allongée et évasée correspondant à un synclinal, dans le relief de type jurassien"@fr ;
+     rdfs:prefLabel "narrow valley"@en ,
+                    "val"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :val ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Dépression allongée et évasée correspondant à un synclinal, dans le relief de type jurassien"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/val"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#vallon
+:vallon rdf:type owl:Class ;
+        rdfs:subClassOf :vallée ;
+        rdfs:altLabel "dingle"@en ,
+                      "small valley"@en ;
+        rdfs:comment "Petite dépression allongée entre deux collines, deux coteaux, deux hauteurs"@fr ;
+        rdfs:prefLabel "dell"@en ,
+                       "vallon"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :vallon ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Petite dépression allongée entre deux collines, deux coteaux, deux hauteurs"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/vallon"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#vallée
+:vallée rdf:type owl:Class ;
+        rdfs:subClassOf :depression_ouverte ;
+        rdfs:comment "Dépression allongée, plus ou moins évasée, formée par un cours d'eau ou un glacier"@fr ;
+        rdfs:prefLabel "valley"@en ,
+                       "vallée"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :vallée ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Dépression allongée, plus ou moins évasée, formée par un cours d'eau ou un glacier"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/vall%C3%A9e"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#verger
+:verger rdf:type owl:Class ;
+        rdfs:subClassOf :zone_de_culture ;
+        rdfs:prefLabel "orchard"@en ,
+                       "verger"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#versant
+:versant rdf:type owl:Class ;
+         rdfs:subClassOf :planaire_vertical ;
+         rdfs:altLabel "adret"@fr ,
+                       "ubac"@fr ;
+         rdfs:comment "Dans une vallée, surface topographique comprise entre le faîte d'un relief et le thalweg voisin"@fr ;
+         rdfs:prefLabel "side"@en ,
+                        "versant"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#vestige
+:vestige rdf:type owl:Class ;
+         rdfs:subClassOf :élément_du_patrimoine ;
+         rdfs:prefLabel "archeological ruins"@en ,
+                        "vestige"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#via_ferrata
+:via_ferrata rdf:type owl:Class ;
+             rdfs:subClassOf :équipement_sportif ;
+             rdfs:prefLabel "via ferrata"@en ,
+                            "via ferrata"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#vierge
+:vierge rdf:type owl:Class ;
+        rdfs:subClassOf :monument_religieux ;
+        rdfs:altLabel "Vierge"@fr ,
+                      "Virgin Mary statue"@en ;
+        rdfs:prefLabel "statue de la Vierge"@fr ,
+                       "statue of the Madonna"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#vigne
+:vigne rdf:type owl:Class ;
+       rdfs:subClassOf :zone_de_culture ;
+       rdfs:prefLabel "vigne"@fr ,
+                      "vineyard"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#vilage
+:vilage rdf:type owl:Class ;
+        rdfs:subClassOf :division_territoriale_administrative ;
+        rdfs:prefLabel "vilage"@fr ,
+                       "village"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#village_de_vacances
+:village_de_vacances rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation> ;
+                     rdfs:altLabel "camp de vacances"@fr ,
+                                   "colonie de vacances"@en ,
+                                   "holiday camp"@en ,
+                                   "summer camp"@en ;
+                     rdfs:prefLabel "holiday village"@en ,
+                                    "village de vacances"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ville
+:ville rdf:type owl:Class ;
+       rdfs:subClassOf :division_territoriale_administrative ;
+       rdfs:altLabel "banlieu"@fr ,
+                     "suburb"@en ;
+       rdfs:prefLabel "town"@en ,
+                      "ville"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#vire
+:vire rdf:type owl:Class ;
+      rdfs:subClassOf :replat ;
+      rdfs:comment "Replat étroit le long d'un escarpement montagneux."@fr ;
+      rdfs:prefLabel "flat"@en ,
+                     "vire"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :vire ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Replat étroit le long d'un escarpement montagneux."@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/vire"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#voie_TGV
+:voie_TGV rdf:type owl:Class ;
+          rdfs:subClassOf :voie_ferrée ;
+          rdfs:prefLabel "ultra-high speed railway"@en ,
+                         "voie TGV"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#voie_antique
+:voie_antique rdf:type owl:Class ;
+              rdfs:subClassOf :vestige ;
+              rdfs:prefLabel "roman road"@en ,
+                             "voie antique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable
+:voie_de_communication_non_carrossable rdf:type owl:Class ;
+                                       rdfs:subClassOf :infrastructure_de_déplacement_terrestre ;
+                                       rdfs:altLabel "not metalled road"@en ;
+                                       rdfs:prefLabel "impassable road"@en ,
+                                                      "voie de communication non carrossable"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#voie_ferrée
+:voie_ferrée rdf:type owl:Class ;
+             rdfs:subClassOf :infrastructure_de_transport_ferré ;
+             rdfs:altLabel "chemin de fer"@fr ,
+                           "rail"@en ,
+                           "rail"@fr ,
+                           "railway"@en ,
+                           "railway  line"@en ,
+                           "railway track"@en ,
+                           "track"@en ,
+                           "voie de tramway"@fr ,
+                           "voie de triage"@fr ;
+             rdfs:prefLabel "rail road"@en ,
+                            "voie ferrée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#voie_ferrée_à_crémaillère
+:voie_ferrée_à_crémaillère rdf:type owl:Class ;
+                           rdfs:subClassOf :voie_ferrée ;
+                           rdfs:prefLabel "track-railway"@en ,
+                                          "voie ferrée à crémaillère"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#volcan
+:volcan rdf:type owl:Class ;
+        rdfs:subClassOf :convexe ;
+        rdfs:comment "Orifice naturel par lequel un réservoir de magma à haute température d'origine profonde communique avec la surface de la terre et s'y répand; relief montagneux de forme conique formé par l'accumulation des produits rejetés, montés par la cheminée dans le cratère au cours d'éruptions"@en ;
+        rdfs:prefLabel "volcan"@fr ,
+                       "volcano"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :volcan ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Orifice naturel par lequel un réservoir de magma à haute température d'origine profonde communique avec la surface de la terre et s'y répand; relief montagneux de forme conique formé par l'accumulation des produits rejetés, montés par la cheminée dans le cratère au cours d'éruptions"@en ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/volcan"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#végétation
+:végétation rdf:type owl:Class ;
+            rdfs:comment "Contient la végétation, qu'elle soit \"naturelle\" ou artificialisée"@fr ;
+            rdfs:prefLabel "vegetation area"@en ,
+                           "végétation"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#végétation_arborée
+:végétation_arborée rdf:type owl:Class ;
+                    rdfs:subClassOf :végétation ;
+                    rdfs:comment "Végétation constituée d'arbres ou interruptions au sein d'une zone arborée (clairière, trouée)"@fr ;
+                    rdfs:prefLabel "végétation arborée"@fr ,
+                                   "wooded area"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#végétation_basse
+:végétation_basse rdf:type owl:Class ;
+                  rdfs:subClassOf :végétation ;
+                  rdfs:altLabel "zone arbustive"@fr ;
+                  rdfs:comment "Végétation de petite taille"@fr ;
+                  rdfs:prefLabel "low vegetation"@en ,
+                                 "végétation basse"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#vélodrome
+:vélodrome rdf:type owl:Class ;
+           rdfs:subClassOf :piste_de_sport ;
+           rdfs:altLabel "bicycle racetrack"@en ;
+           rdfs:prefLabel "cycle-racing track"@en ,
+                          "vélodrome"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#zonage
+:zonage rdf:type owl:Class ;
+        rdfs:comment "Contient les délimitations immatérielles du territoire. Ces délimitations peuvent-être de fait (agglomération) ou de jure (commune, zone industrielle). Les marqueurs matériels de ces délimitations sont dans la catégorie \"construction\""@fr ;
+        rdfs:prefLabel "land subdivision"@en ,
+                       "zonage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#zone_bâtie
+:zone_bâtie rdf:type owl:Class ;
+            rdfs:subClassOf :zonage ;
+            rdfs:comment "Délimitation de fait d'une zone contenant un ou plusieurs batiments"@fr ;
+            rdfs:prefLabel "built-up area"@en ,
+                           "zone bâtie"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#zone_d_activité
+:zone_d_activité rdf:type owl:Class ;
+                 rdfs:subClassOf :zonage ;
+                 rdfs:altLabel "industrial estate"@en ,
+                               "industrial park"@en ,
+                               "parc d'activité"@fr ,
+                               "zone artisanale"@fr ,
+                               "zone commerciale"@fr ,
+                               "zone industrielle"@fr ;
+                 rdfs:comment "Délimitation de fait ou légale d'une zone contenant principalement des activités éconnomiques"@fr ;
+                 rdfs:prefLabel "industrial area"@en ,
+                                "zone d'activité"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#zone_de_culture
+:zone_de_culture rdf:type owl:Class ;
+                 rdfs:subClassOf :végétation ;
+                 rdfs:altLabel "cultivated land"@en ,
+                               "farm land"@en ,
+                               "zone de culture"@fr ;
+                 rdfs:comment "Espace dédié à une production agricole"@fr ;
+                 rdfs:prefLabel "crops"@en ,
+                                "plantation"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#zone_militaire
+:zone_militaire rdf:type owl:Class ;
+                rdfs:subClassOf :zonage ;
+                rdfs:altLabel "military reservation"@en ,
+                              "terrain militaire"@fr ;
+                rdfs:comment "Délimitation de fait ou légale d'une zone pouvant accueillir des activités militaires"@fr ;
+                rdfs:prefLabel "military area"@en ,
+                               "zone militaire"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#zones_naturelles_protégées
+:zones_naturelles_protégées rdf:type owl:Class ;
+                            rdfs:subClassOf :zonage ;
+                            rdfs:comment "Délimitation légale d'une zone de projection de l'environnement"@fr ;
+                            rdfs:prefLabel "protected natural zone"@en ,
+                                           "zone naturelle protégée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#éboulis
+:éboulis rdf:type owl:Class ;
+         rdfs:subClassOf :pierrier ;
+         rdfs:comment "Ensemble de débris rocheux détachés d'un abrupt, et formant un talus incliné plan ou conique, à fortes pentes"@fr ;
+         rdfs:prefLabel "scree"@en ,
+                        "éboulis"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :éboulis ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Ensemble de débris rocheux détachés d'un abrupt, et formant un talus incliné plan ou conique, à fortes pentes"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/%C3%A9boulis"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#échangeur
+:échangeur rdf:type owl:Class ;
+           rdfs:subClassOf :carrefour ;
+           rdfs:altLabel "clover-leaf"@en ;
+           rdfs:prefLabel "interchange"@en ,
+                          "échangeur"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#échappatoire
+:échappatoire rdf:type owl:Class ;
+              rdfs:subClassOf :planaire_vertical ;
+              rdfs:comment "Passage aidant à sortir vers une autre voie"@fr ;
+              rdfs:prefLabel "climbing escape"@en ,
+                             "échappatoire"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#écluse
+:écluse rdf:type owl:Class ;
+        rdfs:subClassOf :infrastructure_de_transport_maritime_ou_fluvial ;
+        rdfs:altLabel "ascenseur à bateaux"@fr ,
+                      "bajoyer"@fr ,
+                      "bassin d'écluse"@fr ,
+                      "cale sèche"@fr ,
+                      "canal lift"@en ,
+                      "dry dock"@en ,
+                      "radoub"@fr ;
+        rdfs:prefLabel "lock"@en ,
+                       "écluse"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#égout
+:égout rdf:type owl:Class ;
+       rdfs:subClassOf :cours_d_eau_artificiel ;
+       rdfs:altLabel "waste water disposal"@en ;
+       rdfs:prefLabel "sewer"@en ,
+                      "égout"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#élément_du_patrimoine
+:élément_du_patrimoine rdf:type owl:Class ;
+                       rdfs:subClassOf :construction ;
+                       rdfs:comment "Constructions à valeur historique"@fr ;
+                       rdfs:prefLabel "cultural heritage feature"@en ,
+                                      "élément du patrimoine"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#éolienne
+:éolienne rdf:type owl:Class ;
+          rdfs:subClassOf :équipement_industriel ;
+          rdfs:prefLabel "wind pump"@en ,
+                         "éolienne"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#épaule
+:épaule rdf:type owl:Class ;
+        rdfs:subClassOf :replat ;
+        rdfs:comment "Replat sous un sommet avant la dernière montée au sommet."@fr ;
+        rdfs:prefLabel "shoulder of the mountain"@en ,
+                       "épaule"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#épaulement
+:épaulement rdf:type owl:Class ;
+            rdfs:subClassOf :planaire_vertical ;
+            rdfs:comment "Élévation de terrain, escarpement naturel tels que colline, montagne, rocher, etc"@fr ;
+            rdfs:prefLabel "shoulder"@en ,
+                           "épaulement"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#éperon
+:éperon rdf:type owl:Class ;
+        rdfs:subClassOf :convexe ;
+        rdfs:comment "Partie saillante, avancée d'un relief montagneux"@fr ;
+        rdfs:prefLabel "spur"@en ,
+                       "éperon"@fr .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :éperon ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Partie saillante, avancée d'un relief montagneux"@fr ;
+   rdfs:isDefinedBy "https://www.cnrtl.fr/definition/%C3%A9peron"
+ ] .
+
+
+###  http://purl.org/choucas.ign.fr/oor#équipement_agricole
+:équipement_agricole rdf:type owl:Class ;
+                     rdfs:subClassOf :bâtiment_et_installations_agricoles ;
+                     rdfs:prefLabel "farm equipment"@en ,
+                                    "équipement agricole"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#équipement_de_montagne
+:équipement_de_montagne rdf:type owl:Class ;
+                        rdfs:subClassOf :infrastructure_service ;
+                        rdfs:altLabel "protective equipment"@en ;
+                        rdfs:prefLabel "équipement de protection"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#équipement_de_protection_hydrographique
+:équipement_de_protection_hydrographique rdf:type owl:Class ;
+                                         rdfs:subClassOf :infrastructure_eau ;
+                                         rdfs:prefLabel "water control equipment" ,
+                                                        "équipement de protection hydrographique" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#équipement_de_sports_d_hiver
+:équipement_de_sports_d_hiver rdf:type owl:Class ;
+                              rdfs:subClassOf :équipement_sportif ;
+                              rdfs:prefLabel "winter-sport equipment"@en ,
+                                             "équipement de sports d'hiver"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#équipement_industriel
+:équipement_industriel rdf:type owl:Class ;
+                       rdfs:subClassOf :batiments_et_installations_industriels ;
+                       rdfs:prefLabel "industrial equipment"@en ,
+                                      "équipement industriel"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#équipement_scientifique_et_technique
+:équipement_scientifique_et_technique rdf:type owl:Class ;
+                                      rdfs:subClassOf :infrastructure_service ;
+                                      rdfs:prefLabel "scientific and technological feature"@en ,
+                                                     "équipement scientifique et technique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#équipement_sportif
+:équipement_sportif rdf:type owl:Class ;
+                    rdfs:subClassOf :bâtiment_et_installation_sport_et_loisirs ;
+                    rdfs:prefLabel "sports facility"@en ,
+                                   "équipement sportif"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#étable
+:étable rdf:type owl:Class ;
+        rdfs:subClassOf :installation_d_élevage ;
+        rdfs:altLabel "bergerie"@fr ,
+                      "chèvrerie"@fr ,
+                      "goat farm"@en ,
+                      "haras"@en ,
+                      "ranch"@en ,
+                      "sheepfold"@en ,
+                      "stud farm"@en ,
+                      "écurie"@fr ;
+        rdfs:prefLabel "stable"@en ,
+                       "étable"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement
+:établissement_d_enseignement rdf:type owl:Class ;
+                              rdfs:subClassOf :batiment_et_installation ,
+                                              :établissement_d_enseignement ;
+                              rdfs:altLabel "elemetnary school"@en ,
+                                            "kindergarten"@en ,
+                                            "maternelle"@fr ,
+                                            "nursery school"@en ,
+                                            "primary education school"@en ,
+                                            "primary school"@en ,
+                                            "school"@en ,
+                                            "école"@fr ,
+                                            "école primaire"@fr ,
+                                            "établissement d'enseignement"@fr ;
+                              rdfs:prefLabel "elementary school"@en ,
+                                             "établissement d'enseignement"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#établissement_de_santé
+:établissement_de_santé rdf:type owl:Class ;
+                        rdfs:subClassOf :batiment_et_installation ;
+                        rdfs:prefLabel "healthcare facility"@en ,
+                                       "établissement de santé"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#état
+:état rdf:type owl:Class ;
+      rdfs:subClassOf :division_territoriale_administrative ;
+      rdfs:altLabel "state"@en ,
+                    "état"@fr ;
+      rdfs:prefLabel "country"@en ,
+                     "pays"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#île
+:île rdf:type owl:Class ;
+     rdfs:subClassOf :réseau_hydrographique_naturel ;
+     rdfs:altLabel "ilôt"@fr ,
+                   "isle"@en ,
+                   "islet"@en ;
+     rdfs:prefLabel "island"@en ,
+                    "île"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d'habitation> rdf:type owl:Class ;
+                                                           rdfs:subClassOf :batiment_et_installation ;
+                                                           rdfs:prefLabel "bâtiment d'habitation"@fr ,
+                                                                          "residential feature"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#canal_d'irrigation
+<http://purl.org/choucas.ign.fr/oor#canal_d'irrigation> rdf:type owl:Class ;
+                                                        rdfs:subClassOf :cours_d_eau_artificiel ;
+                                                        rdfs:altLabel "roubine"@fr ;
+                                                        rdfs:prefLabel "canal d'irrigation"@fr ,
+                                                                       "irrigation channel"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#château_d'eau
+<http://purl.org/choucas.ign.fr/oor#château_d'eau> rdf:type owl:Class ;
+                                                   rdfs:subClassOf :bâtiment_remarquable ;
+                                                   rdfs:prefLabel "château d'eau"@fr ,
+                                                                  "water tower"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf :infrastructure_eau ;
+                                                                           rdfs:prefLabel "fresh water catchment infrastructure"@en ,
+                                                                                          "infrastructure de gestion d'eau douce"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d'eau
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d'eau> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf :hydrographie ,
+                                                                                       :infrastructure_eau ;
+                                                                       rdfs:prefLabel "infrastructure de transport d'eau"@fr ,
+                                                                                      "water transport"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#point_d'eau
+<http://purl.org/choucas.ign.fr/oor#point_d'eau> rdf:type owl:Class ;
+                                                 rdfs:subClassOf :surface_d_eau ;
+                                                 rdfs:prefLabel "point d'eau"@fr ,
+                                                                "water point"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#relais_d'escalade
+<http://purl.org/choucas.ign.fr/oor#relais_d'escalade> rdf:type owl:Class ;
+                                                       rdfs:subClassOf :équipement_de_montagne ;
+                                                       rdfs:comment "relais est un ancrage d'assurage dans la roche représentant le sommet d'une longueur"@fr ;
+                                                       rdfs:prefLabel "climbing relay"@en ,
+                                                                      "relais d'escalade"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_d'atterrissage_parapente
+<http://purl.org/choucas.ign.fr/oor#secteur_d'atterrissage_parapente> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf :secteur ;
+                                                                      rdfs:comment "paragliding landing area"@en ,
+                                                                                   "secteur d'atterrissage parapente"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_d'avalanche
+<http://purl.org/choucas.ign.fr/oor#secteur_d'avalanche> rdf:type owl:Class ;
+                                                         rdfs:subClassOf :secteur ;
+                                                         rdfs:prefLabel "avalanche area"@en ,
+                                                                        "secteur d'avalanche"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_d'escalade
+<http://purl.org/choucas.ign.fr/oor#secteur_d'escalade> rdf:type owl:Class ;
+                                                        rdfs:subClassOf :secteur ;
+                                                        rdfs:prefLabel "clumbing area"@en ,
+                                                                       "secteur d'escalade"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tourne_d'avalanche
+<http://purl.org/choucas.ign.fr/oor#tourne_d'avalanche> rdf:type owl:Class ;
+                                                        rdfs:subClassOf :pare-avalanche ;
+                                                        rdfs:prefLabel "avanlanche turn"@en ,
+                                                                       "tourne d'avalanche"@fr .
+
+
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

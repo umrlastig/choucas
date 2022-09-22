@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+html{}
+
+body{
+  margin: auto;
+}
+
+              /**************/
+              /*** Cartes ***/
+              /**************/
+
+#wrap{
+  background-color:#EFE8EF;
+  display:flex;
+  flex-direction: column;
+  width:1000px;
+  min-width: 200px;
+  margin:auto;
+}
+
+#maps{
+  display:flex;
+  flex-direction: column;
+}
+
+.sous-titre h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 32px;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.map-container{
+  display:flex;
+  background-color:rgb(245,245,252);
+  margin: 0.2em 0;
+  padding: 0.2em;
+}
+
+.even{
+  flex-direction:row-reverse;
+}
+
+img {
+  display: block;
+  width: 300px;
+  height:auto;
+}
+
+.comment{
+  display : flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.comment p{
+  margin:0.5em 0.5em;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #222222;
+  text-align:justify;
+}
+
+.source p{
+  font-size: 10.5px;
+  text-align: center;
+}
+
+.desc{
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+}
+
+
+              /*************************/
+              /*     Web-responsive    */
+              /*************************/
+
+@media (max-width: 1070px) {
+  #wrap{
+    width:93%;
+  }
+}
+
+@media (max-width: 880px){
+  #wrap{
+  }
+  .map-container{
+    /*flex-wrap: wrap;*/
+    flex:2 5;
+  }
+  img{
+    width:auto;
+    max-width:290px;
+    min-width:200px;
+  }
+}

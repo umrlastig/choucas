@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Inscrivez-vous &agrave; la mailing list de l'Action Prospective</title>
+  </head>
+
+  <body>
+	<form id="myForm">
+
+		<input type="text" value="Nom" />
+		<input type="text" value="Pr&eacute;nom" />
+		<input type="text" value="Affiliation" />
+		<input type="text" value="email" />
+		<br /><br />
+
+		<input type="submit" value="Envoyer" />
+
+	</form>
+
+	  
+
+	<script>
+
+		var myForm = document.getElementById('myForm');	  
+
+		myForm.addEventListener('submit', function(e) {
+
+			alert('Vous avez envoyé le formulaire !\n\nMais celui-ci a été bloqué pour que vous ne changiez pas de page.');
+
+			e.preventDefault();
+
+		});
+
+	</script>
+	
+  </body>
+</html>

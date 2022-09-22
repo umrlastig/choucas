@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="Choucas-maps" content="Choucas Cartes Localisation Montagne Secours">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine%7CLobster%7CRaleway%7CAladin" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"  integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+  </head>
+
+  <body>
+    <header></header>
+
+    <div id="wrap">
+  		<div class="sous-titre">
+  		  <h2>Projet Choucas : Cartes obtenues à l'aide d'un S.I.G.</h2>
+  		</div>
+
+      <div id="maps">
+        <div class="map-container">
+    			<div class="map">
+				
+					<a href="./img/Carte_01.PNG">
+    				<img src="img/Carte_01.PNG" alt="Carte01"></a>
+    				<div class="desc">
+					<a href="./img/Legende/Leg_01.PNG">Légende</a></div>
+					
+    			</div>
+
+    			<div class="comment">
+					<div class="txt">
+    				<p>	On s’intéresse à l’élément de localisation « est sous une ligne électrique ».</p>
+					<p>
+    					La carte fait apparaître en orange, les lignes électriques de haute et très haute tension issues de la BDTOPO,
+    					avec une épaisseur de trait qui est fonction du voltage (400kv/225kv pour les plus épais et 90kv/63kv pour les plus fins).
+    					Les câbles des téléphériques, qui peuvent être confondus, par la personne accidentée, avec des câbles électriques
+    					ont été représentés en violet. Ce linéaire est issu de la vectorisation de des tracés d’openstreetmap. </p>
+    				<p>
+    					Les tracés vert et bleus, issus des données mise en ligne par ENEDIS, gestionnaire de plus de 95% du réseau français,
+    					représentent respectivement les lignes de moyenne tension (HTA) et basse tension. Les discontinuités visibles montrent
+    					a priori la nécessité d’enrichir ces données avec d’autres sources d’information pour une meilleure connaissance du réseau.
+    				</p></div>
+					<div class="source"><p>Sources : BDTOPO (IGN), ENEDIS (<a href="https://data.enedis.fr">https://data.enedis.fr</a>)</p></div>
+    			</div>
+        </div>
+
+        <div class="map-container even">
+    			<div class="map">
+					<a href="./img/Carte_02.PNG">
+    				<img src="img/Carte_02.PNG" alt="Carte02"></a>
+    				<div class="desc"><a href="./img/Legende/Leg_02.PNG">Légende</a></div>
+    			</div>
+    			<div class="comment">
+					<div class="txt">
+    				<p> Le but de cette carte est d’aider à la localisation à partir de l’élément « voit une partie d’un plan d’eau ».</p>
+    				<p>
+    					Il s’agit d’une carte représentant pour deux plans d’eau de plus de 50 ha, figurant en bleu foncé, les zones depuis lesquelles
+    					ceux-ci sont visibles. Les zones en orange montrent l’ensemble des points pour lesquels un observateur peut voir le lac du Verney au nord,
+    					et en vert le lac de Chambon. Si la couleur est foncée, alors une partie seulement du plan d’eau est visible,
+    					tandis que dans les parties claires, il est possible de le distinguer dans sa quasi-intégralité.
+    				</p></div>
+					<div class="source"><p>Sources : BDTOPO (IGN)</p></div>
+    			</div>
+        </div>
+
+  		  <div class="map-container">
+    			<div class="map">
+					<a href="./img/Carte_03.PNG">
+    				<img src="img/Carte_03.PNG" alt="Carte03"></a>
+    				<div class="desc"><a href="./img/Legende/Leg_03.PNG">Légende</a></div>
+    			</div>
+    			<div class="comment">
+					<div class="txt">
+    				<p>	La carte s’articule autour de l’élément de localisation « a chuté de plusieurs mètres ».</p>
+    				<p> Ci-dessus, on représente des classes de pentes supérieures à 30° (soit une pente de 57% environ), 35°, 40°, 45° (pente égale à 100%)
+    				calculées à partir du modèle numérique de terrain issu de la BD Alti de l’IGN. Les pentes les plus abruptes sont colorées en violet.
+    				Sur la carte figurent également en noir les lignes orographiques de la BDTOPO représentant des talus.
+    				</p>
+					</div>
+					<div class="source"><p>Sources : BDTOPO (IGN)</p></div>
+    			</div>
+			</div>
+
+		    <div class="map-container even">
+    			<div class="map">
+					<a href="./img/Carte_04.PNG">
+    				<img src="img/Carte_04.PNG" alt="Carte04"></a>
+    				<div class="desc"><a href="./img/Legende/Leg_04.PNG">Légende</a></div>
+    			</div>
+    			<div class="comment">
+					<div class="txt">
+					<p> On s’intéresse à l’élément de localisation : « a marché plusieurs heures ».</p>
+    				<p>
+    					Les isochrones ont été calculées à partir du centre-ville de Bourg d’Oisans. Elles ont été obtenues pour un marcheur
+    					ayant une vitesse de 4 km par heure en plaine, 400 m par heure en ascencion et 600 m par heure en descente.
+    					Chaque plage de couleur correspond à une isochrone d’une heure.
+    				</p>
+					</div>
+					<div class="source"><p>Sources : BDTOPO (IGN)</p></div>
+    				
+    			</div>
+			</div>
+			
+			 <div class="map-container">
+    			<div class="map">
+					<a href="./img/Carte_05.PNG">
+    				<img src="img/Carte_05.PNG" alt="Carte05"></a>
+    				<div class="desc"><a href="./img/Legende/Leg_05.PNG">Légende</a></div>
+    			</div>
+    			<div class="comment">
+					<div class="txt">
+    				<p>	La carte est construite en combinant l'indication « a marché plusieurs heures » et « est parti en direction de l'Alpe d'Huez ».</p>
+    				<p> La vitesse du marcheur est la même que celle ayant servi précédemment. Pour le calcul, seuls les sentiers et les routes permettant de rejoindre l'Alpe
+					d'Huez ont été conservés.
+    				</p></div>
+					<div class="source"><p>Sources : BDTOPO (IGN)</p></div>
+    			</div>
+			</div>
+			
+			 <div class="map-container even">
+    			<div class="map">
+					<a href="./img/Carte_06.PNG">
+    				<img src="img/Carte_06.PNG" alt="Carte06"></a>
+    				<div class="desc"><a href="./img/Legende/Leg_06.PNG">Légende</a></div>
+    			</div>
+    			<div class="comment">
+					<div class="txt">
+    				<p>	On affiche ci-contre une représentation à partir du renseignement « est accroché à une cellule GSM SFR située CHAPELLE STE-PHILOMENE à VILLARD-REYMOND (38520) 
+					et orientée au 90° (est) ».</p>
+    				<p>Les cellules délimitées par des bords rouges forment un diagramme de Voronoï. Ce graphe donne l'ensemble des points les plus proches d'une antenne donnée. Ce résultat théorique 
+					ne peut suffire pour appréhender la zone de recherche et doit être considéré comme une simple indication. En effet, le relief constitue un obstacle à la propagation des
+					ondes si bien que la zone réelle de couverture de l'antenne de Villard-Reymond (en rouge bordeaux) risque de prendre une forme différente en montagne.
+					En revanche, le cône bleu illustre l'orientation de l'antenne (90° Est) et peut constituer une indication plus fiable en terme de recherche de victimes.
+					</p></div>
+					<div class="source"><p>Sources : ANFR (<a href="https://data.anfr.fr/">https://data.anfr.fr/</a>)</p></div>
+    			</div>
+			</div>
+      </div>
+    </div>
+
+    <footer></footer>
+  </body>
+</html>
